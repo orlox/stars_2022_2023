@@ -723,9 +723,9 @@ Compute the resulting acceleration after the perturbation <span class="math notr
 <p>and</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{\rho_0+\delta \rho} = \frac{1}{\rho_0(1+\delta \rho/\rho_0)}=\frac{1-\delta \rho/\rho}{\rho_0}.\]</div>
-<p>The continuity equation then reads as</p>
-<div class="math notranslate nohighlight">
-\[\frac{\partial r_0}{\partial m}(1+\alpha)=\frac{1}{4\pi r_0^2 \rho_0}(1-2\alpha)(1-\delta\rho/\rho_0),\]</div>
+<p>The continuity equation then reads as
+2
+$<span class="math notranslate nohighlight">\(\frac{\partial r_0}{\partial m}(1+\alpha)=\frac{1}{4\pi r_0^2 \rho_0}(1-2\alpha)(1-\delta\rho/\rho_0),\)</span>$</p>
 <p>and replacing <span class="math notranslate nohighlight">\(\partial r_0/\partial m\)</span> with the unperturbed continuity equation, while ignoring quadratic perturbation terms, gives us the desired result:</p>
 <div class="math notranslate nohighlight">
 \[\frac{\delta \rho}{\rho_0}=-3\alpha,\]</div>
@@ -751,11 +751,17 @@ Compute the resulting acceleration after the perturbation <span class="math notr
 <p>giving the total mass when evaluated at <span class="math notranslate nohighlight">\(\xi=\xi_1\)</span>.</p>
 <p>To obtain the mass-radius relationship, we note from the definition of <span class="math notranslate nohighlight">\(r_n\)</span> that</p>
 <div class="math notranslate nohighlight">
-\[R\propto \rho_c^{-1/2+1/2n},\]</div>
-<p>and since <span class="math notranslate nohighlight">\(M\propto \rho_c\)</span> we get the scaling between radius and mass:</p>
+\[R\propto r_n\propto \sqrt{\frac{P_\mathrm{c}}{\rho_c^2}}\propto \rho_c^{-1/2+1/2n},\]</div>
+<p>and since <span class="math notranslate nohighlight">\(M\propto r_n^3\rho_c\)</span> we get the scaling between mass and central density:</p>
 <div class="math notranslate nohighlight">
-\[R\propto M^{-1/2+1/2n}.\]</div>
-<p>An equation of state <span class="math notranslate nohighlight">\(P\propto \rho^{5/3}\)</span> corresponds to <span class="math notranslate nohighlight">\(n=1.5\)</span>, and the above shows we expect more compact stars as mass increases. As we will see in a few classes, this case corresponds to a fully degenerate non-relativistic gas, and can be used to describe the properties of white dwarfs.</p>
+\[M\propto \rho_c^{-1/2+3/2n}.\]</div>
+<p>Combining the equations for R and M we find that</p>
+<div class="math notranslate nohighlight">
+\[R\propto M^\beta,\quad \beta=\frac{1-n}{3-n}.\]</div>
+<p>A negative exponent, indicative of a decreasing radius with mass, happens between n=1 and 3.
+One can use the case <span class="math notranslate nohighlight">\(n=0\)</span>, corresponding to constant density, as a validity check. What value of <span class="math notranslate nohighlight">\(\beta\)</span> do you expect then?
+An equation of state <span class="math notranslate nohighlight">\(P\propto \rho^{5/3}\)</span> corresponds to <span class="math notranslate nohighlight">\(n=1.5\)</span>, and the above shows we expect more compact stars as mass increases.
+As we will see in a few classes, this case corresponds to a fully degenerate non-relativistic gas, and can be used to describe the properties of white dwarfs. An equation of state <span class="math notranslate nohighlight">\(P\propto \rho^{4/3}\)</span> corresponds to <span class="math notranslate nohighlight">\(n=3\)</span>, which we can see is a critical point where the above expression is undefined. Yet again, the <span class="math notranslate nohighlight">\(4/3\)</span> value holds an important meaning!</p>
 </section>
 </section>
 <section id="solution-to-computational-exercises">
