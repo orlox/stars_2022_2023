@@ -34,3 +34,7 @@ html:
 
 #launch_buttons:
 #  colab_url: "https://colab.research.google.com"
+
+sphinx:
+  config:
+    bibtex_reference_style: author_year

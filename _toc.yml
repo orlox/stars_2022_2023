@@ -5,3 +5,5 @@ format: jb-book
 root: index
 chapters:
 - file: history/history
+- file: equations/equations
+- file: bibliography
