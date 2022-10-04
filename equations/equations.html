@@ -373,6 +373,18 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#solution-to-pen-paper-exercises">
    Solution to pen &amp; paper exercises
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Dynamical instability
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Mass-Radius relationship for a polytrope
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solution-to-computational-exercises">
@@ -434,6 +446,18 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#solution-to-pen-paper-exercises">
    Solution to pen &amp; paper exercises
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Dynamical instability
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Mass-Radius relationship for a polytrope
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solution-to-computational-exercises">
@@ -481,14 +505,14 @@ title="Print to PDF"
 \[P_0+\delta P = C (\rho_0+\delta\rho)^\gamma \simeq C\rho_0^\gamma\left(1+\frac{\gamma \delta\rho}{\rho_0}\right),\]</div>
 <p>where <span class="math notranslate nohighlight">\(P_0\)</span> and <span class="math notranslate nohighlight">\(r_0\)</span> are the unperturbed values of pressure and density. It follows that the perturbations on density and pressure can be related to each other:</p>
 <div class="math notranslate nohighlight">
-\[\frac{\delta P}{P}=\gamma\frac{\delta \rho}{\rho}.\]</div>
+\[\frac{\delta P}{P_0}=\gamma\frac{\delta \rho}{\rho_0}.\]</div>
 <p>Using this answer the following questions:</p>
 <ul class="simple">
 <li><p>If the radii <span class="math notranslate nohighlight">\(r_0(m)\)</span> of each mass shell in a star is perturbed by <span class="math notranslate nohighlight">\(\delta r=\alpha r_0\)</span> (where <span class="math notranslate nohighlight">\(\alpha\ll 1\)</span> is a small positive number independent of <span class="math notranslate nohighlight">\(m\)</span>), show that the stellar density is perturbed at each point by an amount <span class="math notranslate nohighlight">\(\delta \rho/\rho_0=3\alpha\)</span> at each point of the star. To do this, take the continuity equation of the unperturbed fluid,<br />
 <span class="math notranslate nohighlight">\(\frac{\partial r_0}{\partial m}=\frac{1}{4\pi\rho_0 r_0^2},\)</span><br />
 and find <span class="math notranslate nohighlight">\(\delta \rho/\rho_0\)</span> from its perturbed form<br />
 <span class="math notranslate nohighlight">\(\frac{\partial (r_0+\alpha r_0)}{\partial m}=\frac{1}{4\pi(\rho_0+\delta \rho) (r_0+\alpha r_0)^2},\)</span><br />
-by ignoring terms of order <span class="math notranslate nohighlight">\(\mathcal{O}([\delta \rho/\rho_0]^2)\)</span> and <span class="math notranslate nohighlight">\(\mathcal{O}(\alpha^2)\)</span>.</p></li>
+by ignoring perturbation terms of quadratic order.</p></li>
 <li><p>Assume the unperturbed star is in hydrostatic equilibrium,<br />
 <span class="math notranslate nohighlight">\(\frac{1}{4\pi r_0^2}\frac{\partial^2 r_0}{\partial t^2}=-\frac{\partial P_0}{\partial m}-\frac{G m}{4\pi r_0^4}=0.\)</span><br />
 Compute the resulting acceleration after the perturbation <span class="math notranslate nohighlight">\(\delta r=\alpha r_0\)</span>. For which values of <span class="math notranslate nohighlight">\(\gamma\)</span> does the resulting acceleration point inwards or outwards? What does this say about stability?</p></li>
@@ -496,23 +520,23 @@ Compute the resulting acceleration after the perturbation <span class="math notr
 </section>
 <section id="mass-radius-relationship-for-a-polytrope">
 <h3>Mass-Radius relationship for a polytrope<a class="headerlink" href="#mass-radius-relationship-for-a-polytrope" title="Permalink to this headline">#</a></h3>
-<p>The structure of a star with a polytropic equation of state can be computed using the Lane-Emden equation,</p>
+<p>The structure of a star with a polytropic equation of state <span class="math notranslate nohighlight">\(P=C \rho^{1+1/n}\)</span> can be computed using the Lane-Emden equation,</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{\xi^2}\frac{d}{d\xi}\left(\xi^2\frac{d\theta_n}{d\xi}\right)=-\theta_n^n,\]</div>
 <p>where</p>
 <div class="math notranslate nohighlight">
-\[\rho=\rho_\mathrm{c}\theta_n^n, \quad P=P_c \theta_n^{1+n}, \quad r = r_n \xi, \quad r_n^2\equiv\frac{(n+1)P_\mathrm{c}}{4\pi G \rho_\mathrm{c}}.\]</div>
+\[\rho=\rho_\mathrm{c}\theta_n^n, \quad P=P_c \theta_n^{1+n}, \quad r = r_n \xi, \quad r_n^2\equiv\frac{(n+1)P_\mathrm{c}}{4\pi G \rho_\mathrm{c}^2}.\]</div>
 <p>The central boundary conditions for this equation are <span class="math notranslate nohighlight">\(\theta_n(0)=1\)</span> and <span class="math notranslate nohighlight">\(\theta_n'(0)=0\)</span>, while the surface is defined by the first zero of <span class="math notranslate nohighlight">\(\theta_n\)</span>, at which point we define <span class="math notranslate nohighlight">\(\xi_1\)</span>.</p>
 <ul class="simple">
 <li><p>Show that the mass contained inside a given value of the coordinate <span class="math notranslate nohighlight">\(\xi\)</span> is given by<br />
 <span class="math notranslate nohighlight">\(m(\xi)=4\pi r_n^3 \rho_\mathrm{c}(-\xi^2 \theta_n'(\xi)).\)</span></p></li>
-<li><p>Show that for an equation of state <span class="math notranslate nohighlight">\(P=\rho^{5/3}\)</span> higher mass stars have smaller radii.</p></li>
+<li><p>Show that for an equation of state <span class="math notranslate nohighlight">\(P=C\rho^{5/3}\)</span> higher mass stars have smaller radii.</p></li>
 </ul>
 </section>
 </section>
 <section id="computational-exercises">
 <h2>Computational exercises<a class="headerlink" href="#computational-exercises" title="Permalink to this headline">#</a></h2>
-<p>Let’s compute some numerical solutions to the Lane-Embden equation. A good reference which was used in the development of this exercise is the book by <span id="id1">[<a class="reference internal" href="../bibliography.html#id2">Hansen <em>et al.</em>, 2004</a>]</span>.</p>
+<p>Let’s compute some numerical solutions to the Lane-Embden equation. A good reference which was used in the development of this exercise is the book by <span id="id1">[<a class="reference internal" href="../bibliography.html#id2" title="Carl J. Hansen, Steven D. Kawaler, and Virginia Trimble. Stellar interiors : physical principles, structure, and evolution. Springer, 2004.">Hansen <em>et al.</em>, 2004</a>]</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">Plots</span>
@@ -643,6 +667,48 @@ Compute the resulting acceleration after the perturbation <span class="math notr
 </section>
 <section id="solution-to-pen-paper-exercises">
 <h2>Solution to pen &amp; paper exercises<a class="headerlink" href="#solution-to-pen-paper-exercises" title="Permalink to this headline">#</a></h2>
+<section id="id2">
+<h3>Dynamical instability<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<p>We start by noting that:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{(r_0+\alpha r_0)^2} = \frac{1}{r_0^2(1+\alpha)^2}=\frac{1-2\alpha}{r_0^2}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{\rho_0+\delta \rho} = \frac{1}{\rho_0(1+\delta \rho/\rho_0)}=\frac{1-\delta \rho/\rho}{\rho_0}.\]</div>
+<p>The continuity equation then reads as</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial r_0}{\partial m}(1+\alpha)=\frac{1}{4\pi r_0^2 \rho_0}(1-2\alpha)(1-\delta\rho/\rho_0),\]</div>
+<p>and replacing <span class="math notranslate nohighlight">\(\partial r_0/\partial m\)</span> with the unperturbed continuity equation, while ignoring quadratic perturbation terms, gives us the desired result:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\delta \rho}{\rho_0}=-3\alpha,\]</div>
+<p>which as expected is negative (a lowering of density) with expansion. With this we immediately know that <span class="math notranslate nohighlight">\(\delta P/P_0=-3\alpha\gamma\)</span>. Next we want to obtain the sign of the acceleration after the perturbation,</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{4\pi (r_0+\alpha r_0)^2}\frac{\partial^2 r_0}{\partial t^2} = -\frac{\partial P_0}{\partial m}(1-3\alpha\gamma) - \frac{Gm}{4\pi r_0^4}(1-4\alpha).\]</div>
+<p>Since we only care about the sign of the acceleration, we don’t need to expand the left-hand side further. For the right-hand side we use the equation of hydrostatic equilibrium for the unperturbed state to obtain:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{4\pi (r_0+\alpha r_0)^2}\frac{\partial^2 r_0}{\partial t^2} = \frac{Gm}{4\pi r_0^4}\times \alpha(4-3\gamma).\]</div>
+<p>This implies that for expansion (<span class="math notranslate nohighlight">\(\alpha&gt;0\)</span>) we will get an outwards acceleration if <span class="math notranslate nohighlight">\(\gamma&lt;4/3\)</span>, which is an unstable situation. Conversely, if we had contraction (<span class="math notranslate nohighlight">\(\alpha&lt;0\)</span>) we would obtain a negative acceleration.</p>
+</section>
+<section id="id3">
+<h3>Mass-Radius relationship for a polytrope<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<p>The mass of the star up to a certain radius can be obtained by integrating the continuity equation:</p>
+<div class="math notranslate nohighlight">
+\[m(r)=\int_0^r 4\pi r^2 \rho dr.\]</div>
+<p>Using <span class="math notranslate nohighlight">\(\rho = \rho_c \theta_n^n\)</span> we find</p>
+<div class="math notranslate nohighlight">
+\[m(r)=4\pi r^2 \rho_c \int_0^r r^2 \theta_n^n dr = 4\pi r_n^3 \rho_c \int_0^\xi \xi^2 \theta_n^n.\]</div>
+<p>The integrand can be replaced using the Lane-Equation, which gives allows for immediate integration:</p>
+<div class="math notranslate nohighlight">
+\[m(\xi)=4\pi r_n^3 \rho_c \int_0^\xi \frac{d}{d \xi}\left(-\xi^2 \theta_n'\right)=4\pi r_n^3 \rho_c (-\xi^2 \theta_n'),\]</div>
+<p>giving the total mass when evaluated at <span class="math notranslate nohighlight">\(\xi=\xi_1\)</span>.</p>
+<p>To obtain the mass-radius relationship, we note from the definition of <span class="math notranslate nohighlight">\(r_n\)</span> that</p>
+<div class="math notranslate nohighlight">
+\[R\propto \rho_c^{-1/2+1/2n},\]</div>
+<p>and since <span class="math notranslate nohighlight">\(M\propto \rho_c\)</span> we get the scaling between radius and mass:</p>
+<div class="math notranslate nohighlight">
+\[R\propto M^{-1/2+1/2n}.\]</div>
+<p>An equation of state <span class="math notranslate nohighlight">\(P\propto \rho^{5/3}\)</span> corresponds to <span class="math notranslate nohighlight">\(n=1.5\)</span>, and the above shows we expect more compact stars as mass increases. As we will see in a few classes, this case corresponds to a fully degenerate non-relativistic gas, and can be used to describe the properties of white dwarfs.</p>
+</section>
 </section>
 <section id="solution-to-computational-exercises">
 <h2>Solution to computational exercises<a class="headerlink" href="#solution-to-computational-exercises" title="Permalink to this headline">#</a></h2>
@@ -677,7 +743,7 @@ Compute the resulting acceleration after the perturbation <span class="math notr
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/equations_12_0.svg" src="../_images/equations_12_0.svg" /></div>
+<img alt="../_images/equations_14_0.svg" src="../_images/equations_14_0.svg" /></div>
 </div>
 <p>To compute the ratio of central density to average density, we define a function to performs this integration for arbitrary <span class="math notranslate nohighlight">\(n\)</span> and looks for the first point where <span class="math notranslate nohighlight">\(y=0\)</span>, which gives <span class="math notranslate nohighlight">\(\xi_1\)</span>.</p>
 <div class="cell docutils container">
@@ -726,7 +792,7 @@ Compute the resulting acceleration after the perturbation <span class="math notr
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/equations_15_0.svg" src="../_images/equations_15_0.svg" /></div>
+<img alt="../_images/equations_17_0.svg" src="../_images/equations_17_0.svg" /></div>
 </div>
 </section>
 </section>
