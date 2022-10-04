@@ -1,0 +1,800 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>The equations of stellar structure and evolution &#8212; Stellar Structure and Evolution</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Bibliography" href="../bibliography.html" />
+    <link rel="prev" title="Some history" href="../history/history.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Stellar Structure and Evolution</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../history/history.html">
+   Some history
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   The equations of stellar structure and evolution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bibliography.html">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/orlox/stars_2022_2023/main?urlpath=tree/equations/equations.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/orlox/stars_2022_2023"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/orlox/stars_2022_2023/issues/new?title=Issue%20on%20page%20%2Fequations/equations.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/equations/equations.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pen-paper-exercises">
+   Pen &amp; paper exercises
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#constant-density-star">
+     Constant density star
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lower-bound-on-central-pressure-of-the-sun">
+     Lower bound on central pressure of the Sun
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dynamical-instability">
+     Dynamical instability
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mass-radius-relationship-for-a-polytrope">
+     Mass-Radius relationship for a polytrope
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#computational-exercises">
+   Computational exercises
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solution-to-pen-paper-exercises">
+   Solution to pen &amp; paper exercises
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solution-to-computational-exercises">
+   Solution to computational exercises
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>The equations of stellar structure and evolution</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pen-paper-exercises">
+   Pen &amp; paper exercises
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#constant-density-star">
+     Constant density star
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lower-bound-on-central-pressure-of-the-sun">
+     Lower bound on central pressure of the Sun
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dynamical-instability">
+     Dynamical instability
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mass-radius-relationship-for-a-polytrope">
+     Mass-Radius relationship for a polytrope
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#computational-exercises">
+   Computational exercises
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solution-to-pen-paper-exercises">
+   Solution to pen &amp; paper exercises
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solution-to-computational-exercises">
+   Solution to computational exercises
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="the-equations-of-stellar-structure-and-evolution">
+<h1>The equations of stellar structure and evolution<a class="headerlink" href="#the-equations-of-stellar-structure-and-evolution" title="Permalink to this headline">#</a></h1>
+<section id="pen-paper-exercises">
+<h2>Pen &amp; paper exercises<a class="headerlink" href="#pen-paper-exercises" title="Permalink to this headline">#</a></h2>
+<section id="constant-density-star">
+<h3>Constant density star<a class="headerlink" href="#constant-density-star" title="Permalink to this headline">#</a></h3>
+<p>Consider a star with constant density,</p>
+<div class="math notranslate nohighlight">
+\[\rho(m)=\rho_\mathrm{c},\quad m(r) =\frac{4\pi}{3}r^3 \rho_\mathrm{c}.\]</div>
+<p>Use the equation of hydrostatic equilibrium in its Eularian form,</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial P}{\partial r} = -\rho g=-\frac{\rho G m(r)}{r^2},\]</div>
+<p>to obtain the interior pressure of the star as a function of the central pressure <span class="math notranslate nohighlight">\(P_\mathrm{c}\)</span> and <span class="math notranslate nohighlight">\(r/R\)</span>, where <span class="math notranslate nohighlight">\(R\)</span> is the total radius of the star. Assume that the pressure at the surface of the star is much smaller than the central pressure.</p>
+</section>
+<section id="lower-bound-on-central-pressure-of-the-sun">
+<h3>Lower bound on central pressure of the Sun<a class="headerlink" href="#lower-bound-on-central-pressure-of-the-sun" title="Permalink to this headline">#</a></h3>
+<p>Using the Lagrangian form of the equation of hydrostatic equilibrium,</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial P}{\partial m}=-\frac{Gm}{4\pi r^4},\]</div>
+<p>place a lower bound on the central density of the sun by making use of the basic property that anywhere within the stellar interior we have that <span class="math notranslate nohighlight">\(r&lt;R_\odot\)</span>.</p>
+</section>
+<section id="dynamical-instability">
+<h3>Dynamical instability<a class="headerlink" href="#dynamical-instability" title="Permalink to this headline">#</a></h3>
+<p>Consider a polytropic equation of state of the form</p>
+<div class="math notranslate nohighlight">
+\[P = C \rho^\gamma,\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> is a constant. If the density of a fluid element is perturbed slightly by an amount <span class="math notranslate nohighlight">\(\delta \rho\ll\rho\)</span>, then the pressure is perturbed by an amount</p>
+<div class="math notranslate nohighlight">
+\[P_0+\delta P = C (\rho_0+\delta\rho)^\gamma \simeq C\rho_0^\gamma\left(1+\frac{\gamma \delta\rho}{\rho_0}\right),\]</div>
+<p>where <span class="math notranslate nohighlight">\(P_0\)</span> and <span class="math notranslate nohighlight">\(r_0\)</span> are the unperturbed values of pressure and density. It follows that the perturbations on density and pressure can be related to each other:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\delta P}{P}=\gamma\frac{\delta \rho}{\rho}.\]</div>
+<p>Using this answer the following questions:</p>
+<ul class="simple">
+<li><p>If the radii <span class="math notranslate nohighlight">\(r_0(m)\)</span> of each mass shell in a star is perturbed by <span class="math notranslate nohighlight">\(\delta r=\alpha r_0\)</span> (where <span class="math notranslate nohighlight">\(\alpha\ll 1\)</span> is a small positive number independent of <span class="math notranslate nohighlight">\(m\)</span>), show that the stellar density is perturbed at each point by an amount <span class="math notranslate nohighlight">\(\delta \rho/\rho_0=3\alpha\)</span> at each point of the star. To do this, take the continuity equation of the unperturbed fluid,<br />
+<span class="math notranslate nohighlight">\(\frac{\partial r_0}{\partial m}=\frac{1}{4\pi\rho_0 r_0^2},\)</span><br />
+and find <span class="math notranslate nohighlight">\(\delta \rho/\rho_0\)</span> from its perturbed form<br />
+<span class="math notranslate nohighlight">\(\frac{\partial (r_0+\alpha r_0)}{\partial m}=\frac{1}{4\pi(\rho_0+\delta \rho) (r_0+\alpha r_0)^2},\)</span><br />
+by ignoring terms of order <span class="math notranslate nohighlight">\(\mathcal{O}([\delta \rho/\rho_0]^2)\)</span> and <span class="math notranslate nohighlight">\(\mathcal{O}(\alpha^2)\)</span>.</p></li>
+<li><p>Assume the unperturbed star is in hydrostatic equilibrium,<br />
+<span class="math notranslate nohighlight">\(\frac{1}{4\pi r_0^2}\frac{\partial^2 r_0}{\partial t^2}=-\frac{\partial P_0}{\partial m}-\frac{G m}{4\pi r_0^4}=0.\)</span><br />
+Compute the resulting acceleration after the perturbation <span class="math notranslate nohighlight">\(\delta r=\alpha r_0\)</span>. For which values of <span class="math notranslate nohighlight">\(\gamma\)</span> does the resulting acceleration point inwards or outwards? What does this say about stability?</p></li>
+</ul>
+</section>
+<section id="mass-radius-relationship-for-a-polytrope">
+<h3>Mass-Radius relationship for a polytrope<a class="headerlink" href="#mass-radius-relationship-for-a-polytrope" title="Permalink to this headline">#</a></h3>
+<p>The structure of a star with a polytropic equation of state can be computed using the Lane-Emden equation,</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{\xi^2}\frac{d}{d\xi}\left(\xi^2\frac{d\theta_n}{d\xi}\right)=-\theta_n^n,\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\rho=\rho_\mathrm{c}\theta_n^n, \quad P=P_c \theta_n^{1+n}, \quad r = r_n \xi, \quad r_n^2\equiv\frac{(n+1)P_\mathrm{c}}{4\pi G \rho_\mathrm{c}}.\]</div>
+<p>The central boundary conditions for this equation are <span class="math notranslate nohighlight">\(\theta_n(0)=1\)</span> and <span class="math notranslate nohighlight">\(\theta_n'(0)=0\)</span>, while the surface is defined by the first zero of <span class="math notranslate nohighlight">\(\theta_n\)</span>, at which point we define <span class="math notranslate nohighlight">\(\xi_1\)</span>.</p>
+<ul class="simple">
+<li><p>Show that the mass contained inside a given value of the coordinate <span class="math notranslate nohighlight">\(\xi\)</span> is given by<br />
+<span class="math notranslate nohighlight">\(m(\xi)=4\pi r_n^3 \rho_\mathrm{c}(-\xi^2 \theta_n'(\xi)).\)</span></p></li>
+<li><p>Show that for an equation of state <span class="math notranslate nohighlight">\(P=\rho^{5/3}\)</span> higher mass stars have smaller radii.</p></li>
+</ul>
+</section>
+</section>
+<section id="computational-exercises">
+<h2>Computational exercises<a class="headerlink" href="#computational-exercises" title="Permalink to this headline">#</a></h2>
+<p>Let’s compute some numerical solutions to the Lane-Embden equation. A good reference which was used in the development of this exercise is the book by <span id="id1">[<a class="reference internal" href="../bibliography.html#id2">Hansen <em>et al.</em>, 2004</a>]</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">Plots</span>
+<span class="k">using</span> <span class="n">LaTeXStrings</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>By defining the variables <span class="math notranslate nohighlight">\(x=\xi\)</span>, <span class="math notranslate nohighlight">\(y=d\theta_n/d\xi\)</span> and <span class="math notranslate nohighlight">\(z=dy/dx\)</span>, the Lane-Emden equation can be written as two first-order differential equations:</p>
+<div class="math notranslate nohighlight">
+\[y' = z\]</div>
+<div class="math notranslate nohighlight">
+\[z' = -y^n -\frac{2}{x}z.\]</div>
+<p>To numerically solve a continuous differential equation with a computer we need to rely on a discretization. For example, if we evaluate <span class="math notranslate nohighlight">\(x\)</span> in discrete steps enumerated by <span class="math notranslate nohighlight">\(i\)</span> with a spacing <span class="math notranslate nohighlight">\(\Delta x\)</span>, we have that:</p>
+<div class="math notranslate nohighlight">
+\[x_i = i\Delta x.\]</div>
+<p>In terms of this discretization, the pair of differential equations above can be approximated as:</p>
+<div class="math notranslate nohighlight">
+\[\frac{y_{i+1}-y_i}{\Delta x}=z_i\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{z_{i+1}-z_i}{\Delta x}=-y_i^n - \frac{2}{x_i} z_i.\]</div>
+<p>This is known as the Euler method, and it lets us compute the values at cell <span class="math notranslate nohighlight">\(i+1\)</span> once we know the value at cell <span class="math notranslate nohighlight">\(i\)</span>. To integrate these equations we will instead use a more precise method known as a fourth-order Runge-Kutta solver. The values at cell <span class="math notranslate nohighlight">\(i+1\)</span> are obtained in this method as</p>
+<div class="math notranslate nohighlight">
+\[y_{i+1} = y_i +\frac{k_1}{6}+\frac{k_2}{3}+\frac{k_3}{3}+\frac{k_4}{6}\]</div>
+<div class="math notranslate nohighlight">
+\[z_{i+1} = z_i +\frac{l_1}{6}+\frac{l_2}{3}+\frac{l_3}{3}+\frac{l_4}{6},\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[k_1 = \Delta x\times y'(x_i,y_i,z_i)\]</div>
+<div class="math notranslate nohighlight">
+\[l_1 = \Delta x\times z'(x_i,y_i,z_i)\]</div>
+<div class="math notranslate nohighlight">
+\[k_2 = \Delta x\times y'(x_i+\Delta x/2,y_i+k_1/2,z_i+l_1/2)\]</div>
+<div class="math notranslate nohighlight">
+\[l_2 = \Delta x\times z'(x_i+\Delta x/2,y_i+k_1/2,z_i+l_1/2)\]</div>
+<div class="math notranslate nohighlight">
+\[k_3 = \Delta x\times y'(x_i+\Delta x/2,y_i+k_2/2,z_i+l_2/2)\]</div>
+<div class="math notranslate nohighlight">
+\[l_3 = \Delta x\times z'(x_i+\Delta x/2,y_i+k_2/2,z_i+l_2/2)\]</div>
+<div class="math notranslate nohighlight">
+\[k_4 = \Delta x\times y'(x_i+\Delta x,y_i+k_3,z_i+l_3)\]</div>
+<div class="math notranslate nohighlight">
+\[l_4 = \Delta x\times z'(x_i+\Delta x,y_i+k_3,z_i+l_3).\]</div>
+<p>The objective is then to start from the center of the star and integrate outwards until we reach the first zero of <span class="math notranslate nohighlight">\(y\)</span>, which represents the stellar surface. One complication however is that the differential equation for <span class="math notranslate nohighlight">\(z'\)</span> is undefined at the center <span class="math notranslate nohighlight">\((x=0)\)</span>. This can be circumvented by using a series approximation near the center, which is straightforward to derive using the boundary conditions:</p>
+<div class="math notranslate nohighlight">
+\[y(\xi)=1-\frac{1}{6}\xi^2 +\frac{n}{120}\xi^4 -\frac{n(8n-5)}{15120}\xi^6+\mathcal{O}(\xi^8).\]</div>
+<p>In the code cell below we define the differential equations as well as a method to do a single Runge-Kutta step, which returns a tuple with the new <span class="math notranslate nohighlight">\((y,z)\)</span> values in the following cell. We also define the function that approximates <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> for small <span class="math notranslate nohighlight">\(\xi\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">dydx</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> <span class="o">=</span> <span class="n">z</span>
+<span class="n">dzdx</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> <span class="o">=</span> <span class="o">-</span><span class="n">y</span><span class="o">^</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">z</span><span class="o">/</span><span class="n">x</span>
+
+<span class="k">function</span> <span class="n">RK_step</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">Δx</span><span class="p">)</span>
+    <span class="n">k₁</span> <span class="o">=</span> <span class="n">Δx</span><span class="o">*</span><span class="n">dydx</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">l₁</span> <span class="o">=</span> <span class="n">Δx</span><span class="o">*</span><span class="n">dzdx</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+
+    <span class="n">k₂</span> <span class="o">=</span> <span class="n">Δx</span><span class="o">*</span><span class="n">dydx</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">Δx</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">y</span><span class="o">+</span><span class="n">k₁</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">z</span><span class="o">+</span><span class="n">l₁</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">l₂</span> <span class="o">=</span> <span class="n">Δx</span><span class="o">*</span><span class="n">dzdx</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">Δx</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">y</span><span class="o">+</span><span class="n">k₁</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">z</span><span class="o">+</span><span class="n">l₁</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+
+    <span class="n">k₃</span> <span class="o">=</span> <span class="n">Δx</span><span class="o">*</span><span class="n">dydx</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">Δx</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">y</span><span class="o">+</span><span class="n">k₂</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">z</span><span class="o">+</span><span class="n">l₂</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">l₃</span> <span class="o">=</span> <span class="n">Δx</span><span class="o">*</span><span class="n">dzdx</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">Δx</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">y</span><span class="o">+</span><span class="n">k₂</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">z</span><span class="o">+</span><span class="n">l₂</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+
+    <span class="n">k₄</span> <span class="o">=</span> <span class="n">Δx</span><span class="o">*</span><span class="n">dydx</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">Δx</span><span class="p">,</span><span class="n">y</span><span class="o">+</span><span class="n">k₃</span><span class="p">,</span><span class="n">z</span><span class="o">+</span><span class="n">l₃</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">l₄</span> <span class="o">=</span> <span class="n">Δx</span><span class="o">*</span><span class="n">dzdx</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">Δx</span><span class="p">,</span><span class="n">y</span><span class="o">+</span><span class="n">k₃</span><span class="p">,</span><span class="n">z</span><span class="o">+</span><span class="n">l₃</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="n">y</span><span class="o">+</span><span class="n">k₁</span><span class="o">/</span><span class="mi">6</span><span class="o">+</span><span class="n">k₂</span><span class="o">/</span><span class="mi">3</span><span class="o">+</span><span class="n">k₃</span><span class="o">/</span><span class="mi">3</span><span class="o">+</span><span class="n">k₄</span><span class="o">/</span><span class="mi">6</span><span class="p">,</span>
+        <span class="n">z</span><span class="o">+</span><span class="n">l₁</span><span class="o">/</span><span class="mi">6</span><span class="o">+</span><span class="n">l₂</span><span class="o">/</span><span class="mi">3</span><span class="o">+</span><span class="n">l₃</span><span class="o">/</span><span class="mi">3</span><span class="o">+</span><span class="n">l₄</span><span class="o">/</span><span class="mi">6</span><span class="p">,</span>
+        <span class="p">)</span>
+<span class="k">end</span>
+
+<span class="n">y_smallx</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">n</span><span class="o">/</span><span class="mi">120</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">4</span> <span class="o">-</span><span class="n">n</span><span class="o">*</span><span class="p">(</span><span class="mi">8</span><span class="o">*</span><span class="n">n</span><span class="o">-</span><span class="mi">5</span><span class="p">)</span><span class="o">/</span><span class="mi">1520</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">6</span>
+<span class="n">z_smallx</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> <span class="o">=</span> <span class="o">-</span> <span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">n</span><span class="o">/</span><span class="mi">30</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">3</span> <span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">n</span><span class="o">*</span><span class="p">(</span><span class="mi">8</span><span class="o">*</span><span class="n">n</span><span class="o">-</span><span class="mi">5</span><span class="p">)</span><span class="o">/</span><span class="mi">760</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>z_smallx (generic function with 1 method)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we will integrate these equations. We start at a small of <span class="math notranslate nohighlight">\(x\)</span> and integrate the equations until <span class="math notranslate nohighlight">\(x=20\)</span> (hoping we find a zero by then). In here you need to update <code class="docutils literal notranslate"><span class="pre">yvals[i]</span></code> and <code class="docutils literal notranslate"><span class="pre">zvals[i]</span></code> inside the for loop.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c"># setup grid in x</span>
+<span class="n">Δx</span> <span class="o">=</span> <span class="mf">1e-4</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">200_000</span>
+<span class="n">xvals</span> <span class="o">=</span> <span class="kt">LinRange</span><span class="p">(</span><span class="n">Δx</span><span class="p">,</span><span class="n">Δx</span><span class="o">*</span><span class="n">nsteps</span><span class="p">,</span><span class="n">nsteps</span><span class="p">)</span>
+
+<span class="c"># initialize first value of y and z using series approximation</span>
+<span class="n">yvals</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">nsteps</span><span class="p">);</span><span class="n">zvals</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">nsteps</span><span class="p">)</span>
+<span class="n">yvals</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_smallx</span><span class="p">(</span><span class="n">Δx</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<span class="n">zvals</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">z_smallx</span><span class="p">(</span><span class="n">Δx</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+
+<span class="c"># Perform the Runge-Kutta integration</span>
+<span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">2</span><span class="o">:</span><span class="n">nsteps</span>
+    <span class="c"># ADD YOUR CODE HERE</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In order to verify your results, plot them together with the analytic solutions that are known for <span class="math notranslate nohighlight">\(n=0,1\)</span> and <span class="math notranslate nohighlight">\(5\)</span>. These solutions are:</p>
+<div class="math notranslate nohighlight">
+\[\theta_0 = 1-\frac{\xi^2}{6}\]</div>
+<div class="math notranslate nohighlight">
+\[\theta_1 = \frac{\sin \xi}{\xi}\]</div>
+<div class="math notranslate nohighlight">
+\[\theta_5 = \frac{1}{\sqrt{1+\xi^2/3}}\]</div>
+<p>Once you complete the code in the cell above you can uncomment the relevant lines in the following cell to do this.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c">#plot(xlabel=L&quot;$x$&quot;, ylabel=L&quot;$y$&quot;)</span>
+<span class="c">#plot!(xvals, 1 .- xvals.^2 ./ 6) #solution for n=0</span>
+<span class="c">#plot!(xvals, sin.(xvals)./xvals, linewidth=4) #solution for n=1</span>
+<span class="c">#plot!(xvals, 1 ./ sqrt.(1 .+ xvals.^2 ./3))    #solution for n=5</span>
+<span class="c">#plot!(xvals, yvals, linewidth=6, linestyle=:dash)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>With a solution in hand, locate the first zero crossing for arbitrary integer values of <span class="math notranslate nohighlight">\(n\)</span> between <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(4\)</span>. A useful property to compute that characterizes each polytrope is the ratio of central to average density, which can be shown to be equal to:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\rho_c}{\langle \rho \rangle}=\frac{1}{3}\left(\frac{\xi_1}{-\theta_n'(\xi_1)}\right).\]</div>
+<p>Make a plot of this quantity versus the polytropic index <span class="math notranslate nohighlight">\(n\)</span>.</p>
+</section>
+<section id="solution-to-pen-paper-exercises">
+<h2>Solution to pen &amp; paper exercises<a class="headerlink" href="#solution-to-pen-paper-exercises" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="solution-to-computational-exercises">
+<h2>Solution to computational exercises<a class="headerlink" href="#solution-to-computational-exercises" title="Permalink to this headline">#</a></h2>
+<p>The integration can be done right away with the method provided for Runge-Kutta integration, below the result is shown for <span class="math notranslate nohighlight">\(n=1\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c"># setup grid in x</span>
+<span class="n">Δx</span> <span class="o">=</span> <span class="mf">1e-4</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">200_000</span>
+<span class="n">xvals</span> <span class="o">=</span> <span class="kt">LinRange</span><span class="p">(</span><span class="n">Δx</span><span class="p">,</span><span class="n">Δx</span><span class="o">*</span><span class="n">nsteps</span><span class="p">,</span><span class="n">nsteps</span><span class="p">)</span>
+
+<span class="c"># initialize first value of y and z using series approximation</span>
+<span class="n">yvals</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">nsteps</span><span class="p">);</span><span class="n">zvals</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">nsteps</span><span class="p">)</span>
+<span class="n">yvals</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_smallx</span><span class="p">(</span><span class="n">Δx</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<span class="n">zvals</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">z_smallx</span><span class="p">(</span><span class="n">Δx</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+
+<span class="c"># Perform the Runge-Kutta integration</span>
+<span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">2</span><span class="o">:</span><span class="n">nsteps</span>
+    <span class="n">next_values</span> <span class="o">=</span> <span class="n">RK_step</span><span class="p">(</span><span class="n">xvals</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">yvals</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">zvals</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">n</span><span class="p">,</span> <span class="n">Δx</span><span class="p">)</span>
+    <span class="n">yvals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">next_values</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">zvals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">next_values</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="k">end</span>
+
+
+<span class="n">plot</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;</span><span class="si">$x</span><span class="s">$&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;</span><span class="si">$y</span><span class="s">$&quot;</span><span class="p">)</span>
+<span class="c">#plot!(xvals, 1 .- xvals.^2 ./ 6,label=&quot;Analytical&quot;) #solution for n=0</span>
+<span class="n">plot!</span><span class="p">(</span><span class="n">xvals</span><span class="p">,</span> <span class="n">sin</span><span class="o">.</span><span class="p">(</span><span class="n">xvals</span><span class="p">)</span><span class="o">./</span><span class="n">xvals</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s">&quot;Analytical&quot;</span><span class="p">)</span> <span class="c">#solution for n=1</span>
+<span class="c">#plot!(xvals, 1 ./ sqrt.(1 .+ xvals.^2 ./3),label=&quot;Analytical&quot;)    #solution for n=5</span>
+<span class="n">plot!</span><span class="p">(</span><span class="n">xvals</span><span class="p">,</span> <span class="n">yvals</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="ss">:dash</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s">&quot;Numerical&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/equations_12_0.svg" src="../_images/equations_12_0.svg" /></div>
+</div>
+<p>To compute the ratio of central density to average density, we define a function to performs this integration for arbitrary <span class="math notranslate nohighlight">\(n\)</span> and looks for the first point where <span class="math notranslate nohighlight">\(y=0\)</span>, which gives <span class="math notranslate nohighlight">\(\xi_1\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="n">rhoc_div_rho_avg</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="c"># setup grid in x</span>
+    <span class="n">Δx</span> <span class="o">=</span> <span class="mf">1e-4</span>
+    <span class="n">nsteps</span> <span class="o">=</span> <span class="mi">200_000</span>
+    <span class="n">xvals</span> <span class="o">=</span> <span class="kt">LinRange</span><span class="p">(</span><span class="n">Δx</span><span class="p">,</span><span class="n">Δx</span><span class="o">*</span><span class="n">nsteps</span><span class="p">,</span><span class="n">nsteps</span><span class="p">)</span>
+
+    <span class="c"># initialize first value of y and z using series approximation</span>
+    <span class="n">yvals</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">nsteps</span><span class="p">);</span><span class="n">zvals</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">nsteps</span><span class="p">)</span>
+    <span class="n">yvals</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_smallx</span><span class="p">(</span><span class="n">Δx</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">zvals</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">z_smallx</span><span class="p">(</span><span class="n">Δx</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+
+    <span class="c"># Perform the Runge-Kutta integration</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">2</span><span class="o">:</span><span class="n">nsteps</span>
+        <span class="n">yvals</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">^</span><span class="n">n</span>
+        <span class="n">next_values</span> <span class="o">=</span> <span class="n">RK_step</span><span class="p">(</span><span class="n">xvals</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">yvals</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">zvals</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">n</span><span class="p">,</span> <span class="n">Δx</span><span class="p">)</span>
+        <span class="n">yvals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">next_values</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">zvals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">next_values</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">yvals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span>
+            <span class="k">return</span> <span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="o">*</span><span class="p">(</span><span class="o">-</span><span class="n">xvals</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">/</span><span class="n">zvals</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="k">end</span>
+    <span class="k">end</span>
+
+    <span class="n">print</span><span class="p">(</span><span class="s">&quot;Error, did not find zero for n=</span><span class="si">$n</span><span class="s">&quot;</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>rhoc_div_rho_avg (generic function with 1 method)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">nvals</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">rhoc_div_rho_avg_vals</span> <span class="o">=</span> <span class="n">rhoc_div_rho_avg</span><span class="o">.</span><span class="p">(</span><span class="n">nvals</span><span class="p">)</span>
+
+<span class="n">plot</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;</span><span class="si">$n</span><span class="s">$&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;$</span><span class="se">\r</span><span class="s">ho_\mathrm{c}/\langle </span><span class="se">\r</span><span class="s">ho </span><span class="se">\r</span><span class="s">angle$&quot;</span><span class="p">,</span> <span class="n">yscale</span><span class="o">=</span><span class="ss">:log</span><span class="p">)</span>
+<span class="n">plot!</span><span class="p">(</span><span class="n">nvals</span><span class="p">,</span> <span class="n">rhoc_div_rho_avg_vals</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">)</span> <span class="c">#solution for n=1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/equations_15_0.svg" src="../_images/equations_15_0.svg" /></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "julia-1.8"
+        },
+        kernelOptions: {
+            kernelName: "julia-1.8",
+            path: "./equations"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'julia-1.8'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../history/history.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Some history</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../bibliography.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Bibliography</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Pablo Marchant<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
