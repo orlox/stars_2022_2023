@@ -3,6 +3,8 @@
 
 format: jb-book
 root: index
+options:
+  numbered: True
 chapters:
 - file: history/history
 - file: equations/equations
