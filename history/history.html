@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2. The equations of stellar structure and evolution" href="../equations/equations.html" />
@@ -336,18 +338,30 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercises">
-   1.1. Exercises
+  <a class="reference internal nav-link" href="#pen-paper-xercises">
+   1.1. Pen &amp; paper xercises
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#timescales-of-stellar-evolution">
+     1.1.1. Timescales of stellar evolution
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#computational-exercises">
    1.2. Computational exercises
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solution-to-pen-paper-exercises">
+   1.3. Solution to pen &amp; paper exercises
+  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#sources">
-     1.2.1. Sources
+     1.3.1. Sources
     </a>
    </li>
   </ul>
@@ -372,18 +386,30 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercises">
-   1.1. Exercises
+  <a class="reference internal nav-link" href="#pen-paper-xercises">
+   1.1. Pen &amp; paper xercises
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#timescales-of-stellar-evolution">
+     1.1.1. Timescales of stellar evolution
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#computational-exercises">
    1.2. Computational exercises
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solution-to-pen-paper-exercises">
+   1.3. Solution to pen &amp; paper exercises
+  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#sources">
-     1.2.1. Sources
+     1.3.1. Sources
     </a>
    </li>
   </ul>
@@ -400,11 +426,25 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="some-history">
 <h1><span class="section-number">1. </span>Some history<a class="headerlink" href="#some-history" title="Permalink to this headline">#</a></h1>
-<section id="exercises">
-<h2><span class="section-number">1.1. </span>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">#</a></h2>
+<section id="pen-paper-xercises">
+<h2><span class="section-number">1.1. </span>Pen &amp; paper xercises<a class="headerlink" href="#pen-paper-xercises" title="Permalink to this headline">#</a></h2>
+<section id="timescales-of-stellar-evolution">
+<h3><span class="section-number">1.1.1. </span>Timescales of stellar evolution<a class="headerlink" href="#timescales-of-stellar-evolution" title="Permalink to this headline">#</a></h3>
+<p>There are three main timescales in which stars evolve. These are the dynamical, thermal and nuclear timescales. Even without knowing the equations of stellar structure and evolution we can do some estimates on the value of these quantities. Compute these without a calculator! We only care about the order of magnitude of these timescales, which given all the approximations done is all we can do.</p>
+<ul>
+<li><p>Thermal timescale: One of the main early hypothesis to explain the energy source of the Sun was that it originated from its slow contraction into its own gravitational potential. In such a case, a rough estimate of the energy the Sun would have radiated through its life is given by:</p>
+<div class="math notranslate nohighlight">
+\[\Omega \sim \frac{GM_\odot^2}{R_\odot}\]</div>
+<p>Assuming that the luminosity of the Sun has always been its current one, <span class="math notranslate nohighlight">\(L_\odot\)</span>, compute the age of the Sun under the assumption</p>
+</li>
+</ul>
+</section>
 </section>
 <section id="computational-exercises">
 <h2><span class="section-number">1.2. </span>Computational exercises<a class="headerlink" href="#computational-exercises" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="solution-to-pen-paper-exercises">
+<h2><span class="section-number">1.3. </span>Solution to pen &amp; paper exercises<a class="headerlink" href="#solution-to-pen-paper-exercises" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">DataFrames</span>
@@ -479,7 +519,7 @@ title="Print to PDF"
 <img alt="../_images/history_5_0.svg" src="../_images/history_5_0.svg" /></div>
 </div>
 <section id="sources">
-<h3><span class="section-number">1.2.1. </span>Sources<a class="headerlink" href="#sources" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.3.1. </span>Sources<a class="headerlink" href="#sources" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Gaia passband info: <a class="reference external" href="https://www.cosmos.esa.int/web/gaia/edr3-passbands">https://www.cosmos.esa.int/web/gaia/edr3-passbands</a></p></li>
 <li><p>Gaia archive: <a class="reference external" href="https://gea.esac.esa.int/archive/">https://gea.esac.esa.int/archive/</a></p></li>
@@ -653,35 +693,33 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">log10_L_div_Lsun</span> <span class="o">=</span> <span class="p">(</span><span class="n">G_sun</span> <span class="o">.-</span> <span class="n">abs_G</span><span class="p">)</span><span class="o">./</span><span class="p">(</span><span class="mf">2.5</span><span class="p">)</span> <span class="o">.-</span>
-    <span class="n">log10</span><span class="o">.</span><span class="p">(</span><span class="n">flux_ratio_G_total</span><span class="o">.</span><span class="p">(</span><span class="mi">10</span> <span class="o">.^</span> <span class="n">log10_T</span><span class="p">))</span> <span class="o">.+</span> <span class="n">log10</span><span class="o">.</span><span class="p">(</span><span class="n">flux_ratio_G_total</span><span class="o">.</span><span class="p">(</span><span class="mi">5772</span><span class="p">));</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c">#log10_L_div_Lsun = (G_sun .- abs_G)./(2.5) .-</span>
+<span class="c">#    log10.(flux_ratio_G_total.(10 .^ log10_T)) .+ log10.(flux_ratio_G_total.(5772));</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;$\log_{10}T_\mathrm{eff}$&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;\log_{10}L/L_\odot&quot;</span><span class="p">)</span>
-
-<span class="c"># Predicted Zero-age main-sequence location for stars of masses (in Msun):</span>
-<span class="c">#     0.4, 0.8, 0.9, 1.0, 1.25, 1.5, 1.7, 2, 2.5</span>
-<span class="c"># All models except those with M=0.4 Msun are from Schaller et al. (1992):</span>
-<span class="c"># - https://ui.adsabs.harvard.edu/abs/1992A%26AS...96..269S/abstract</span>
-<span class="c"># Model at 0.4 Msun is from Charbonnel et al. (1999):</span>
-<span class="c"># - https://ui.adsabs.harvard.edu/abs/1999A%26AS..135..405C/abstract</span>
-<span class="n">log10_T_geneva</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.568</span><span class="p">,</span> <span class="mf">3.687</span><span class="p">,</span> <span class="mf">3.724</span><span class="p">,</span> <span class="mf">3.751</span><span class="p">,</span> <span class="mf">3.808</span><span class="p">,</span> <span class="mf">3.852</span><span class="p">,</span> <span class="mf">3.901</span><span class="p">,</span> <span class="mf">3.958</span><span class="p">,</span> <span class="mf">4.031</span><span class="p">]</span>
-<span class="n">log10_L_geneva</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">1.63</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.612</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.394</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.163</span><span class="p">,</span> <span class="mf">0.325</span><span class="p">,</span> <span class="mf">0.676</span><span class="p">,</span> <span class="mf">0.916</span><span class="p">,</span> <span class="mf">1.209</span><span class="p">,</span> <span class="mf">1.600</span><span class="p">]</span>
-
-<span class="n">scatter!</span><span class="p">(</span><span class="n">log10_T</span><span class="p">,</span> <span class="n">log10_L_div_Lsun</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;Gaia&quot;</span><span class="p">)</span>
-<span class="c">#scatter!(log10_T, (G_sun .- abs_G)./(-2.5))</span>
-<span class="n">scatter!</span><span class="p">([</span><span class="n">log10_T_from_BP_sub_RP</span><span class="p">(</span><span class="n">BP_sun</span><span class="o">-</span><span class="n">RP_sun</span><span class="p">)],[</span><span class="mi">0</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;Sun&quot;</span><span class="p">)</span>
-<span class="n">plot!</span><span class="p">(</span><span class="n">log10_T_geneva</span><span class="p">,</span> <span class="n">log10_L_geneva</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span> <span class="ss">:dot</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">&quot;orange&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;ZAMS&quot;</span><span class="p">)</span>
-<span class="n">xflip!</span><span class="p">(</span><span class="nb">true</span><span class="p">)</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c">#plot(xlabel=L&quot;$\log_{10}T_\mathrm{eff}$&quot;, ylabel=L&quot;\log_{10}L/L_\odot&quot;)</span>
+<span class="c">#</span>
+<span class="c">## Predicted Zero-age main-sequence location for stars of masses (in Msun):</span>
+<span class="c">##     0.4, 0.8, 0.9, 1.0, 1.25, 1.5, 1.7, 2, 2.5</span>
+<span class="c">## All models except those with M=0.4 Msun are from Schaller et al. (1992):</span>
+<span class="c">## - https://ui.adsabs.harvard.edu/abs/1992A%26AS...96..269S/abstract</span>
+<span class="c">## Model at 0.4 Msun is from Charbonnel et al. (1999):</span>
+<span class="c">## - https://ui.adsabs.harvard.edu/abs/1999A%26AS..135..405C/abstract</span>
+<span class="c">#log10_T_geneva = [3.568, 3.687, 3.724, 3.751, 3.808, 3.852, 3.901, 3.958, 4.031]</span>
+<span class="c">#log10_L_geneva = [-1.63, -0.612, -0.394, -0.163, 0.325, 0.676, 0.916, 1.209, 1.600]</span>
+<span class="c">#</span>
+<span class="c">#scatter!(log10_T, log10_L_div_Lsun, label=&quot;Gaia&quot;)</span>
+<span class="c">##scatter!(log10_T, (G_sun .- abs_G)./(-2.5))</span>
+<span class="c">#scatter!([log10_T_from_BP_sub_RP(BP_sun-RP_sun)],[0], label=&quot;Sun&quot;)</span>
+<span class="c">#plot!(log10_T_geneva, log10_L_geneva, linewidth=5, linestyle= :dot, color=&quot;orange&quot;, label=&quot;ZAMS&quot;)</span>
+<span class="c">#xflip!(true)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/history_17_0.svg" src="../_images/history_17_0.svg" /></div>
 </div>
 </section>
 </section>

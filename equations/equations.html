@@ -527,15 +527,20 @@ title="Print to PDF"
 <div class="math notranslate nohighlight">
 \[\frac{\delta P}{P_0}=\gamma\frac{\delta \rho}{\rho_0}.\]</div>
 <p>Using this answer the following questions:</p>
-<ul class="simple">
-<li><p>If the radii <span class="math notranslate nohighlight">\(r_0(m)\)</span> of each mass shell in a star is perturbed by <span class="math notranslate nohighlight">\(\delta r=\alpha r_0\)</span> (where <span class="math notranslate nohighlight">\(\alpha\ll 1\)</span> is a small positive number independent of <span class="math notranslate nohighlight">\(m\)</span>), show that the stellar density is perturbed at each point by an amount <span class="math notranslate nohighlight">\(\delta \rho/\rho_0=3\alpha\)</span> at each point of the star. To do this, take the continuity equation of the unperturbed fluid,<br />
-<span class="math notranslate nohighlight">\(\frac{\partial r_0}{\partial m}=\frac{1}{4\pi\rho_0 r_0^2},\)</span><br />
-and find <span class="math notranslate nohighlight">\(\delta \rho/\rho_0\)</span> from its perturbed form<br />
-<span class="math notranslate nohighlight">\(\frac{\partial (r_0+\alpha r_0)}{\partial m}=\frac{1}{4\pi(\rho_0+\delta \rho) (r_0+\alpha r_0)^2},\)</span><br />
-by ignoring perturbation terms of quadratic order.</p></li>
-<li><p>Assume the unperturbed star is in hydrostatic equilibrium,<br />
-<span class="math notranslate nohighlight">\(\frac{1}{4\pi r_0^2}\frac{\partial^2 r_0}{\partial t^2}=-\frac{\partial P_0}{\partial m}-\frac{G m}{4\pi r_0^4}=0.\)</span><br />
-Compute the resulting acceleration after the perturbation <span class="math notranslate nohighlight">\(\delta r=\alpha r_0\)</span>. For which values of <span class="math notranslate nohighlight">\(\gamma\)</span> does the resulting acceleration point inwards or outwards? What does this say about stability?</p></li>
+<ul>
+<li><p>If the radii <span class="math notranslate nohighlight">\(r_0(m)\)</span> of each mass shell in a star is perturbed by <span class="math notranslate nohighlight">\(\delta r=\alpha r_0\)</span> (where <span class="math notranslate nohighlight">\(\alpha\ll 1\)</span> is a small positive number independent of <span class="math notranslate nohighlight">\(m\)</span>), show that the stellar density is perturbed at each point by an amount <span class="math notranslate nohighlight">\(\delta \rho/\rho_0=3\alpha\)</span> at each point of the star. To do this, take the continuity equation of the unperturbed fluid,</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial r_0}{\partial m}=\frac{1}{4\pi\rho_0 r_0^2},\]</div>
+<p>and find <span class="math notranslate nohighlight">\(\delta \rho/\rho_0\)</span> from its perturbed form</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial (r_0+\alpha r_0)}{\partial m}=\frac{1}{4\pi(\rho_0+\delta \rho) (r_0+\alpha r_0)^2},\]</div>
+<p>by ignoring perturbation terms of quadratic order.</p>
+</li>
+<li><p>Assume the unperturbed star is in hydrostatic equilibrium,</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{4\pi r_0^2}\frac{\partial^2 r_0}{\partial t^2}=-\frac{\partial P_0}{\partial m}-\frac{G m}{4\pi r_0^4}=0.\]</div>
+<p>Compute the resulting acceleration after the perturbation <span class="math notranslate nohighlight">\(\delta r=\alpha r_0\)</span>. For which values of <span class="math notranslate nohighlight">\(\gamma\)</span> does the resulting acceleration point inwards or outwards? What does this say about stability?</p>
+</li>
 </ul>
 </section>
 <section id="mass-radius-relationship-for-a-polytrope">
@@ -700,7 +705,7 @@ Compute the resulting acceleration after the perturbation <span class="math notr
 \[P_c = \frac{4\pi \rho_c^2 G}{6} R^2.\]</div>
 <p>The pressure at an arbitrary radius can be obtained by changing the integration limits</p>
 <div class="math notranslate nohighlight">
-\[\int_r^R \frac{\partial P}{\partial r} dr = P(r) - P_\mathrm{c}=-\frac{4\pi \rho_c^2 G}{6} (r^2-R^2)=P_\mathrm{c}(1-r^2/R^2).\]</div>
+\[\int_0^r \frac{\partial P}{\partial r} dr = P(r) - P_\mathrm{c}=-\frac{4\pi \rho_c^2 G}{6} (r^2-R^2)=P_\mathrm{c}(1-r^2/R^2).\]</div>
 </section>
 <section id="id3">
 <h3><span class="section-number">2.3.2. </span>Lower bound on central pressure of the Sun<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
@@ -793,11 +798,10 @@ As we will see in a few classes, this case corresponds to a fully degenerate non
 <span class="n">plot!</span><span class="p">(</span><span class="n">xvals</span><span class="p">,</span> <span class="n">sin</span><span class="o">.</span><span class="p">(</span><span class="n">xvals</span><span class="p">)</span><span class="o">./</span><span class="n">xvals</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s">&quot;Analytical&quot;</span><span class="p">)</span> <span class="c">#solution for n=1</span>
 <span class="c">#plot!(xvals, 1 ./ sqrt.(1 .+ xvals.^2 ./3),label=&quot;Analytical&quot;)    #solution for n=5</span>
 <span class="n">plot!</span><span class="p">(</span><span class="n">xvals</span><span class="p">,</span> <span class="n">yvals</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="ss">:dash</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s">&quot;Numerical&quot;</span><span class="p">)</span>
+<span class="n">savefig</span><span class="p">(</span><span class="s">&quot;lane_emden.pdf&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/equations_16_0.svg" src="../_images/equations_16_0.svg" /></div>
 </div>
 <p>To compute the ratio of central density to average density, we define a function to performs this integration for arbitrary <span class="math notranslate nohighlight">\(n\)</span> and looks for the first point where <span class="math notranslate nohighlight">\(y=0\)</span>, which gives <span class="math notranslate nohighlight">\(\xi_1\)</span>.</p>
 <div class="cell docutils container">
