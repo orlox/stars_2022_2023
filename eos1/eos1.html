@@ -529,7 +529,7 @@ title="Print to PDF"
 <h3><span class="section-number">3.1.1. </span>Manipulation of thermodynamic quantities<a class="headerlink" href="#manipulation-of-thermodynamic-quantities" title="Permalink to this headline">#</a></h3>
 <p>Using the definitions of <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\delta\)</span>,</p>
 <div class="math notranslate nohighlight">
-\[\alpha \equiv \left(\frac{\partial \rho}{\partial P}\right)_T,\quad \delta \equiv -\left(\frac{\partial \rho}{\partial T}\right)_P,\]</div>
+\[\alpha \equiv \left(\frac{\partial \ln\rho}{\partial \ln P}\right)_T,\quad \delta \equiv -\left(\frac{\partial \ln\rho}{\partial \ln T}\right)_P,\]</div>
 <p>and expressing a change in specific volume <span class="math notranslate nohighlight">\(v\)</span> in terms of <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(T\)</span> as independent variables,</p>
 <div class="math notranslate nohighlight">
 \[dv=\left(\frac{\partial v}{\partial T}\right)_P dT + \left(\frac{\partial v}{\partial P}\right)_T dP\]</div>
@@ -541,7 +541,7 @@ title="Print to PDF"
 <h3><span class="section-number">3.1.2. </span>Energy equation using <span class="math notranslate nohighlight">\(\rho\)</span> and <span class="math notranslate nohighlight">\(T\)</span> as independent variables<a class="headerlink" href="#energy-equation-using-rho-and-t-as-independent-variables" title="Permalink to this headline">#</a></h3>
 <p>We have shown that using <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(P\)</span> as independent variables the energy equation can be expressed as:</p>
 <div class="math notranslate nohighlight">
-\[\frac{dq}{dt}=c_P\frac{\partial T}{\partial t} - \frac{\delta}{\rho}\frac{\partial P}{\partial t}.\]</div>
+\[\frac{dq}{dt}=c_P\frac{d T}{d t} - \frac{\delta}{\rho}\frac{d P}{d t}.\]</div>
 <p>However, one could alternatively use <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(\rho\)</span> as independent variables (which is done, for example, by the <span class="math notranslate nohighlight">\(\texttt{MESA}\)</span> code). Show that the energy equation using these two independent variables can be expressed as:</p>
 <div class="math notranslate nohighlight">
 \[\frac{dq}{dt}=c_P\left[(1-\chi_T\nabla_\mathrm{ad})\frac{dT}{dt}-\frac{T}{\rho}\chi_\rho \nabla_\mathrm{ad}\frac{d\rho}{d t}\right],\]</div>
