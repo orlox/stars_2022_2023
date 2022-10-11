@@ -544,10 +544,10 @@ title="Print to PDF"
 \[\frac{dq}{dt}=c_P\frac{\partial T}{\partial t} - \frac{\delta}{\rho}\frac{\partial P}{\partial t}.\]</div>
 <p>However, one could alternatively use <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(\rho\)</span> as independent variables (which is done, for example, by the <span class="math notranslate nohighlight">\(\texttt{MESA}\)</span> code). Show that the energy equation using these two independent variables can be expressed as:</p>
 <div class="math notranslate nohighlight">
-\[\frac{dq}{dt}=c_P\left([1-\chi_T\nabla_\mathrm{ad}]\frac{dT}{dt}-\frac{T}{\rho}\chi_P \nabla_\mathrm{ad}\frac{d\rho}{d t}\right),\]</div>
+\[\frac{dq}{dt}=c_P\left[(1-\chi_T\nabla_\mathrm{ad})\frac{dT}{dt}-\frac{T}{\rho}\chi_\rho \nabla_\mathrm{ad}\frac{d\rho}{d t}\right],\]</div>
 <p>where</p>
 <div class="math notranslate nohighlight">
-\[\nabla_\mathrm{ad}\equiv\left(\frac{\partial \ln T}{\partial \ln P}\right)_s=\frac{P\delta}{T\rho c_P},\quad \chi_T\equiv \left(\frac{\partial \ln P}{\partial \ln T}\right)_\rho, \quad \chi_T\equiv \left(\frac{\partial \ln P}{\partial \ln \rho}\right)_T.\]</div>
+\[\nabla_\mathrm{ad}\equiv\left(\frac{\partial \ln T}{\partial \ln P}\right)_s=\frac{P\delta}{T\rho c_P},\quad \chi_T\equiv \left(\frac{\partial \ln P}{\partial \ln T}\right)_\rho, \quad \chi_\rho\equiv \left(\frac{\partial \ln P}{\partial \ln \rho}\right)_T.\]</div>
 </section>
 <section id="ideal-gas-eos-from-maxwell-boltzmann-distribution">
 <h3><span class="section-number">3.1.3. </span>Ideal gas EOS from Maxwell-Boltzmann distribution<a class="headerlink" href="#ideal-gas-eos-from-maxwell-boltzmann-distribution" title="Permalink to this headline">#</a></h3>
@@ -570,7 +570,9 @@ title="Print to PDF"
 <p>The structure of a hypothetical star with constant entropy would be given by</p>
 <div class="math notranslate nohighlight">
 \[\frac{\partial \ln T}{\partial \ln P}=\nabla_\mathrm{ad}=\frac{P\delta}{T\rho c_P}.\]</div>
-<p>Show that for an ideal gas without radiation pressure <span class="math notranslate nohighlight">\(\nabla_\mathrm{ad}=2/5\)</span>, and that this implies that the structure of the star can be described using an <span class="math notranslate nohighlight">\(n=3/2\)</span> polytrope.</p>
+<p>Show that for an ideal gas without radiation pressure <span class="math notranslate nohighlight">\(\nabla_\mathrm{ad}=2/5\)</span>, and that this implies that the structure of the star can be described using an <span class="math notranslate nohighlight">\(n=3/2\)</span> polytrope. Remember that the specific heat at constant pressure can be computed from</p>
+<div class="math notranslate nohighlight">
+\[c_P = \left(\frac{\partial u}{\partial T}\right)_P +P \left(\frac{dv}{dT}\right)_P.\]</div>
 </section>
 </section>
 <section id="computational-exercises">
@@ -583,14 +585,41 @@ title="Print to PDF"
 <h3><span class="section-number">3.3.1. </span>Manipulation of thermodynamic quantities<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <p>From the expression for <span class="math notranslate nohighlight">\(dv\)</span> we have that</p>
 <div class="math notranslate nohighlight">
-\[\frac{dv}{dP}=\left(\frac{\partial v}{\partial T}\right)_P \frac{dT}{dP}+\left(\frac{\partial v}{\partial T}\right)_T\]</div>
+\[\frac{dv}{dT}=\left(\frac{\partial v}{\partial T}\right)_P +\left(\frac{\partial v}{\partial P}\right)_T \frac{dP}{dT}.\]</div>
+<p>Considering a change in temperature at constant volume we obtain</p>
+<div class="math notranslate nohighlight">
+\[0=\left(\frac{\partial v}{\partial T}\right)_P+\left(\frac{\partial v}{\partial P}\right)_T \left(\frac{dP}{dT}\right)_v,\]</div>
+<p>from which it follows that</p>
+<div class="math notranslate nohighlight">
+\[\left(\frac{\partial P}{\partial T}\right)_v = \frac{-\left(\frac{\partial v}{\partial T}\right)_P}{\left(\frac{\partial v}{\partial P}\right)_T}.\]</div>
+<p>The partial derivatives of specific volume can be turned into derivatives of density,</p>
+<div class="math notranslate nohighlight">
+\[\left(\frac{\partial v}{\partial T}\right)_P = \left(\frac{\partial (1/\rho)}{\partial T}\right)_P=-\frac{1}{\rho^2}\left(\frac{\partial \rho}{\partial T}\right)_P= -\frac{1}{\rho^2}\frac{\rho}{T}\left(\frac{\partial \ln\rho}{\partial \ln T}\right)_P=\frac{\delta}{\rho T},\]</div>
+<p>and multiplying this by the density gives us the second required result. Similarly we find that</p>
+<div class="math notranslate nohighlight">
+\[\left(\frac{\partial v}{\partial P}\right)_T=-\frac{\alpha}{\rho P},\]</div>
+<p>from which we obtain the first result:</p>
+<div class="math notranslate nohighlight">
+\[\left(\frac{\partial P}{\partial T}\right)_v=\frac{P\delta}{T\alpha}.\]</div>
 </section>
 <section id="id2">
 <h3><span class="section-number">3.3.2. </span>Energy equation using <span class="math notranslate nohighlight">\(\rho\)</span> and <span class="math notranslate nohighlight">\(T\)</span> as independent variables<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<p>We start by noting that</p>
+<div class="math notranslate nohighlight">
+\[\frac{d P}{d T} = \left(\frac{\partial P}{\partial T}\right)_\rho \frac{d T}{dt} + \left(\frac{\partial P}{\partial \rho}\right)_T \frac{d \rho}{dt}\]</div>
+<p>Turning the derivatives into derivatives over the logarithms, and replacing with <span class="math notranslate nohighlight">\(\chi_T\)</span> and <span class="math notranslate nohighlight">\(\chi_\rho\)</span>, gives us</p>
+<div class="math notranslate nohighlight">
+\[\frac{d P}{d T} = \frac{P\chi_T}{T}\frac{d T}{dt} + \frac{P\chi_\rho}{\rho}\frac{d \rho}{dt}.\]</div>
+<p>We then replace this in the energy equation with <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(P\)</span> as independent variables:</p>
+<div class="math notranslate nohighlight">
+\[\frac{dq}{dt}=\left[c_P -\frac{P\delta\chi_T}{\rho T}\right] \frac{d T}{dt} - \frac{P\delta\chi_\rho}{\rho^2}\frac{d \rho}{dt}.\]</div>
+<p>Replacing <span class="math notranslate nohighlight">\(P\delta = \nabla_\mathrm{ad}T\rho c_P\)</span> we find the final result,</p>
+<div class="math notranslate nohighlight">
+\[\frac{dq}{dt}=c_P\left[(1-\chi_T\nabla_\mathrm{ad})\frac{dT}{dt}-\frac{T}{\rho}\chi_\rho \nabla_\mathrm{ad}\frac{d\rho}{d t}\right].\]</div>
 </section>
 <section id="id3">
 <h3><span class="section-number">3.3.3. </span>Ideal gas EOS from Maxwell-Boltzmann distribution<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
-<p>Deriving the standard integral given by <span class="math notranslate nohighlight">\(a\)</span> results in</p>
+<p>Deriving the standard integral by <span class="math notranslate nohighlight">\(a\)</span> results in</p>
 <div class="math notranslate nohighlight">
 \[\frac{d}{da}\int_0^\infty e^{-ax^2} dx = -\int_0^\infty e^{-ax^2} x^2 dx\]</div>
 <p>equating this to the derivation by <span class="math notranslate nohighlight">\(a\)</span> on the known result of the standard integral gives us</p>
@@ -602,6 +631,19 @@ title="Print to PDF"
 </section>
 <section id="id4">
 <h3><span class="section-number">3.3.4. </span>Constant entropy star<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
+<p>We start by computing the specific heat at constant pressure:</p>
+<div class="math notranslate nohighlight">
+\[c_P = \left(\frac{d u}{dT}\right)_P +P \left(\frac{d v}{dT}\right)_P.\]</div>
+<p>Using the energy density and the pressure for the ideal gas without radiation given in the previous exercise we find that</p>
+<div class="math notranslate nohighlight">
+\[\left(\frac{\partial u}{\partial T}\right)_P =\frac{3}{2}\frac{k}{m},\quad P \left(\frac{d v}{dT}\right)_P = -\frac{P}{\rho^2}\left(\frac{d \rho}{dT}\right)_P=\frac{k}{m},\]</div>
+<p>which gives us the specific heat at constant pressure,</p>
+<div class="math notranslate nohighlight">
+\[c_P = \frac{5}{2}\frac{k}{m}.\]</div>
+<p>Similarly we find that</p>
+<div class="math notranslate nohighlight">
+\[\delta = -\frac{T}{\rho} \left(\frac{\partial \rho}{\partial T}\right)_P=1.\]</div>
+<p>Combining the two previous results we obtain <span class="math notranslate nohighlight">\(\nabla_\mathrm{ad}=2/5\)</span>. Now consider the temperature follows a power law on pressure <span class="math notranslate nohighlight">\(T\propto P^\beta\)</span>. If we have a stellar model with an adiabatic structure then it follows that <span class="math notranslate nohighlight">\(\beta=2/5\)</span>. Since the ideal gas law without radiation says that <span class="math notranslate nohighlight">\(P\propto \rho T\)</span>, we find that <span class="math notranslate nohighlight">\(P\propto \rho^{5/3}\)</span>. This power law corresponds exactly to a polytrope of index <span class="math notranslate nohighlight">\(n=3/2\)</span>.</p>
 </section>
 </section>
 </section>
