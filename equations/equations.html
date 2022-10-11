@@ -798,10 +798,11 @@ As we will see in a few classes, this case corresponds to a fully degenerate non
 <span class="n">plot!</span><span class="p">(</span><span class="n">xvals</span><span class="p">,</span> <span class="n">sin</span><span class="o">.</span><span class="p">(</span><span class="n">xvals</span><span class="p">)</span><span class="o">./</span><span class="n">xvals</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s">&quot;Analytical&quot;</span><span class="p">)</span> <span class="c">#solution for n=1</span>
 <span class="c">#plot!(xvals, 1 ./ sqrt.(1 .+ xvals.^2 ./3),label=&quot;Analytical&quot;)    #solution for n=5</span>
 <span class="n">plot!</span><span class="p">(</span><span class="n">xvals</span><span class="p">,</span> <span class="n">yvals</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="ss">:dash</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s">&quot;Numerical&quot;</span><span class="p">)</span>
-<span class="n">savefig</span><span class="p">(</span><span class="s">&quot;lane_emden.pdf&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/equations_16_0.svg" src="../_images/equations_16_0.svg" /></div>
 </div>
 <p>To compute the ratio of central density to average density, we define a function to performs this integration for arbitrary <span class="math notranslate nohighlight">\(n\)</span> and looks for the first point where <span class="math notranslate nohighlight">\(y=0\)</span>, which gives <span class="math notranslate nohighlight">\(\xi_1\)</span>.</p>
 <div class="cell docutils container">
