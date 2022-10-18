@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Stellar Structure and Evolution
-author: Pablo Marchant
+author: Pablo Marchant & Annachiara Picco
 logo: logo.png
 
 # Force re-execution of notebooks on each build.

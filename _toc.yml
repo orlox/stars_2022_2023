@@ -6,7 +6,9 @@ root: index
 options:
   numbered: True
 chapters:
+- file: instructions/instructions
 - file: history/history
 - file: equations/equations
 - file: eos1/eos1
+- file: eos2/eos2
 - file: bibliography
