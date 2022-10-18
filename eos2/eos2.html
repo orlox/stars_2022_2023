@@ -568,7 +568,18 @@ P_{e,\mathrm{ER}} = \left(\frac{3}{\pi}\right)^{1/3}\frac{hc}{8 m_u^{4/3}}\left(
 <p>For an ionized helium gas we can express the electron and ion densities as</p>
 <div class="math notranslate nohighlight">
 \[n_e = \frac{\rho}{\mu_e m_\mathrm{u}},\quad n_\mathrm{ion} = \frac{\rho}{\mu_\mathrm{ion} m_\mathrm{u}}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\mu_e\)</span> corresponds to the number of atomic mass units per electron in the gas and <span class="math notranslate nohighlight">\(\mu_\mathrm{ion}\)</span> is the average mass of the ions in units of the atomic mass (<span class="math notranslate nohighlight">\(\mu_\mathrm{e}\simeq 2\)</span> and <span class="math notranslate nohighlight">\(\mu_\mathrm{ion} \simeq 4\)</span> for an ionized helium gas)</p>
+<p>where <span class="math notranslate nohighlight">\(\mu_e\)</span> corresponds to the number of atomic mass units per electron in the gas and <span class="math notranslate nohighlight">\(\mu_\mathrm{ion}\)</span> is the average mass of the ions in units of the atomic mass (<span class="math notranslate nohighlight">\(\mu_\mathrm{e}\simeq 2\)</span> and <span class="math notranslate nohighlight">\(\mu_\mathrm{ion} \simeq 4\)</span> for an ionized helium gas). We now can compute the critical densities at which we expect quantum effects to be important:</p>
+<div class="math notranslate nohighlight">
+\[1=(2m_e k T)^{1/2}\left(\frac{3 h^3 \rho_\mathrm{crit,e}}{8\pi \mu_e m_\mathrm{u}}\right)^{-1/3}\]</div>
+<div class="math notranslate nohighlight">
+\[\rho_\mathrm{crit, e}=\frac{8\pi \mu_e m_\mathrm{u}}{3h^3}(2m_e kT)^{3/2}.\]</div>
+<p>The result for the ions is the same but with <span class="math notranslate nohighlight">\(\mu_\mathrm{ion}\)</span> and <span class="math notranslate nohighlight">\(m_\mathrm{He}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\rho_\mathrm{crit, ions}=\frac{8\pi \mu_\mathrm{ion} m_\mathrm{u}}{3h^3}(2m_\mathrm{He} kT)^{3/2}.\]</div>
+<p>Taking the ratio between the two densities we have that</p>
+<div class="math notranslate nohighlight">
+\[\frac{\rho_\mathrm{crit, e}}{\rho_\mathrm{crit, ions}}=\frac{\mu_e}{\mu_\mathrm{ion}}\left(\frac{m_\mathrm{e}}{m_\mathrm{He}}\right)^{3/2}\simeq 8\times 10^{-7},\]</div>
+<p>such that densities need to be much higher for degeneracy of ions to take place in addition to degeneracy of electrons.</p>
 </section>
 <section id="id2">
 <h3><span class="section-number">5.3.2. </span>Energetics of a degenerate star<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
@@ -597,17 +608,23 @@ P_{e,\mathrm{ER}} = \left(\frac{3}{\pi}\right)^{1/3}\frac{hc}{8 m_u^{4/3}}\left(
 </section>
 <section id="id3">
 <h3><span class="section-number">5.3.3. </span>Limiting cases of the degenerate electron gas<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
-<ul class="simple">
-<li><p>Non-relativistic case: Here we have <span class="math notranslate nohighlight">\(v(p)\simeq p/m_e\)</span> and the pressure integral is given by
-$<span class="math notranslate nohighlight">\(P_{e,\mathrm{NR}} = \frac{1}{3}\int_0^{p_\mathrm{F}}\left(\frac{p}{m_e}\right)\times p \times \left(\frac{8\pi p^2}{h^3}\right)dp,\quad p_\mathrm{F}=\left(\frac{3h^3 n_e}{8\pi}\right)^{1/3}.\)</span><span class="math notranslate nohighlight">\(
-  Performing the integral we find
-  \)</span><span class="math notranslate nohighlight">\(P_{e,\mathrm{NR}}=\frac{1}{3}\left(\frac{8\pi}{h^3 m_e}\right)\frac{p_F^5}{5},\)</span><span class="math notranslate nohighlight">\(
-  which after substituting \)</span>n_e=p/(\mu_e m_\mathrm{u})$ gives the expected result.</p></li>
-<li><p>Extremely-relativistic case: Procedure is the same but with <span class="math notranslate nohighlight">\(v(p)=c\)</span>:
-$<span class="math notranslate nohighlight">\(P_{e,\mathrm{NR}} = \frac{1}{3}\int_0^{p_\mathrm{F}}c\times p \times \left(\frac{8\pi p^2}{h^3}\right)dp.\)</span><span class="math notranslate nohighlight">\(
-  Performing the integral we find
-  \)</span><span class="math notranslate nohighlight">\(P_{e,\mathrm{NR}}=\frac{1}{3}\left(\frac{8\pi c}{h^3}\right)\frac{p_F^4}{4},\)</span><span class="math notranslate nohighlight">\(
-  which after substituting \)</span>n_e=p/(\mu_e m_\mathrm{u})$ gives the expected result.</p></li>
+<ul>
+<li><p>Non-relativistic case: Here we have <span class="math notranslate nohighlight">\(v(p)\simeq p/m_e\)</span> and the pressure integral is given by</p>
+<div class="math notranslate nohighlight">
+\[P_{e,\mathrm{NR}} = \frac{1}{3}\int_0^{p_\mathrm{F}}\left(\frac{p}{m_e}\right)\times p \times \left(\frac{8\pi p^2}{h^3}\right)dp,\quad p_\mathrm{F}=\left(\frac{3h^3 n_e}{8\pi}\right)^{1/3}.\]</div>
+<p>Performing the integral we find</p>
+<div class="math notranslate nohighlight">
+\[P_{e,\mathrm{NR}}=\frac{1}{3}\left(\frac{8\pi}{h^3 m_e}\right)\frac{p_F^5}{5},\]</div>
+<p>which after substituting <span class="math notranslate nohighlight">\(n_e=p/(\mu_e m_\mathrm{u})\)</span> gives the expected result.</p>
+</li>
+<li><p>Extremely-relativistic case: Procedure is the same but with <span class="math notranslate nohighlight">\(v(p)=c\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[P_{e,\mathrm{NR}} = \frac{1}{3}\int_0^{p_\mathrm{F}}c\times p \times \left(\frac{8\pi p^2}{h^3}\right)dp.\]</div>
+<p>Performing the integral we find</p>
+<div class="math notranslate nohighlight">
+\[P_{e,\mathrm{NR}}=\frac{1}{3}\left(\frac{8\pi c}{h^3}\right)\frac{p_F^4}{4},\]</div>
+<p>which after substituting <span class="math notranslate nohighlight">\(n_e=p/(\mu_e m_\mathrm{u})\)</span> gives the expected result.</p>
+</li>
 </ul>
 </section>
 <section id="id4">
