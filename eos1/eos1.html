@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>3. The energy equation and the equation of state &#8212; Stellar Structure and Evolution</title>
+    <title>4. The energy equation and the equation of state &#8212; Stellar Structure and Evolution</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4. Bibliography" href="../bibliography.html" />
-    <link rel="prev" title="2. The equations of stellar structure and evolution" href="../equations/equations.html" />
+    <link rel="next" title="5. Degenerate equations of state" href="../eos2/eos2.html" />
+    <link rel="prev" title="3. The equations of stellar structure and evolution" href="../equations/equations.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -117,23 +117,33 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../instructions/instructions.html">
+   1. Instructions
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../history/history.html">
-   1. Some history
+   2. Some history
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../equations/equations.html">
-   2. The equations of stellar structure and evolution
+   3. The equations of stellar structure and evolution
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   3. The energy equation and the equation of state
+   4. The energy equation and the equation of state
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../eos2/eos2.html">
+   5. Degenerate equations of state
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../bibliography.html">
-   4. Bibliography
+   6. Bibliography
   </a>
  </li>
 </ul>
@@ -344,17 +354,17 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pen-paper-exercises">
-   3.1. Pen &amp; paper exercises
+   4.1. Pen &amp; paper exercises
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#manipulation-of-thermodynamic-quantities">
-     3.1.1. Manipulation of thermodynamic quantities
+     4.1.1. Manipulation of thermodynamic quantities
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#energy-equation-using-rho-and-t-as-independent-variables">
-     3.1.2. Energy equation using
+     4.1.2. Energy equation using
      <span class="math notranslate nohighlight">
       \(\rho\)
      </span>
@@ -367,34 +377,34 @@ title="Print to PDF"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#ideal-gas-eos-from-maxwell-boltzmann-distribution">
-     3.1.3. Ideal gas EOS from Maxwell-Boltzmann distribution
+     4.1.3. Ideal gas EOS from Maxwell-Boltzmann distribution
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#constant-entropy-star">
-     3.1.4. Constant entropy star
+     4.1.4. Constant entropy star
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#computational-exercises">
-   3.2. Computational exercises
+   4.2. Computational exercises
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solution-to-pen-paper-exercises">
-   3.3. Solution to pen &amp; paper exercises
+   4.3. Solution to pen &amp; paper exercises
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
-     3.3.1. Manipulation of thermodynamic quantities
+     4.3.1. Manipulation of thermodynamic quantities
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id2">
-     3.3.2. Energy equation using
+     4.3.2. Energy equation using
      <span class="math notranslate nohighlight">
       \(\rho\)
      </span>
@@ -407,12 +417,12 @@ title="Print to PDF"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id3">
-     3.3.3. Ideal gas EOS from Maxwell-Boltzmann distribution
+     4.3.3. Ideal gas EOS from Maxwell-Boltzmann distribution
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id4">
-     3.3.4. Constant entropy star
+     4.3.4. Constant entropy star
     </a>
    </li>
   </ul>
@@ -438,17 +448,17 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pen-paper-exercises">
-   3.1. Pen &amp; paper exercises
+   4.1. Pen &amp; paper exercises
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#manipulation-of-thermodynamic-quantities">
-     3.1.1. Manipulation of thermodynamic quantities
+     4.1.1. Manipulation of thermodynamic quantities
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#energy-equation-using-rho-and-t-as-independent-variables">
-     3.1.2. Energy equation using
+     4.1.2. Energy equation using
      <span class="math notranslate nohighlight">
       \(\rho\)
      </span>
@@ -461,34 +471,34 @@ title="Print to PDF"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#ideal-gas-eos-from-maxwell-boltzmann-distribution">
-     3.1.3. Ideal gas EOS from Maxwell-Boltzmann distribution
+     4.1.3. Ideal gas EOS from Maxwell-Boltzmann distribution
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#constant-entropy-star">
-     3.1.4. Constant entropy star
+     4.1.4. Constant entropy star
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#computational-exercises">
-   3.2. Computational exercises
+   4.2. Computational exercises
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solution-to-pen-paper-exercises">
-   3.3. Solution to pen &amp; paper exercises
+   4.3. Solution to pen &amp; paper exercises
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
-     3.3.1. Manipulation of thermodynamic quantities
+     4.3.1. Manipulation of thermodynamic quantities
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id2">
-     3.3.2. Energy equation using
+     4.3.2. Energy equation using
      <span class="math notranslate nohighlight">
       \(\rho\)
      </span>
@@ -501,12 +511,12 @@ title="Print to PDF"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id3">
-     3.3.3. Ideal gas EOS from Maxwell-Boltzmann distribution
+     4.3.3. Ideal gas EOS from Maxwell-Boltzmann distribution
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id4">
-     3.3.4. Constant entropy star
+     4.3.4. Constant entropy star
     </a>
    </li>
   </ul>
@@ -522,11 +532,11 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="the-energy-equation-and-the-equation-of-state">
-<h1><span class="section-number">3. </span>The energy equation and the equation of state<a class="headerlink" href="#the-energy-equation-and-the-equation-of-state" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">4. </span>The energy equation and the equation of state<a class="headerlink" href="#the-energy-equation-and-the-equation-of-state" title="Permalink to this headline">#</a></h1>
 <section id="pen-paper-exercises">
-<h2><span class="section-number">3.1. </span>Pen &amp; paper exercises<a class="headerlink" href="#pen-paper-exercises" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.1. </span>Pen &amp; paper exercises<a class="headerlink" href="#pen-paper-exercises" title="Permalink to this headline">#</a></h2>
 <section id="manipulation-of-thermodynamic-quantities">
-<h3><span class="section-number">3.1.1. </span>Manipulation of thermodynamic quantities<a class="headerlink" href="#manipulation-of-thermodynamic-quantities" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.1.1. </span>Manipulation of thermodynamic quantities<a class="headerlink" href="#manipulation-of-thermodynamic-quantities" title="Permalink to this headline">#</a></h3>
 <p>Using the definitions of <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\delta\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[\alpha \equiv \left(\frac{\partial \ln\rho}{\partial \ln P}\right)_T,\quad \delta \equiv -\left(\frac{\partial \ln\rho}{\partial \ln T}\right)_P,\]</div>
@@ -538,7 +548,7 @@ title="Print to PDF"
 \[\left(\frac{\partial P}{\partial T}\right)_v = \frac{-\left(\frac{\partial v}{\partial T}\right)_P}{\left(\frac{\partial v}{\partial P}\right)_T}=\frac{P\delta}{T\alpha}\qquad \mathrm{and} \qquad T\left(\frac{\partial v}{\partial T}\right)_P = \frac{\delta}{\rho}.\]</div>
 </section>
 <section id="energy-equation-using-rho-and-t-as-independent-variables">
-<h3><span class="section-number">3.1.2. </span>Energy equation using <span class="math notranslate nohighlight">\(\rho\)</span> and <span class="math notranslate nohighlight">\(T\)</span> as independent variables<a class="headerlink" href="#energy-equation-using-rho-and-t-as-independent-variables" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.1.2. </span>Energy equation using <span class="math notranslate nohighlight">\(\rho\)</span> and <span class="math notranslate nohighlight">\(T\)</span> as independent variables<a class="headerlink" href="#energy-equation-using-rho-and-t-as-independent-variables" title="Permalink to this headline">#</a></h3>
 <p>We have shown that using <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(P\)</span> as independent variables the energy equation can be expressed as:</p>
 <div class="math notranslate nohighlight">
 \[\frac{dq}{dt}=c_P\frac{d T}{d t} - \frac{\delta}{\rho}\frac{d P}{d t}.\]</div>
@@ -550,7 +560,7 @@ title="Print to PDF"
 \[\nabla_\mathrm{ad}\equiv\left(\frac{\partial \ln T}{\partial \ln P}\right)_s=\frac{P\delta}{T\rho c_P},\quad \chi_T\equiv \left(\frac{\partial \ln P}{\partial \ln T}\right)_\rho, \quad \chi_\rho\equiv \left(\frac{\partial \ln P}{\partial \ln \rho}\right)_T.\]</div>
 </section>
 <section id="ideal-gas-eos-from-maxwell-boltzmann-distribution">
-<h3><span class="section-number">3.1.3. </span>Ideal gas EOS from Maxwell-Boltzmann distribution<a class="headerlink" href="#ideal-gas-eos-from-maxwell-boltzmann-distribution" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.1.3. </span>Ideal gas EOS from Maxwell-Boltzmann distribution<a class="headerlink" href="#ideal-gas-eos-from-maxwell-boltzmann-distribution" title="Permalink to this headline">#</a></h3>
 <p>The number density per unit momentum <span class="math notranslate nohighlight">\(n_p\)</span> of classical non-relativistic particles of mass <span class="math notranslate nohighlight">\(m\)</span> in thermodynamic equilibrium is given by the Maxwell-Boltzmann distribution:</p>
 <div class="math notranslate nohighlight">
 \[n_p(p)=\frac{n}{(2\pi m k T)^{3/2}}\exp\left(\frac{-p^2}{2mkT}\right) 4\pi p^2,\]</div>
@@ -566,7 +576,7 @@ title="Print to PDF"
 <p>which by derivation of both sides by <span class="math notranslate nohighlight">\(a\)</span> (moving the derivation under the integral in the left hand side) gives the required integrals.</p>
 </section>
 <section id="constant-entropy-star">
-<h3><span class="section-number">3.1.4. </span>Constant entropy star<a class="headerlink" href="#constant-entropy-star" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.1.4. </span>Constant entropy star<a class="headerlink" href="#constant-entropy-star" title="Permalink to this headline">#</a></h3>
 <p>The structure of a hypothetical star with constant entropy would be given by</p>
 <div class="math notranslate nohighlight">
 \[\frac{\partial \ln T}{\partial \ln P}=\nabla_\mathrm{ad}=\frac{P\delta}{T\rho c_P}.\]</div>
@@ -576,13 +586,13 @@ title="Print to PDF"
 </section>
 </section>
 <section id="computational-exercises">
-<h2><span class="section-number">3.2. </span>Computational exercises<a class="headerlink" href="#computational-exercises" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.2. </span>Computational exercises<a class="headerlink" href="#computational-exercises" title="Permalink to this headline">#</a></h2>
 <p>No computational exercises this session.</p>
 </section>
 <section id="solution-to-pen-paper-exercises">
-<h2><span class="section-number">3.3. </span>Solution to pen &amp; paper exercises<a class="headerlink" href="#solution-to-pen-paper-exercises" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.3. </span>Solution to pen &amp; paper exercises<a class="headerlink" href="#solution-to-pen-paper-exercises" title="Permalink to this headline">#</a></h2>
 <section id="id1">
-<h3><span class="section-number">3.3.1. </span>Manipulation of thermodynamic quantities<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.3.1. </span>Manipulation of thermodynamic quantities<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <p>From the expression for <span class="math notranslate nohighlight">\(dv\)</span> we have that</p>
 <div class="math notranslate nohighlight">
 \[\frac{dv}{dT}=\left(\frac{\partial v}{\partial T}\right)_P +\left(\frac{\partial v}{\partial P}\right)_T \frac{dP}{dT}.\]</div>
@@ -603,7 +613,7 @@ title="Print to PDF"
 \[\left(\frac{\partial P}{\partial T}\right)_v=\frac{P\delta}{T\alpha}.\]</div>
 </section>
 <section id="id2">
-<h3><span class="section-number">3.3.2. </span>Energy equation using <span class="math notranslate nohighlight">\(\rho\)</span> and <span class="math notranslate nohighlight">\(T\)</span> as independent variables<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.3.2. </span>Energy equation using <span class="math notranslate nohighlight">\(\rho\)</span> and <span class="math notranslate nohighlight">\(T\)</span> as independent variables<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <p>We start by noting that</p>
 <div class="math notranslate nohighlight">
 \[\frac{d P}{d T} = \left(\frac{\partial P}{\partial T}\right)_\rho \frac{d T}{dt} + \left(\frac{\partial P}{\partial \rho}\right)_T \frac{d \rho}{dt}\]</div>
@@ -618,7 +628,7 @@ title="Print to PDF"
 \[\frac{dq}{dt}=c_P\left[(1-\chi_T\nabla_\mathrm{ad})\frac{dT}{dt}-\frac{T}{\rho}\chi_\rho \nabla_\mathrm{ad}\frac{d\rho}{d t}\right].\]</div>
 </section>
 <section id="id3">
-<h3><span class="section-number">3.3.3. </span>Ideal gas EOS from Maxwell-Boltzmann distribution<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.3.3. </span>Ideal gas EOS from Maxwell-Boltzmann distribution<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
 <p>Deriving the standard integral by <span class="math notranslate nohighlight">\(a\)</span> results in</p>
 <div class="math notranslate nohighlight">
 \[\frac{d}{da}\int_0^\infty e^{-ax^2} dx = -\int_0^\infty e^{-ax^2} x^2 dx\]</div>
@@ -630,7 +640,7 @@ title="Print to PDF"
 \[\int_0^\infty e^{-ax^2} x^4 dx = \frac{3}{8}\sqrt{\frac{\pi}{a^5}}.\]</div>
 </section>
 <section id="id4">
-<h3><span class="section-number">3.3.4. </span>Constant entropy star<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">4.3.4. </span>Constant entropy star<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
 <p>We start by computing the specific heat at constant pressure:</p>
 <div class="math notranslate nohighlight">
 \[c_P = \left(\frac{d u}{dT}\right)_P +P \left(\frac{d v}{dT}\right)_P.\]</div>
@@ -679,13 +689,13 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">2. </span>The equations of stellar structure and evolution</p>
+            <p class="prev-next-title"><span class="section-number">3. </span>The equations of stellar structure and evolution</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../bibliography.html" title="next page">
+    <a class='right-next' id="next-link" href="../eos2/eos2.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Bibliography</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Degenerate equations of state</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -696,7 +706,7 @@ title="Print to PDF"
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By Pablo Marchant<br/>
+    By Pablo Marchant & Annachiara Picco<br/>
   
       &copy; Copyright 2022.<br/>
 </p>

@@ -1,0 +1,581 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>1. Instructions &#8212; Stellar Structure and Evolution</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Some history" href="../history/history.html" />
+    <link rel="prev" title="Introduction" href="../index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Stellar Structure and Evolution</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   1. Instructions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../history/history.html">
+   2. Some history
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../equations/equations.html">
+   3. The equations of stellar structure and evolution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../eos1/eos1.html">
+   4. The energy equation and the equation of state
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../eos2/eos2.html">
+   5. Degenerate equations of state
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bibliography.html">
+   6. Bibliography
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/orlox/stars_2022_2023/main?urlpath=tree/instructions/instructions.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/orlox/stars_2022_2023"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/orlox/stars_2022_2023/issues/new?title=Issue%20on%20page%20%2Finstructions/instructions.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/instructions/instructions.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linux-based-systems">
+   1.1. Linux-based systems
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#getting-julia">
+     1.1.1. Getting Julia
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setting-up-julia">
+     1.1.2. Setting up Julia
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#getting-the-julia-notebook">
+     1.1.3. Getting the Julia notebook
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#open-up-your-notebook">
+     1.1.4. Open up your notebook
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Instructions</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linux-based-systems">
+   1.1. Linux-based systems
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#getting-julia">
+     1.1.1. Getting Julia
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setting-up-julia">
+     1.1.2. Setting up Julia
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#getting-the-julia-notebook">
+     1.1.3. Getting the Julia notebook
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#open-up-your-notebook">
+     1.1.4. Open up your notebook
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="instructions">
+<h1><span class="section-number">1. </span>Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">#</a></h1>
+<p>The following are some instructions on how to get a physical notebook (.ipynb extension) out of the chapters of these lecture notes, and compile it locally on your machines. First of all, which chapter do you want to get your hands on? Choose your favorite one. My favorite will be: <i> “2. The equations of stellar structure and evolution” </i>. Open that one and select the download symbol:</p>
+<p><img alt="alt text for screen readers" src="../_images/Download_idiotproof.png" /></p>
+<p>Then download the notebook .ipynb in your favorite directory. We’ll get back to this later.</p>
+<section id="linux-based-systems">
+<h2><span class="section-number">1.1. </span>Linux-based systems<a class="headerlink" href="#linux-based-systems" title="Permalink to this headline">#</a></h2>
+<section id="getting-julia">
+<h3><span class="section-number">1.1.1. </span>Getting Julia<a class="headerlink" href="#getting-julia" title="Permalink to this headline">#</a></h3>
+<p>The provided notebooks are written in Julia (check out <a class="reference external" href="https://julialang.org/">https://julialang.org/</a>), so first step will be to install Julia in your machines. Go to the page of the downloadable releases,</p>
+<center>
+<p><a class="reference external" href="https://julialang.org/downloads/">https://julialang.org/downloads/</a></p>
+</center> 
+<p>and download the version that suits your system in your home directory, which will have a name of this sort <code class="docutils literal notranslate"><span class="pre">/home/annachiara</span></code>. Be sure to download the latest stable release, avoid older versions. <br>
+In the following, I am going to assume that</p>
+<ul>
+<li>
+<p>You downloaded the compressed file <code class="docutils literal notranslate"><span class="pre">julia-1.8.2-linux-x86_64.tar.gz</span></code> ;</p>
+</li>
+<li>
+<p>Your home directory is called <code class="docutils literal notranslate"><span class="pre">HOME_DIR</span></code>.</p>
+</li>
+</ul>
+<p>You should adapt the commands to the version you downloaded and the folder you chose.
+<br><br><br>
+We need to open a terminal, a command-line interface to communicate directly with your computer. To do so, press <code class="docutils literal notranslate"><span class="pre">ctrl+shift+T</span></code> on your keyboard. Type then the following commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Move to the download directory</span>
+<span class="nb">cd</span> HOME_DIR
+<span class="c1"># Uncompress the .tar.gz</span>
+tar zxvf julia-1.8.2-linux-x86_64.tar.gz
+</pre></div>
+</div>
+<p>This will create a folder called <code class="docutils literal notranslate"><span class="pre">julia-1.8.2</span></code> in <code class="docutils literal notranslate"><span class="pre">HOME_DIR</span></code>. You can find your executable in <code class="docutils literal notranslate"><span class="pre">HOME_DIR/julia-1.8.2/bin/julia</span></code>.</p>
+</section>
+<section id="setting-up-julia">
+<h3><span class="section-number">1.1.2. </span>Setting up Julia<a class="headerlink" href="#setting-up-julia" title="Permalink to this headline">#</a></h3>
+<p>For saving time, we’ll add the path of your executable in your <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file, which contains all the informations that your (bash) shell extracts at each shell session. To edit the <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file, I am going to use the <code class="docutils literal notranslate"><span class="pre">nano</span></code> text editor, but you can use your favorite text editor. So</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Open the .bashrc file</span>
+nano ~/.bashrc
+</pre></div>
+</div>
+<p>Copy and paste the following line at the bottom of the file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">alias</span> <span class="nv">julia</span><span class="o">=</span>/HOME_DIR/julia-1.8.2/bin/julia
+</pre></div>
+</div>
+<p>To save changes and exit from nano, you’ll have to press <code class="docutils literal notranslate"><span class="pre">ctrl+X</span></code> , then <code class="docutils literal notranslate"><span class="pre">Y</span></code> to accept to save the modified buffer and then <code class="docutils literal notranslate"><span class="pre">enter</span></code>. Now, everytime you’ll open a shell, you’ll be able to call Julia by simply typing</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>julia
+</pre></div>
+</div>
+<p>Try it and see the greeting message 😁</p>
+<p><img alt="alt text for screen readers" src="../_images/Julia_screen.png" /></p>
+</section>
+<section id="getting-the-julia-notebook">
+<h3><span class="section-number">1.1.3. </span>Getting the Julia notebook<a class="headerlink" href="#getting-the-julia-notebook" title="Permalink to this headline">#</a></h3>
+<p>We want to get the Julia notebook now, to be able to execute an .ipynb file. Within Julia, type the following in your terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Open up the package manager</span>
+<span class="o">]</span>
+<span class="c1"># Install the Julia notebook package</span>
+add IJulia
+</pre></div>
+</div>
+<p>The installation of the notebook should take a few minutes. At the end, press <code class="docutils literal notranslate"><span class="pre">ctrl+C</span></code> to go out of the package manager. Within Julia, type</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Declare that you&#39;ll use the Julia notebook package</span>
+using IJulia
+<span class="c1"># Call the Julia notebook package</span>
+notebook<span class="o">()</span>
+</pre></div>
+</div>
+<p>If you’re asked to install Jupyter via Conda, accept by pressing <code class="docutils literal notranslate"><span class="pre">Y+enter</span></code>. This should get you Jupyter notebook, the web-based computing platform that will run your Julia notebooks in your favorite browser. This installation should also take a few minutes.</p>
+</section>
+<section id="open-up-your-notebook">
+<h3><span class="section-number">1.1.4. </span>Open up your notebook<a class="headerlink" href="#open-up-your-notebook" title="Permalink to this headline">#</a></h3>
+<p>Once Jupyter is launched, you should see a window popping up in your favorite browser. That window is going to show you an interactive platform that lists all your files in your <code class="docutils literal notranslate"><span class="pre">HOME_DIR</span></code>. Something like this:</p>
+<p><img alt="alt text for screen readers" src="../_images/juppy.png" /></p>
+<p>At this point, you just need to find the .ipynb file you downloaded into your favorite directory in the first step. Open it, and the game is done ✅</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "julia-1.8"
+        },
+        kernelOptions: {
+            kernelName: "julia-1.8",
+            path: "./instructions"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'julia-1.8'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Introduction</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../history/history.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Some history</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Pablo Marchant & Annachiara Picco<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
