@@ -17,19 +17,35 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-yvals = xvals.^2
-plot(xlabel=L"$x$", ylabel=L"$x^2$")
-plot!(xvals, yvals)Limi;sadasdiLiasdsadasdasd
+function flux_ratio_BP_RP(T)
+    # Ignoring constant in the integration, relying on bins being equally spaced in lambda
+    F_sun_BP = sum(passbands.BP_pb .* normalized_spectral_radiance.(passbands.lambda,T))
+    F_sun_RP = sum(passbands.RP_pb .* normalized_spectral_radiance.(passbands.lambda,T))
+    return F_sun_BP/F_sun_RP
+end
+
+diff_zero_point_BP_RP = 0.82+2.5*log10(flux_ratio_BP_RP(5772))
+
+# sample 
+log10_T_sample = LinRange(3.0,6.0,100)
+BP_sub_RP = -2.5*log10.(flux_ratio_BP_RP.(10 .^ log10_T_sample)) .+ diff_zero_point_BP_RP
+
+plot(xlabel=L"$log_{10} T_\mathrm{eff}$",ylabel=L"$m_\mathrm{BP}-m_\mathrm{RP}$")
+plot!(log10_T_sample, BP_sub_RP,label="")
 ------------------
 
-UndefVarError: Limi not defined
+MethodError: objects of type Int64 are not callable
+Maybe you forgot to use an operator such as [36m*, ^, %, / etc. [39m?
 
 Stacktrace:
- [1] top-level scope
-   @ In[5]:3
- [2] eval
+ [1] flux_ratio_BP_RP(T::Int64)
+   @ Main ./In[14]:3
+ [2] top-level scope
+   @ In[14]:8
+ [3] eval
    @ ./boot.jl:368 [inlined]
- [3] include_string(mapexpr::typeof(REPL.softscope), mod::Module, code::String, filename::String)
+ [4] include_string(mapexpr::typeof(REPL.softscope), mod::Module, code::String, filename::String)
    @ Base ./loading.jl:1428
-LoadError: UndefVarError: Limi not defined
+LoadError: MethodError: objects of type Int64 are not callable
+Maybe you forgot to use an operator such as [36m*, ^, %, / etc. [39m?
 

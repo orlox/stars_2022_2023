@@ -365,13 +365,13 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#computational-exercises">
-   2.2. Computational exercises
+  <a class="reference internal nav-link" href="#solution-to-pen-paper-exercises">
+   2.2. Solution to pen &amp; paper exercises
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#solution-to-pen-paper-exercises">
-   2.3. Solution to pen &amp; paper exercises
+  <a class="reference internal nav-link" href="#julia-basics">
+   2.3. Julia basics
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -413,13 +413,13 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#computational-exercises">
-   2.2. Computational exercises
+  <a class="reference internal nav-link" href="#solution-to-pen-paper-exercises">
+   2.2. Solution to pen &amp; paper exercises
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#solution-to-pen-paper-exercises">
-   2.3. Solution to pen &amp; paper exercises
+  <a class="reference internal nav-link" href="#julia-basics">
+   2.3. Julia basics
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -455,25 +455,88 @@ title="Print to PDF"
 <p>Assuming that the luminosity of the Sun has always been its current one, <span class="math notranslate nohighlight">\(L_\odot\)</span>, compute the age of the Sun under the assumption that it is only powered by contraction.</p>
 </li>
 <li><p>Dynamical timescale: For most of their lives stars are very close to hydrostatic equilibrium, carefully balancing their gravities against the support of a pressure gradient. Whenever these two forces are misbalanced, the star will evolve in what is known as the dynamical timescale. Estimate this timescale by computing the time it would take for the surface of the sun to free-fall all the way to its center if all forces opposing gravity would be removed. For simplicity assume that the gravitational acceleration is constant and equal to its present one.</p></li>
-<li><p>Nuclear timescale: As we now know, most stars are powered by nuclear reactions. Masses of isotopes are normally given in terms of the atomic mass unit <span class="math notranslate nohighlight">\(m_\mathrm{u}=1.661\times 10^{-24}\)</span>, defined as <span class="math notranslate nohighlight">\(1/12\)</span> of the mass of a carbon-12 atom. The mass of a hydrogen atom is <span class="math notranslate nohighlight">\(m_\mathrm{H}=1.007825m_\mathrm{u}\)</span> and that of a helium atom is <span class="math notranslate nohighlight">\(m_\mathrm{He}=4.002602 m_\mathrm{u}\)</span>, such that if four hydrogen atoms are fused into a helium atom there is a mass deficit leading to a release of energy <span class="math notranslate nohighlight">\((4m_\mathrm{H}-m_\mathrm{He})c^2\sim 4\times 10^{-5}\;\mathrm{[erg]}\)</span>. With this information, estimate the lifetime of the Sun as a core-hydrogen burning star. For simplicity, assume the Sun has a constant luminosity and is entirely composed of hydrogen, 10% of which is burned into Helium during core-hydrogen burning.</p></li>
+<li><p>Nuclear timescale: As we now know, most stars are powered by nuclear reactions. Masses of isotopes are normally given in terms of the atomic mass unit <span class="math notranslate nohighlight">\(m_\mathrm{u}=1.661\times 10^{-24}\;\mathrm{g}\)</span>, defined as <span class="math notranslate nohighlight">\(1/12\)</span> of the mass of a carbon-12 atom. The mass of a hydrogen atom is <span class="math notranslate nohighlight">\(m_\mathrm{H}=1.007825m_\mathrm{u}\)</span> and that of a helium atom is <span class="math notranslate nohighlight">\(m_\mathrm{He}=4.002602 m_\mathrm{u}\)</span>, such that if four hydrogen atoms are fused into a helium atom there is a mass deficit leading to a release of energy <span class="math notranslate nohighlight">\((4m_\mathrm{H}-m_\mathrm{He})c^2\sim 4\times 10^{-5}\;\mathrm{[erg]}\)</span>. With this information, estimate the lifetime of the Sun as a core-hydrogen burning star. For simplicity, assume the Sun has a constant luminosity and is entirely composed of hydrogen, 10% of which is burned into Helium during core-hydrogen burning.</p></li>
 </ul>
 </section>
 </section>
-<section id="computational-exercises">
-<h2><span class="section-number">2.2. </span>Computational exercises<a class="headerlink" href="#computational-exercises" title="Permalink to this headline">#</a></h2>
-</section>
 <section id="solution-to-pen-paper-exercises">
-<h2><span class="section-number">2.3. </span>Solution to pen &amp; paper exercises<a class="headerlink" href="#solution-to-pen-paper-exercises" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.2. </span>Solution to pen &amp; paper exercises<a class="headerlink" href="#solution-to-pen-paper-exercises" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="julia-basics">
+<h2><span class="section-number">2.3. </span>Julia basics<a class="headerlink" href="#julia-basics" title="Permalink to this headline">#</a></h2>
+<p>For the first class we provide a computational example rather than exercises. All computational exercises will be shown using the <a class="reference external" href="https://julialang.org/"><em>julia</em></a> programming language, but the code provided can be easily translated to other languages such as python. The main benefit of julia is that it is a language that is simple to write but can still have a performance comparable to traditional compiled languages. A good overview of the language can be found in the official <a class="reference external" href="https://docs.julialang.org/en/v1/manual/getting-started/">manual</a>, but below we show some of the basic functionality that you will need to use.</p>
+<p>First of all, we illustrate the basic usage of julia. A normal thing you will do at the beginning of any notebook or program is to include packages. Our life is made significantly easier by people who provide these packages! To do this, one makes use of the <code class="docutils literal notranslate"><span class="pre">using</span></code> keyword. Below we include the packages we will be using in this example.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">DataFrames</span>
-<span class="k">using</span> <span class="n">Plots</span>
-<span class="k">using</span> <span class="n">CSV</span>
-<span class="k">using</span> <span class="n">LaTeXStrings</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">DataFrames</span>     <span class="c"># Used to deal with tabular data</span>
+<span class="k">using</span> <span class="n">Plots</span>          <span class="c"># Provides a multitude of plotting routines</span>
+<span class="k">using</span> <span class="n">CSV</span>            <span class="c"># Efficient reading of files in &quot;comma separated values&quot; format</span>
+<span class="k">using</span> <span class="n">LaTeXStrings</span>   <span class="c"># Makes it easy to write LaTeX strings</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>Whenever you work on a fresh environment you will find the above code fails, as the packages are not installed. As described in the error message you can correct this by running (in a different cell) <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">Pkg;</span> <span class="pre">Pkg.add(&quot;DataFrames&quot;)</span></code>, and similarly for the other packages. Once this is done for a package, it will remain installed in your environment, and you don’t need to use <code class="docutils literal notranslate"><span class="pre">Pkg.add</span></code> again (it is safe to erase the cells with that command).</p>
+<p>The syntax of julia should be familiar to those with a python background. Assigning numerical variables and performing arithmetic operations on them is straightforward.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">pi</span> <span class="c"># the definition of pi is included by default</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span> <span class="c"># addition</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">b</span><span class="o">^</span><span class="n">a</span> <span class="c"># exponentiation</span>
+<span class="n">e</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="c"># basic mathematical functions are also defined in the language, no need to include a package</span>
+
+<span class="n">print</span><span class="p">(</span><span class="s">&quot;c=</span><span class="si">$</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="s">, b=</span><span class="si">$</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="s">, c=</span><span class="si">$</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="s">&quot;</span><span class="p">)</span> <span class="c"># $() notation is used to read the value in parenthesis into the string</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c=5.141592653589793, b=9.869604401089358, c=0.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>One option that can let you increase the readability of code is the use of greek characters. To include these in a code block you can write <code class="docutils literal notranslate"><span class="pre">\beta</span></code> and then press tab, which will replace them with the corresponding greek character.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">β</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>  <span class="c"># Using &#39;;&#39; at the end of a line will hide its output</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You also have access to basic keywords for control flow, including <code class="docutils literal notranslate"><span class="pre">if</span></code> blocks and <code class="docutils literal notranslate"><span class="pre">for</span></code> loops. Here some small notational variations arise with respect to <code class="docutils literal notranslate"><span class="pre">python</span></code>. Blocks of code are not defined by indentation but by the use of the <code class="docutils literal notranslate"><span class="pre">end</span></code> keyword.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="k">if</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="mi">2</span>   <span class="c"># &amp;&amp; stands for &#39;and&#39;</span>
+    <span class="n">print</span><span class="p">(</span><span class="s">&quot;if was successful&quot;</span><span class="p">)</span>
+<span class="k">elseif</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="o">||</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="mi">2</span>   <span class="c"># || stands for &#39;or&#39;</span>
+    <span class="n">print</span><span class="p">(</span><span class="s">&quot;elseif was successful&quot;</span><span class="p">)</span>
+<span class="k">else</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Neither if or elseif were successful&quot;</span><span class="p">)</span>
+<span class="k">end</span>
+<span class="n">print</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span> <span class="c"># print a line break</span>
+
+<span class="c"># Add up all digits between 1 and 10 using a for loop</span>
+<span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="mi">10</span>
+    <span class="n">sum</span> <span class="o">=</span> <span class="n">sum</span><span class="o">+</span><span class="n">i</span>
+<span class="k">end</span>
+<span class="n">print</span><span class="p">(</span><span class="s">&quot;Adding all numbers between 1 and 10 gives us </span><span class="si">$</span><span class="p">(</span><span class="n">sum</span><span class="p">)</span><span class="s">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>elseif was successful
+Adding all numbers between 1 and 10 gives us 55
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also define functions using the <code class="docutils literal notranslate"><span class="pre">function</span></code> keyword.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="n">add1</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -490,9 +553,10 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<p>We often deal not just with scalars but also vectors or matrices. We can define a vector covering a range of values using the <code class="docutils literal notranslate"><span class="pre">LinRange</span></code> function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">xvals</span> <span class="o">=</span> <span class="kt">LinRange</span><span class="p">(</span><span class="o">-</span><span class="mf">5.0</span><span class="p">,</span><span class="mf">5.0</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">xvals</span> <span class="o">=</span> <span class="kt">LinRange</span><span class="p">(</span><span class="o">-</span><span class="mf">5.0</span><span class="p">,</span><span class="mf">5.0</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span> <span class="c"># Create a vector with elements from -5.0 to 5.0 with 11 elements.</span>
 </pre></div>
 </div>
 </div>
@@ -503,6 +567,31 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<p>Beware that many operations on vectors will not work as you might naively expect. If you try computing <code class="docutils literal notranslate"><span class="pre">xvals^2</span></code>, an error will be thrown as the <code class="docutils literal notranslate"><span class="pre">^</span></code> operation is not defined between a vector and an integer. You could think that the above operation is ambiguous, do we mean that we want to take the square of each element of the vector or instead that we want to take the dot product of xvals with itself? To explicitly state that an operation is meant to be done element by element, one can use a <code class="docutils literal notranslate"><span class="pre">.</span></code> before the operation. Further information on this notation can be founde <a class="reference external" href="https://docs.julialang.org/en/v1/manual/functions/#man-vectorized">here</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">xvals</span><span class="o">.^</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11-element Vector{Float64}:
+ 25.0
+ 16.0
+  9.0
+  4.0
+  1.0
+  0.0
+  1.0
+  3.999999999999999
+  9.0
+ 16.0
+ 25.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>This can be done with any function. For instance the code below will apply our <code class="docutils literal notranslate"><span class="pre">add1</span></code> function to each element of the array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">add1</span><span class="o">.</span><span class="p">(</span><span class="n">xvals</span><span class="p">)</span>
@@ -526,16 +615,21 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<p>Finally, the <code class="docutils literal notranslate"><span class="pre">Plots</span></code> package allows us to easily make different kinds of plots. The example below shows a (sparsely) sampled plot of sine and cosine. The plot can be created by calling the <code class="docutils literal notranslate"><span class="pre">plot(...)</span></code> function, while things are added to it by calling the <code class="docutils literal notranslate"><span class="pre">plot!()</span></code> function. Using <code class="docutils literal notranslate"><span class="pre">!</span></code> as part of a function name is part of the style guide of julia to identify functions which modify their arguments. For example, the <code class="docutils literal notranslate"><span class="pre">sort(x)</span></code> function will return a copy of the vector <code class="docutils literal notranslate"><span class="pre">x</span></code> which is sorted, while <code class="docutils literal notranslate"><span class="pre">sort!(x)</span></code> will modify the vector <code class="docutils literal notranslate"><span class="pre">x</span></code> into a sorted version of itself (known as in place sorting).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">yvals</span> <span class="o">=</span> <span class="n">xvals</span><span class="o">.^</span><span class="mi">2</span>
-<span class="n">plot</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;</span><span class="si">$x</span><span class="s">$&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;</span><span class="si">$x</span><span class="s">^2$&quot;</span><span class="p">)</span>
-<span class="n">plot!</span><span class="p">(</span><span class="n">xvals</span><span class="p">,</span> <span class="n">yvals</span><span class="p">)</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">yvals</span> <span class="o">=</span> <span class="n">sin</span><span class="o">.</span><span class="p">(</span><span class="n">xvals</span><span class="p">)</span>
+<span class="n">yvals2</span> <span class="o">=</span> <span class="n">cos</span><span class="o">.</span><span class="p">(</span><span class="n">xvals</span><span class="p">)</span>
+<span class="c"># The LaTeX strings package allows us to write LaTeX without needing to escape backslashes</span>
+<span class="c"># (i.e., we can write L&quot;\sin(x)&quot; instead of &quot;$\\sin(x)$&quot;).</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;</span><span class="si">$x</span><span class="s">$&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;</span><span class="si">$y</span><span class="s">$&quot;</span><span class="p">)</span> 
+<span class="n">plot!</span><span class="p">(</span><span class="n">xvals</span><span class="p">,</span> <span class="n">yvals</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;$\sin(x)$&quot;</span><span class="p">)</span>
+<span class="n">plot!</span><span class="p">(</span><span class="n">xvals</span><span class="p">,</span> <span class="n">yvals2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;$\cos(x)$&quot;</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="ss">:dash</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/history_5_0.svg" src="../_images/history_5_0.svg" /></div>
+<img alt="../_images/history_19_0.svg" src="../_images/history_19_0.svg" /></div>
 </div>
 <section id="sources">
 <h3><span class="section-number">2.3.1. </span>Sources<a class="headerlink" href="#sources" title="Permalink to this headline">#</a></h3>
@@ -583,7 +677,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/history_8_0.svg" src="../_images/history_8_0.svg" /></div>
+<img alt="../_images/history_22_0.svg" src="../_images/history_22_0.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -599,7 +693,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/history_9_0.svg" src="../_images/history_9_0.svg" /></div>
+<img alt="../_images/history_23_0.svg" src="../_images/history_23_0.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -621,7 +715,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/history_10_0.svg" src="../_images/history_10_0.svg" /></div>
+<img alt="../_images/history_24_0.svg" src="../_images/history_24_0.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -644,7 +738,21 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/history_11_0.svg" src="../_images/history_11_0.svg" /></div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">MethodError</span>: objects of type Int64 are not callable
+<span class="n">Maybe</span> <span class="n">you</span> <span class="n">forgot</span> <span class="n">to</span> <span class="n">use</span> <span class="n">an</span> <span class="n">operator</span> <span class="n">such</span> <span class="k">as</span> <span class="o">*</span><span class="p">,</span> <span class="o">^</span><span class="p">,</span> <span class="o">%</span><span class="p">,</span> <span class="o">/</span> <span class="n">etc</span><span class="o">.</span> <span class="o">?</span>
+
+<span class="ne">Stacktrace</span>:
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">flux_ratio_BP_RP</span><span class="p">(</span><span class="n">T</span><span class="p">::</span><span class="n">Int64</span><span class="p">)</span>
+   <span class="o">@</span> <span class="n">Main</span> <span class="o">./</span><span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">]:</span><span class="mi">3</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
+   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">]:</span><span class="mi">8</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="nb">eval</span>
+   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">368</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
+   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1428</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -692,7 +800,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/history_14_0.svg" src="../_images/history_14_0.svg" /></div>
+<img alt="../_images/history_28_0.svg" src="../_images/history_28_0.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -708,7 +816,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/history_15_0.svg" src="../_images/history_15_0.svg" /></div>
+<img alt="../_images/history_29_0.svg" src="../_images/history_29_0.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -739,6 +847,8 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/history_31_0.svg" src="../_images/history_31_0.svg" /></div>
 </div>
 </section>
 </section>
