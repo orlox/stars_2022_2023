@@ -1,6 +1,5 @@
 # Introduction
 
-TODO
 
 ```{tableofcontents}
 ```

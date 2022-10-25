@@ -11,4 +11,5 @@ chapters:
 - file: equations/equations
 - file: eos1/eos1
 - file: eos2/eos2
+- file: radiative/radiative
 - file: bibliography
