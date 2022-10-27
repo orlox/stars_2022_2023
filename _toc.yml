@@ -7,7 +7,6 @@ options:
   numbered: True
 chapters:
 - file: instructions/instructions
-- file: history/test
 - file: history/history
 - file: equations/equations
 - file: eos1/eos1
