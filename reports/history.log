@@ -17,35 +17,32 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-function flux_ratio_BP_RP(T)
-    # Ignoring constant in the integration, relying on bins being equally spaced in lambda
-    F_sun_BP = sum(passbands.BP_pb .* normalized_spectral_radiance.(passbands.lambda,T))
-    F_sun_RP = sum(passbands.RP_pb .* normalized_spectral_radiance.(passbands.lambda,T))
-    return F_sun_BP/F_sun_RP
-end
+plot(xlabel=L"$\log_{10}T_\mathrm{eff}$", ylabel=L"\log_{10}L/L_\odot")
 
-diff_zero_point_BP_RP = 0.82+2.5*log10(flux_ratio_BP_RP(5772))
+# Predicted Zero-age main-sequence location for stars of masses (in Msun):
+#     0.4, 0.8, 0.9, 1.0, 1.25, 1.5, 1.7, 2, 2.5
+# All models except those with M=0.4 Msun are from Schaller et al. (1992):
+# - https://ui.adsabs.harvard.edu/abs/1992A%26AS...96..269S/abstract
+# Model at 0.4 Msun is from Charbonnel et al. (1999):
+# - https://ui.adsabs.harvard.edu/abs/1999A%26AS..135..405C/abstract
+log10_T_geneva = [3.568, 3.687, 3.724, 3.751, 3.808, 3.852, 3.901, 3.958, 4.031]
+log10_L_geneva = [-1.63, -0.612, -0.394, -0.163, 0.325, 0.676, 0.916, 1.209, 1.600]
 
-# sample 
-log10_T_sample = LinRange(3.0,6.0,100)
-BP_sub_RP = -2.5*log10.(flux_ratio_BP_RP.(10 .^ log10_T_sample)) .+ diff_zero_point_BP_RP
-
-plot(xlabel=L"$log_{10} T_\mathrm{eff}$",ylabel=L"$m_\mathrm{BP}-m_\mathrm{RP}$")
-plot!(log10_T_sample, BP_sub_RP,label="")
+scatter!(log10_T, log10_L_div_Lsun, label="Gaia")
+#scatter!(log10_T, (G_sun .- abs_G)./(-2.5))
+scatter!([log10_T_from_BP_sub_RP(BP_sun-RP_sun)],[0], label="Sun")
+plot!(log10_T_geneva, log10_L_geneva, linewidth=5, linestyle= :dot, color="orange", label="ZAMS")
+xflip!(true)
 ------------------
 
-MethodError: objects of type Int64 are not callable
-Maybe you forgot to use an operator such as [36m*, ^, %, / etc. [39m?
+UndefVarError: log10_T_from_BP_sub_RP not defined
 
 Stacktrace:
- [1] flux_ratio_BP_RP(T::Int64)
-   @ Main ./In[14]:3
- [2] top-level scope
-   @ In[14]:8
- [3] eval
+ [1] top-level scope
+   @ In[20]:14
+ [2] eval
    @ ./boot.jl:368 [inlined]
- [4] include_string(mapexpr::typeof(REPL.softscope), mod::Module, code::String, filename::String)
+ [3] include_string(mapexpr::typeof(REPL.softscope), mod::Module, code::String, filename::String)
    @ Base ./loading.jl:1428
-LoadError: MethodError: objects of type Int64 are not callable
-Maybe you forgot to use an operator such as [36m*, ^, %, / etc. [39m?
+LoadError: UndefVarError: log10_T_from_BP_sub_RP not defined
 

@@ -142,8 +142,13 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../radiative/radiative.html">
+   6. Radiative and conductive energy transport
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../bibliography.html">
-   6. Bibliography
+   7. Bibliography
   </a>
  </li>
 </ul>
@@ -375,8 +380,8 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sources">
-     2.3.1. Sources
+    <a class="reference internal nav-link" href="#constructing-an-hr-diagram-with-gaia-data">
+     2.3.1. Constructing an HR diagram with Gaia data
     </a>
    </li>
   </ul>
@@ -423,8 +428,8 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sources">
-     2.3.1. Sources
+    <a class="reference internal nav-link" href="#constructing-an-hr-diagram-with-gaia-data">
+     2.3.1. Constructing an HR diagram with Gaia data
     </a>
    </li>
   </ul>
@@ -521,9 +526,9 @@ title="Print to PDF"
 <span class="n">print</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span> <span class="c"># print a line break</span>
 
 <span class="c"># Add up all digits between 1 and 10 using a for loop</span>
-<span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">summation</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">1</span><span class="o">:</span><span class="mi">10</span>
-    <span class="n">sum</span> <span class="o">=</span> <span class="n">sum</span><span class="o">+</span><span class="n">i</span>
+    <span class="n">summation</span> <span class="o">=</span> <span class="n">summation</span><span class="o">+</span><span class="n">i</span>
 <span class="k">end</span>
 <span class="n">print</span><span class="p">(</span><span class="s">&quot;Adding all numbers between 1 and 10 gives us </span><span class="si">$</span><span class="p">(</span><span class="n">sum</span><span class="p">)</span><span class="s">&quot;</span><span class="p">)</span>
 </pre></div>
@@ -531,7 +536,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>elseif was successful
-Adding all numbers between 1 and 10 gives us 55
+Adding all numbers between 1 and 10 gives us sum
 </pre></div>
 </div>
 </div>
@@ -567,7 +572,8 @@ Adding all numbers between 1 and 10 gives us 55
 </div>
 </div>
 </div>
-<p>Beware that many operations on vectors will not work as you might naively expect. If you try computing <code class="docutils literal notranslate"><span class="pre">xvals^2</span></code>, an error will be thrown as the <code class="docutils literal notranslate"><span class="pre">^</span></code> operation is not defined between a vector and an integer. You could think that the above operation is ambiguous, do we mean that we want to take the square of each element of the vector or instead that we want to take the dot product of xvals with itself? To explicitly state that an operation is meant to be done element by element, one can use a <code class="docutils literal notranslate"><span class="pre">.</span></code> before the operation. Further information on this notation can be founde <a class="reference external" href="https://docs.julialang.org/en/v1/manual/functions/#man-vectorized">here</a>.</p>
+<p>Contrary to python, arrays in julia start at position 1, so if you attempt to access <code class="docutils literal notranslate"><span class="pre">xvals[0]</span></code> you will get an error.</p>
+<p>Beware that many operations on vectors will not work as you might naively expect. If you try computing <code class="docutils literal notranslate"><span class="pre">xvals^2</span></code>, an error will be thrown as the <code class="docutils literal notranslate"><span class="pre">^</span></code> operation is not defined between a vector and an integer. You could think that the above operation is ambiguous, do we mean that we want to take the square of each element of the vector or instead that we want to take the dot product of xvals with itself? To explicitly state that an operation is meant to be done element by element, one can use a <code class="docutils literal notranslate"><span class="pre">.</span></code> before the operation. Further information on this notation can be found <a class="reference external" href="https://docs.julialang.org/en/v1/manual/functions/#man-vectorized">here</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">xvals</span><span class="o">.^</span><span class="mi">2</span>
@@ -629,81 +635,92 @@ Adding all numbers between 1 and 10 gives us 55
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/history_19_0.svg" src="../_images/history_19_0.svg" /></div>
+<img alt="../_images/history_20_0.svg" src="../_images/history_20_0.svg" /></div>
 </div>
-<section id="sources">
-<h3><span class="section-number">2.3.1. </span>Sources<a class="headerlink" href="#sources" title="Permalink to this headline">#</a></h3>
-<ul class="simple">
-<li><p>Gaia passband info: <a class="reference external" href="https://www.cosmos.esa.int/web/gaia/edr3-passbands">https://www.cosmos.esa.int/web/gaia/edr3-passbands</a></p></li>
-<li><p>Gaia archive: <a class="reference external" href="https://gea.esac.esa.int/archive/">https://gea.esac.esa.int/archive/</a></p></li>
-<li><p>Sun Gaia magnitude: <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2018MNRAS.479L.102C/abstract">https://ui.adsabs.harvard.edu/abs/2018MNRAS.479L.102C/abstract</a></p></li>
-<li><p>Sun effective temperature (5772 K): Resolution B3 on recommended nominal conversion constants for selected solar and planetary properties Proposed by IAU Inter-Division A-G Working Group on Nominal Units for Stellar &amp; Planetary Astronomy The XXIXth International Astronomical Union General Assembly, <a class="reference external" href="https://www.iau.org/static/resolutions/IAU2015_English.pdf">https://www.iau.org/static/resolutions/IAU2015_English.pdf</a></p></li>
-<li><p>Solar spectrum: <a class="reference external" href="https://www.nrel.gov/grid/solar-resource/spectra-astm-e490.html">https://www.nrel.gov/grid/solar-resource/spectra-astm-e490.html</a></p></li>
-</ul>
+<section id="constructing-an-hr-diagram-with-gaia-data">
+<h3><span class="section-number">2.3.1. </span>Constructing an HR diagram with Gaia data<a class="headerlink" href="#constructing-an-hr-diagram-with-gaia-data" title="Permalink to this headline">#</a></h3>
+<p>To run this lab locally you will need three additional files, <a class="reference download internal" download="" href="../_downloads/16c58f2fe7fdef623d4fec7ec4b143fa/solar_spectrum.dat"><code class="xref download docutils literal notranslate"><span class="pre">solar_spectrum.dat</span></code></a>, <a class="reference download internal" download="" href="../_downloads/990f67d18958a317ab97bf38e2b36586/gaia_100pc_par_over_err_100.csv"><code class="xref download docutils literal notranslate"><span class="pre">gaia_100pc_par_over_err_100.csv</span></code></a> and <a class="reference download internal" download="" href="../_downloads/73382180c6f76469a6680ea8eb565519/passband.dat"><code class="xref download docutils literal notranslate"><span class="pre">passband.dat</span></code></a>.</p>
+<p>The radiation coming out of a star can be approximated to first order using black body radiation. In this case the intensity is described by Planck’s law,</p>
+<div class="math notranslate nohighlight">
+\[B_\lambda(\lambda,T) = \frac{2h c^2}{\lambda^5}\frac{1}{\exp\left(\frac{hc}{\lambda k_\mathrm{B}T}\right)-1},\]</div>
+<p>which describes the energy flux per unit area and unit solid angle. This function peaks at a value of <span class="math notranslate nohighlight">\(\lambda_\mathrm{max}=hc/(4.965 k_\mathrm{B}T)\)</span>. We can use this to normalize the distribution such that its peak value is <span class="math notranslate nohighlight">\(1\)</span>, which is useful for visualization. Below we define both <span class="math notranslate nohighlight">\(B_\lambda\)</span> and its normalized version.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">h</span> <span class="o">=</span> <span class="mf">6.6261e-27</span>      <span class="c"># Planck&#39;s constant, cm^2 g s^-1</span>
 <span class="n">c</span> <span class="o">=</span> <span class="mf">2.99792458e10</span>   <span class="c"># speed of light cm s^-1</span>
-<span class="n">k_b</span> <span class="o">=</span> <span class="mf">1.3807e-16</span>    <span class="c"># Boltzmann constant erg K-1</span>
-<span class="n">σ</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="nb">π</span><span class="o">^</span><span class="mi">5</span><span class="o">*</span><span class="n">k_b</span><span class="o">^</span><span class="mi">4</span><span class="o">/</span><span class="p">(</span><span class="mi">15</span><span class="o">*</span><span class="n">h</span><span class="o">^</span><span class="mi">3</span><span class="o">*</span><span class="n">c</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span> <span class="c"># Stefan-Boltzmann constant</span>
-<span class="k">function</span> <span class="n">spectral_radiance</span><span class="p">(</span><span class="n">λ</span><span class="p">,</span><span class="n">T</span><span class="p">)</span> <span class="c">#λ in nm, T in Kelvin</span>
+<span class="n">k_B</span> <span class="o">=</span> <span class="mf">1.3807e-16</span>    <span class="c"># Boltzmann constant erg K-1</span>
+<span class="n">σ</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="nb">π</span><span class="o">^</span><span class="mi">5</span><span class="o">*</span><span class="n">k_B</span><span class="o">^</span><span class="mi">4</span><span class="o">/</span><span class="p">(</span><span class="mi">15</span><span class="o">*</span><span class="n">h</span><span class="o">^</span><span class="mi">3</span><span class="o">*</span><span class="n">c</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span> <span class="c"># Stefan-Boltzmann constant</span>
+<span class="k">function</span> <span class="n">B_λ</span><span class="p">(</span><span class="n">λ</span><span class="p">,</span><span class="n">T</span><span class="p">)</span> <span class="c">#λ in nm, T in Kelvin</span>
     <span class="n">λ_cm</span> <span class="o">=</span> <span class="n">λ</span><span class="o">*</span><span class="mf">1e-7</span>
-    <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">h</span><span class="o">*</span><span class="n">c</span><span class="o">^</span><span class="mi">2</span><span class="o">/</span><span class="n">λ_cm</span><span class="o">^</span><span class="mi">5</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">exp</span><span class="p">(</span><span class="n">h</span><span class="o">*</span><span class="n">c</span><span class="o">/</span><span class="p">(</span><span class="n">λ_cm</span><span class="o">*</span><span class="n">k_b</span><span class="o">*</span><span class="n">T</span><span class="p">))</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
-<span class="k">end</span>
-<span class="k">function</span> <span class="n">normalized_spectral_radiance</span><span class="p">(</span><span class="n">λ</span><span class="p">,</span><span class="n">T</span><span class="p">)</span> <span class="c">#λ in nm, T in Kelvin</span>
-    <span class="n">peak_λ</span> <span class="o">=</span> <span class="n">h</span><span class="o">*</span><span class="n">c</span><span class="o">/</span><span class="p">(</span><span class="mf">4.965</span><span class="o">*</span><span class="n">k_b</span><span class="o">*</span><span class="n">T</span><span class="p">)</span><span class="o">*</span><span class="mf">1e7</span> <span class="c">#in nm</span>
-    <span class="k">return</span> <span class="n">spectral_radiance</span><span class="p">(</span><span class="n">λ</span><span class="p">,</span><span class="n">T</span><span class="p">)</span><span class="o">/</span><span class="n">spectral_radiance</span><span class="p">(</span><span class="n">peak_λ</span><span class="p">,</span><span class="n">T</span><span class="p">)</span>
-<span class="k">end</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>normalized_spectral_radiance (generic function with 1 method)
+    <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">h</span><span class="o">*</span><span class="n">c</span><span class="o">^</span><span class="mi">2</span><span class="o">/</span><span class="n">λ_cm</span><span class="o">^</span><span class="mi">5</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">exp</span><span class="p">(</span><span class="n">h</span><span class="o">*</span><span class="n">c</span><span class="o">/</span><span class="p">(</span><span class="n">λ_cm</span><span class="o">*</span><span class="n">k_B</span><span class="o">*</span><span class="n">T</span><span class="p">))</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+<span class="k">end</span><span class="p">;</span>
+<span class="k">function</span> <span class="n">normalized_B_λ</span><span class="p">(</span><span class="n">λ</span><span class="p">,</span><span class="n">T</span><span class="p">)</span> <span class="c">#λ in nm, T in Kelvin</span>
+    <span class="n">peak_λ</span> <span class="o">=</span> <span class="n">h</span><span class="o">*</span><span class="n">c</span><span class="o">/</span><span class="p">(</span><span class="mf">4.965</span><span class="o">*</span><span class="n">k_B</span><span class="o">*</span><span class="n">T</span><span class="p">)</span><span class="o">*</span><span class="mf">1e7</span> <span class="c">#in nm</span>
+    <span class="k">return</span> <span class="n">B_λ</span><span class="p">(</span><span class="n">λ</span><span class="p">,</span><span class="n">T</span><span class="p">)</span><span class="o">/</span><span class="n">B_λ</span><span class="p">(</span><span class="n">peak_λ</span><span class="p">,</span><span class="n">T</span><span class="p">)</span>
+<span class="k">end</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>To see what we mean when we say the spectrum of a star resembles that of a black body, we can check a solar spectrum. The flux that would come out of the surface of the sun per unit wavelength can be obtained by integration of <span class="math notranslate nohighlight">\(B_\lambda\)</span> over a half sphere, with a <span class="math notranslate nohighlight">\(\cos(\theta)\)</span> correction to account for projection effects,</p>
+<div class="math notranslate nohighlight">
+\[F_\lambda = \int_0^{2 \pi}d\phi\int_0^{\pi/2}B_\lambda(\lambda,T)\cos(\theta)\sin(\theta) d\theta d\phi=\pi B_\lambda.\]</div>
+<p>Integrated over all wavelengths it can be shown that the total flux is given by <span class="math notranslate nohighlight">\(F=\sigma T^4\)</span>, where <span class="math notranslate nohighlight">\(\sigma\)</span> is the Stefan-Boltzmann constant. While travelling through vacuum the flux scales as the inverse of the square distance, such that the solar flux observed at Earth can be computed as</p>
+<div class="math notranslate nohighlight">
+\[F_{\lambda,\mathrm{Earth}} = \pi B_\lambda \left(\frac{R_\odot}{1\;\mathrm{[au]}}\right)^2.\]</div>
+<p>Below we compare this black body prediction to a <a class="reference external" href="https://www.nrel.gov/grid/solar-resource/spectra-astm-e490.html">standard solar spectrum</a> from the National Renewable Energy Laboratory of the US. Here we use a temperature of <span class="math notranslate nohighlight">\(T_\mathrm{eff}=5772\;\mathrm{K}\)</span> for the Sun, which is a standard value defined by the <a class="reference external" href="https://www.iau.org/static/resolutions/IAU2015_English.pdf">International Astronomical Union</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">passbands</span> <span class="o">=</span> <span class="n">CSV</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s">&quot;passband.dat&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">delim</span><span class="o">=</span><span class="s">&quot; &quot;</span><span class="p">,</span> <span class="n">ignorerepeated</span><span class="o">=</span><span class="nb">true</span><span class="p">,</span> <span class="n">DataFrame</span><span class="p">)</span>
-<span class="n">plot</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;$\mathrm{Wavelength\;[nm]}$&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s">&quot;Transmissivity&quot;</span><span class="p">)</span>
-<span class="n">plot!</span><span class="p">(</span><span class="n">passbands</span><span class="o">.</span><span class="n">lambda</span><span class="p">,</span> <span class="n">passbands</span><span class="o">.</span><span class="n">G_pb</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;G&quot;</span><span class="p">)</span>
-<span class="n">plot!</span><span class="p">(</span><span class="n">passbands</span><span class="o">.</span><span class="n">lambda</span><span class="p">,</span> <span class="n">passbands</span><span class="o">.</span><span class="n">BP_pb</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;BP&quot;</span><span class="p">)</span>
-<span class="n">plot!</span><span class="p">(</span><span class="n">passbands</span><span class="o">.</span><span class="n">lambda</span><span class="p">,</span> <span class="n">passbands</span><span class="o">.</span><span class="n">RP_pb</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;RP&quot;</span><span class="p">)</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span> <span class="c"># We read a CSV file into a dataframe. The first line of the file contains the column names</span>
+<span class="n">solar_spectrum</span> <span class="o">=</span> <span class="n">CSV</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s">&quot;solar_spectrum.dat&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">delim</span><span class="o">=</span><span class="s">&quot; &quot;</span><span class="p">,</span> <span class="n">ignorerepeated</span><span class="o">=</span><span class="nb">true</span><span class="p">,</span> <span class="n">DataFrame</span><span class="p">)</span>
 
-<span class="n">xvals</span> <span class="o">=</span> <span class="kt">LinRange</span><span class="p">(</span><span class="mf">200.0</span><span class="p">,</span><span class="mf">1500.0</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
-<span class="n">plot!</span><span class="p">(</span><span class="n">xvals</span><span class="p">,</span> <span class="n">normalized_spectral_radiance</span><span class="o">.</span><span class="p">(</span><span class="n">xvals</span><span class="p">,</span><span class="mi">5772</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;T=5772 K&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/history_22_0.svg" src="../_images/history_22_0.svg" /></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">solar_spectrum</span> <span class="o">=</span> <span class="n">CSV</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s">&quot;solar_spectrum.dat&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">delim</span><span class="o">=</span><span class="s">&quot; &quot;</span><span class="p">,</span> <span class="n">ignorerepeated</span><span class="o">=</span><span class="nb">true</span><span class="p">,</span> <span class="n">DataFrame</span><span class="p">)</span>
 <span class="n">plot</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;$\mathrm{Wavelength\;[nm]}$&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;$\mathrm{Flux}\; [\mathrm{erg\;s^{-1}\;cm^{-2}\;nm^{-1}}]$&quot;</span><span class="p">,</span> <span class="n">xlims</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2000</span><span class="p">])</span>
 
 <span class="n">xvals</span> <span class="o">=</span> <span class="kt">LinRange</span><span class="p">(</span><span class="mf">200.0</span><span class="p">,</span><span class="mf">2000.0</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">au</span> <span class="o">=</span> <span class="mf">1.5e13</span>
 <span class="n">Rsun</span> <span class="o">=</span> <span class="mf">7e10</span>
-<span class="n">plot!</span><span class="p">(</span><span class="n">xvals</span><span class="p">,</span> <span class="nb">pi</span><span class="o">*</span><span class="n">spectral_radiance</span><span class="o">.</span><span class="p">(</span><span class="n">xvals</span><span class="p">,</span><span class="mi">5772</span><span class="p">)</span><span class="o">/</span><span class="mf">1e7</span><span class="o">/</span><span class="p">(</span><span class="n">au</span><span class="o">/</span><span class="n">Rsun</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">plot!</span><span class="p">(</span><span class="n">solar_spectrum</span><span class="o">.</span><span class="n">lambda</span><span class="p">,</span> <span class="n">solar_spectrum</span><span class="o">.</span><span class="n">flux</span><span class="p">)</span>
+<span class="n">plot!</span><span class="p">(</span><span class="n">xvals</span><span class="p">,</span> <span class="nb">pi</span><span class="o">*</span><span class="n">B_λ</span><span class="o">.</span><span class="p">(</span><span class="n">xvals</span><span class="p">,</span><span class="mi">5772</span><span class="p">)</span><span class="o">/</span><span class="mf">1e7</span><span class="o">/</span><span class="p">(</span><span class="n">au</span><span class="o">/</span><span class="n">Rsun</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span> <span class="c"># 1e7 factor converts from centimeter to nanometer</span>
+<span class="n">plot!</span><span class="p">(</span><span class="n">solar_spectrum</span><span class="o">.</span><span class="n">lambda</span><span class="p">,</span> <span class="n">solar_spectrum</span><span class="o">.</span><span class="n">flux</span><span class="p">)</span> <span class="c"># columns in a dataframe can be easily accesible by name</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/history_23_0.svg" src="../_images/history_23_0.svg" /></div>
+<img alt="../_images/history_24_0.svg" src="../_images/history_24_0.svg" /></div>
 </div>
+<p>In this exercise we will work with <a class="reference external" href="https://www.esa.int/Science_Exploration/Space_Science/Gaia">Gaia</a> data. Gaia is a space mission that is performing astrometry of over a billion targets, providing an incredible picture on the structure of our Galaxy. Using parallaxes we can determine the distance to these stars and thus infer their absolute magnitudes. Gaia also provides photometric measurements in three bands, called <span class="math notranslate nohighlight">\(G\)</span>, <span class="math notranslate nohighlight">\(G_{RP}\)</span> and <span class="math notranslate nohighlight">\(G_{BP}\)</span>. The G band is a broadband filter, while the <span class="math notranslate nohighlight">\(G_{RP}\)</span> and <span class="math notranslate nohighlight">\(G_{BP}\)</span> filters are more sensitive to short and long wavelengths respectively. The sensitivity of each filter to light at different wavelengths is described by the passbands, which are shown below compared to a (normalized) black body spectrum with the effective temperature of the Sun. For simplicity from here on we refer to the <span class="math notranslate nohighlight">\(G_{RP}\)</span> and <span class="math notranslate nohighlight">\(G_{BP}\)</span> filters as RP and BP.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">passbands</span> <span class="o">=</span> <span class="n">CSV</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s">&quot;passband.dat&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">delim</span><span class="o">=</span><span class="s">&quot; &quot;</span><span class="p">,</span> <span class="n">ignorerepeated</span><span class="o">=</span><span class="nb">true</span><span class="p">,</span> <span class="n">DataFrame</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;$\mathrm{Wavelength\;[nm]}$&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;\mathrm{Transmissivity}&quot;</span><span class="p">,</span> <span class="n">legendfontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plot!</span><span class="p">(</span><span class="n">passbands</span><span class="o">.</span><span class="n">lambda</span><span class="p">,</span> <span class="n">passbands</span><span class="o">.</span><span class="n">G_pb</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;</span><span class="si">$G</span><span class="s">$&quot;</span><span class="p">)</span>
+<span class="n">plot!</span><span class="p">(</span><span class="n">passbands</span><span class="o">.</span><span class="n">lambda</span><span class="p">,</span> <span class="n">passbands</span><span class="o">.</span><span class="n">BP_pb</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;BP&quot;</span><span class="p">)</span>
+<span class="n">plot!</span><span class="p">(</span><span class="n">passbands</span><span class="o">.</span><span class="n">lambda</span><span class="p">,</span> <span class="n">passbands</span><span class="o">.</span><span class="n">RP_pb</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;RP&quot;</span><span class="p">)</span>
+
+<span class="n">xvals</span> <span class="o">=</span> <span class="kt">LinRange</span><span class="p">(</span><span class="mf">200.0</span><span class="p">,</span><span class="mf">1500.0</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">plot!</span><span class="p">(</span><span class="n">xvals</span><span class="p">,</span> <span class="n">normalized_B_λ</span><span class="o">.</span><span class="p">(</span><span class="n">xvals</span><span class="p">,</span><span class="mi">5772</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;</span><span class="si">$T</span><span class="s">=5772\;\mathrm{[K]}$&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/history_26_0.svg" src="../_images/history_26_0.svg" /></div>
+</div>
+<p>The <a class="reference external" href="https://gea.esac.esa.int/archive/">Gaia archive</a> gives us a nice interface to query results from this mission (although queries are limited to 2000 results). Here we read a file <code class="docutils literal notranslate"><span class="pre">gaia_100pc_par_over_err_100.csv</span></code> that containts a sample of stars within <span class="math notranslate nohighlight">\(100\)</span> parsecs for which the error in the measured parallax is smaller that <span class="math notranslate nohighlight">\(1\%\)</span> of the total. As a quick reminder on what parallax means, it refers to the angular displacement of stars as seen by two different observers. When this angle is taken between two measurements at opposite ends of a circle with a distance of <span class="math notranslate nohighlight">\(1\;\mathrm{au}\)</span> (so, for an observer on Earth), the parallax <span class="math notranslate nohighlight">\(p\)</span> is half the of the angular displacement measured against a background of distant “fixed” stars. A parsec corresponds to the distance at which a source has a parallax of <span class="math notranslate nohighlight">\(1''\)</span> (<span class="math notranslate nohighlight">\(''\)</span> stands for arcsecond, which corresponds to <span class="math notranslate nohighlight">\(1/(60\times 3600)\)</span> of a degree). In this way the distance of a source is given by</p>
+<div class="math notranslate nohighlight">
+\[\frac{d}{1\;\mathrm{[pc]}} = \frac{1}{p/1''}.\]</div>
+<p>Knowing the distance we can compute the absolute magnitude <span class="math notranslate nohighlight">\(M\)</span> of a star of known apparent magnitude <span class="math notranslate nohighlight">\(m\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[M=m-5(\log_{10}d_\mathrm{pc}-1),\]</div>
+<p>where <span class="math notranslate nohighlight">\(d_\mathrm{pc}\)</span> is the distance to the source in parsecs. Using this, below we read the datafile obtained from the Gaia archive, compute the absolute G magnitude of each object using the distance obtained from the parallax (note that the parallaxes are in units of milliarcseconds), and plot a Hertzsprung-Russell diagram. The x-coordinate of the diagram is the color, obtained from substracting the magnitudes on the BP and RP filters. As lower magnitudes imply higher flux, sources to the left of the diagram have a bluer spectrum. We also include in here the location of the Sun using the values provided by <span id="id1">[<a class="reference internal" href="../bibliography.html#id3" title="L. Casagrande and Don A. VandenBerg. On the use of Gaia magnitudes and new tables of bolometric corrections. \mnras , 479(1):L102-L107, September 2018. arXiv:1806.01953, doi:10.1093/mnrasl/sly104.">Casagrande and VandenBerg, 2018</a>]</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">gaia_data</span> <span class="o">=</span> <span class="n">CSV</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s">&quot;gaia_100pc_par_over_err_100.csv&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">DataFrame</span><span class="p">)</span>
 
-<span class="n">plot</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s">&quot;BP-RP&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s">&quot;G&quot;</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;</span><span class="si">$m_</span><span class="s">{BP}-m_{RP}$&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s">&quot;Absolute G magnitude&quot;</span><span class="p">)</span>
 <span class="n">color</span> <span class="o">=</span> <span class="n">gaia_data</span><span class="o">.</span><span class="n">phot_bp_mean_mag</span> <span class="o">-</span> <span class="n">gaia_data</span><span class="o">.</span><span class="n">phot_rp_mean_mag</span>
 <span class="n">distance_pc</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">./</span> <span class="p">(</span><span class="mf">1e-3</span><span class="o">.*</span><span class="n">gaia_data</span><span class="o">.</span><span class="n">parallax</span><span class="p">)</span>
 <span class="n">abs_G</span> <span class="o">=</span> <span class="n">gaia_data</span><span class="o">.</span><span class="n">phot_g_mean_mag</span> <span class="o">.-</span> <span class="mi">5</span> <span class="o">.*</span> <span class="p">(</span><span class="n">log10</span><span class="o">.</span><span class="p">(</span><span class="n">distance_pc</span><span class="p">)</span><span class="o">.-</span><span class="mi">1</span><span class="p">)</span>
 
+<span class="c"># Solar absolute magnitudes from Casagrande &amp; VandenBerg (2018)</span>
 <span class="n">G_sun</span> <span class="o">=</span> <span class="mf">4.67</span>
 <span class="n">BP_sun</span> <span class="o">=</span> <span class="n">G_sun</span><span class="o">+</span><span class="mf">0.33</span>
 <span class="n">RP_sun</span> <span class="o">=</span> <span class="n">G_sun</span><span class="o">-</span><span class="mf">0.49</span>
@@ -715,18 +732,33 @@ Adding all numbers between 1 and 10 gives us 55
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/history_24_0.svg" src="../_images/history_24_0.svg" /></div>
+<img alt="../_images/history_28_0.svg" src="../_images/history_28_0.svg" /></div>
 </div>
+<p>A lot of interesting structure comes right out of this figure. We have that most stars live in a narrow band which crosses the figure diagonally. This band is the main-sequence, and is populated by core-hydrogen burning stars. On the lower left of the diagram we see an additional band of stars, which are much fainter for a given color. These stars correspond to white dwarfs. Finally, and not so apparent, on the upper left of the main sequence there are a few objects which diverge to higher luminosities than the main sequence. These are stars on their red-giant branch. We will go through all of these types of stars later in this course.</p>
+<p>Next up, we want to turn this into a theoretical Hertzprung-Russell diagram which shows the effective temperature <span class="math notranslate nohighlight">\(T_\mathrm{eff}\)</span> versus the luminosity. For this we need to know how to transform the color into an effective temperature, and how to determine the luminosity of a star with a given absolute G band magnitude and color. We will start with the mapping from color to effective temperature. In all of this we will assume all stars radiate as black bodies with an unkown temperature. For a source with a temperature <span class="math notranslate nohighlight">\(T_\mathrm{eff}\)</span> we can compute the magnitude in each band as</p>
+<div class="math notranslate nohighlight">
+\[m_{BP}=-2.5\log_{10} F_{BP} + m_{0,BP},\quad m_{RP}=-2.5\log_{10} F_{RP} + m_{0,RP},\]</div>
+<p>where the fluxes on each band are obtained by integrating a black body spectrum with the corresponding passband (<span class="math notranslate nohighlight">\(\varphi_{BP}(\lambda)\)</span> or <span class="math notranslate nohighlight">\(\varphi_{RP}(\lambda)\)</span>) that were plotted earlier:</p>
+<div class="math notranslate nohighlight">
+\[F_{BP} = C\int_0^\infty B_\lambda(\lambda,T) \varphi_{BP}(\lambda) d\lambda,\quad F_{RP}=C\int_0^\infty B_\lambda(\lambda,T) \varphi_{RP}(\lambda) d\lambda, \quad C=\pi \left(\frac{R}{d}\right)^2.\]</div>
+<p>The two zero-points <span class="math notranslate nohighlight">\(m_{0,BP}\)</span> and <span class="math notranslate nohighlight">\(m_{0,RP}\)</span> form part of the definition of the photometric system. Taking the difference between the magnitudes we obtain the color,</p>
+<div class="math notranslate nohighlight" id="equation-zero-point1">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-zero-point1" title="Permalink to this equation">#</a></span>\[m_{BP}-m_{RP} = -2.5 \log_{10}\left(\frac{\int_0^\infty B_\lambda(\lambda,T) \varphi_{BP}(\lambda) d\lambda}{\int_0^\infty B_\lambda(\lambda,T) \varphi_{RP}(\lambda) d\lambda}\right) + m_{0,BP} - m_{0,RP}.\]</div>
+<p>Taking the absolute magnitude of the Sun in the BP and RP bands, and assuming it radiates as a black body with <span class="math notranslate nohighlight">\(T=5772\;\mathrm{[K]}\)</span>, the difference between the zero-points can be expressed as (it does not make a difference if we use the absolute or apparent magnitude of the Sun here)</p>
+<div class="math notranslate nohighlight" id="equation-zero-point2">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-zero-point2" title="Permalink to this equation">#</a></span>\[m_{0,BP} - m_{0,RP}= M_{BP,\odot}-M_{RP,\odot} + 2.5 \log_{10}\left(\frac{\int_0^\infty B_\lambda(\lambda,5772\;\mathrm{[K]}) \varphi_{BP}(\lambda) d\lambda}{\int_0^\infty B_\lambda(\lambda,5772\;\mathrm{[K]}) \varphi_{RP}(\lambda) d\lambda}\right).\]</div>
+<p>Although we are getting the difference in the zero points by using an approximation of the Sun as a black body, a more formal approach would be to use the definition of the zero point of the GAIA photometric system, which uses the VEGAMAG system. In this system the zero points are set such that one particular star, Vega, has a magnitude of zero in all bands (or more specifally, a particular spectral model of Vega satisfies that). However, for this exercise, Vega is not ideal to use because it is a rapidly rotating star which cannot be well approximated with a blackbody spectrum. For details on this, you can check the section on <a class="reference external" href="https://gea.esac.esa.int/archive/documentation/GDR3/Data_processing/chap_cu5pho/cu5pho_sec_photProc/cu5pho_ssec_photCal.html">external calibration</a> from the documentation of the third Gaia data release <span id="id2">[<a class="reference internal" href="../bibliography.html#id4" title="F. van Leeuwen, J. de Bruijne, C. Babusiaux, G. Busso, J. Castañeda, C. Ducourant, C. Fabricius, and et al. Gaia DR3 documentation. Gaia DR3 documentation, European Space Agency; Gaia Data Processing and Analysis Consortium. Online at https://gea.esac.esa.int/archive/documentation/GDR3/index.html, id. 1, June 2022.">van Leeuwen <em>et al.</em>, 2022</a>]</span>.</p>
+<p>Combining equations <a class="reference internal" href="#equation-zero-point1">(2.1)</a> and <a class="reference internal" href="#equation-zero-point2">(2.2)</a> we can infer the color <span class="math notranslate nohighlight">\(m_{BP}-m_{RP}\)</span> of a source as a function of <span class="math notranslate nohighlight">\(T_\mathrm{eff}\)</span>. This is illustrated below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="n">flux_ratio_BP_RP</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
-    <span class="c"># Ignoring constant in the integration, relying on bins being equally spaced in lambda</span>
-    <span class="n">F_sun_BP</span> <span class="o">=</span> <span class="n">sum</span><span class="p">(</span><span class="n">passbands</span><span class="o">.</span><span class="n">BP_pb</span> <span class="o">.*</span> <span class="n">normalized_spectral_radiance</span><span class="o">.</span><span class="p">(</span><span class="n">passbands</span><span class="o">.</span><span class="n">lambda</span><span class="p">,</span><span class="n">T</span><span class="p">))</span>
-    <span class="n">F_sun_RP</span> <span class="o">=</span> <span class="n">sum</span><span class="p">(</span><span class="n">passbands</span><span class="o">.</span><span class="n">RP_pb</span> <span class="o">.*</span> <span class="n">normalized_spectral_radiance</span><span class="o">.</span><span class="p">(</span><span class="n">passbands</span><span class="o">.</span><span class="n">lambda</span><span class="p">,</span><span class="n">T</span><span class="p">))</span>
+    <span class="c"># Ignoring constant in the integration as we just care about the ratio, relying on bins being equally spaced in lambda</span>
+    <span class="n">F_sun_BP</span> <span class="o">=</span> <span class="n">sum</span><span class="p">(</span><span class="n">passbands</span><span class="o">.</span><span class="n">BP_pb</span> <span class="o">.*</span> <span class="n">B_λ</span><span class="o">.</span><span class="p">(</span><span class="n">passbands</span><span class="o">.</span><span class="n">lambda</span><span class="p">,</span><span class="n">T</span><span class="p">))</span>
+    <span class="n">F_sun_RP</span> <span class="o">=</span> <span class="n">sum</span><span class="p">(</span><span class="n">passbands</span><span class="o">.</span><span class="n">RP_pb</span> <span class="o">.*</span> <span class="n">B_λ</span><span class="o">.</span><span class="p">(</span><span class="n">passbands</span><span class="o">.</span><span class="n">lambda</span><span class="p">,</span><span class="n">T</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">F_sun_BP</span><span class="o">/</span><span class="n">F_sun_RP</span>
 <span class="k">end</span>
 
-<span class="n">diff_zero_point_BP_RP</span> <span class="o">=</span> <span class="mf">0.82</span><span class="o">+</span><span class="mf">2.5</span><span class="o">*</span><span class="n">log10</span><span class="p">(</span><span class="n">flux_ratio_BP_RP</span><span class="p">(</span><span class="mi">5772</span><span class="p">))</span>
+<span class="n">diff_zero_point_BP_RP</span> <span class="o">=</span> <span class="n">BP_sun</span> <span class="o">-</span> <span class="n">RP_sun</span> <span class="o">+</span> <span class="mf">2.5</span><span class="o">*</span><span class="n">log10</span><span class="p">(</span><span class="n">flux_ratio_BP_RP</span><span class="p">(</span><span class="mi">5772</span><span class="p">))</span>
 
 <span class="c"># sample </span>
 <span class="n">log10_T_sample</span> <span class="o">=</span> <span class="kt">LinRange</span><span class="p">(</span><span class="mf">3.0</span><span class="p">,</span><span class="mf">6.0</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
@@ -738,118 +770,125 @@ Adding all numbers between 1 and 10 gives us 55
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">MethodError</span>: objects of type Int64 are not callable
-<span class="n">Maybe</span> <span class="n">you</span> <span class="n">forgot</span> <span class="n">to</span> <span class="n">use</span> <span class="n">an</span> <span class="n">operator</span> <span class="n">such</span> <span class="k">as</span> <span class="o">*</span><span class="p">,</span> <span class="o">^</span><span class="p">,</span> <span class="o">%</span><span class="p">,</span> <span class="o">/</span> <span class="n">etc</span><span class="o">.</span> <span class="o">?</span>
-
-<span class="ne">Stacktrace</span>:
- <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">flux_ratio_BP_RP</span><span class="p">(</span><span class="n">T</span><span class="p">::</span><span class="n">Int64</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Main</span> <span class="o">./</span><span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">]:</span><span class="mi">3</span>
- <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
-   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">]:</span><span class="mi">8</span>
- <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="nb">eval</span>
-   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">368</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
- <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
-   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1428</span>
-</pre></div>
+<img alt="../_images/history_30_0.svg" src="../_images/history_30_0.svg" /></div>
 </div>
-</div>
-</div>
+<p>Now, on our quest to turn the Gaia Hertzsprung-Russell diagram into one of effective temperature versus luminosity, we run into a small problem. We have found a way to get a color from an effective temperature but what we need is the inverse! The inverse function can be computed numerically using a bisection algorithm. From the plot above we see that the relationship between temperature and color is monotonic. If we have an upper and a lower bound on the temperature that corresponds to a given color, we can iteratively improve on these bounds by taking their average and seeing if this new value corresponds to an upper or a lower bound. This can be iterated upon until the upper and lower bounds are close enough (down to a specific tolerance). The function below implements such a bisection solver.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c">#bisection algorithm to get Teff from BP-RP</span>
-<span class="k">function</span> <span class="n">log10_T_from_BP_sub_RP</span><span class="p">(</span><span class="n">BP_sub_RP</span><span class="p">)</span>
-    <span class="n">log10_T_min</span> <span class="o">=</span> <span class="mf">3.0</span>
-    <span class="n">log10_T_max</span> <span class="o">=</span> <span class="mf">6.0</span>
-    <span class="n">log10_T</span> <span class="o">=</span> <span class="mf">0.0</span>
-    <span class="k">while</span> <span class="n">abs</span><span class="p">(</span><span class="n">log10_T_min</span><span class="o">-</span><span class="n">log10_T_max</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mf">0.001</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c">#bisection algorithm to get Teff from the color BP-RP</span>
+<span class="k">function</span> <span class="n">log10_T_from_BP_minus_RP</span><span class="p">(</span><span class="n">BP_minus_RP</span><span class="p">)</span>
+    <span class="n">log10_T_min</span> <span class="o">=</span> <span class="mf">3.0</span> <span class="c"># lower bound</span>
+    <span class="n">log10_T_max</span> <span class="o">=</span> <span class="mf">6.0</span> <span class="c"># upper bound</span>
+    <span class="n">log10_T</span> <span class="o">=</span> <span class="mf">0.0</span> <span class="c"># initialize at an arbitrary value</span>
+    <span class="k">while</span> <span class="n">abs</span><span class="p">(</span><span class="n">log10_T_min</span><span class="o">-</span><span class="n">log10_T_max</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mf">0.001</span> <span class="c"># Iterate until we reach this tolerance</span>
+        <span class="c"># bisect bounds</span>
         <span class="n">log10_T</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">log10_T_max</span> <span class="o">+</span> <span class="n">log10_T_min</span><span class="p">)</span>
-        <span class="n">BP_sub_RP_new</span> <span class="o">=</span> <span class="o">-</span><span class="mf">2.5</span><span class="o">*</span><span class="n">log10</span><span class="o">.</span><span class="p">(</span><span class="n">flux_ratio_BP_RP</span><span class="p">(</span><span class="mi">10</span><span class="o">^</span><span class="n">log10_T</span><span class="p">))</span> <span class="o">.+</span> <span class="n">diff_zero_point_BP_RP</span>
-        <span class="k">if</span> <span class="n">BP_sub_RP_new</span> <span class="o">&gt;</span> <span class="n">BP_sub_RP</span> <span class="c"># T too low, update lower limit</span>
+        <span class="c"># evaluate the color that corresponds to this temperature</span>
+        <span class="n">BP_minus_RP_new</span> <span class="o">=</span> <span class="o">-</span><span class="mf">2.5</span><span class="o">*</span><span class="n">log10</span><span class="o">.</span><span class="p">(</span><span class="n">flux_ratio_BP_RP</span><span class="p">(</span><span class="mi">10</span><span class="o">^</span><span class="n">log10_T</span><span class="p">))</span> <span class="o">.+</span> <span class="n">diff_zero_point_BP_RP</span>
+
+        <span class="c"># Determine if the new value for log10_T is an upper or lower bound.</span>
+        <span class="c"># This relies on BP-RP decreasing monotonically with temperature</span>
+        <span class="k">if</span> <span class="n">BP_minus_RP_new</span> <span class="o">&gt;</span> <span class="n">BP_minus_RP</span> <span class="c"># T too low, update lower limit</span>
             <span class="n">log10_T_min</span> <span class="o">=</span> <span class="n">log10_T</span>
         <span class="k">else</span> <span class="c"># otherwise, update upper limit</span>
             <span class="n">log10_T_max</span> <span class="o">=</span> <span class="n">log10_T</span>
         <span class="k">end</span>
     <span class="k">end</span>
     <span class="k">return</span> <span class="n">log10_T</span>
-<span class="k">end</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>log10_T_from_BP_sub_RP (generic function with 1 method)
+<span class="k">end</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">log10_T</span> <span class="o">=</span> <span class="n">log10_T_from_BP_sub_RP</span><span class="o">.</span><span class="p">(</span><span class="n">color</span><span class="p">);</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c"># we use the function defined above to compute log10_Teff for all our Gaia sources </span>
+<span class="n">log10_T</span> <span class="o">=</span> <span class="n">log10_T_from_BP_minus_RP</span><span class="o">.</span><span class="p">(</span><span class="n">color</span><span class="p">);</span> <span class="c">#remember that color is defined as BP-RP</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>We can make use of this to make a <span class="math notranslate nohighlight">\(T_\mathrm{eff}\)</span> versus absolute G magnitude diagram.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;$\log_{10}T_\mathrm{eff}$&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s">&quot;G&quot;</span><span class="p">)</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;$\log_{10}T_\mathrm{eff}$&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s">&quot;Absolute G magnitude&quot;</span><span class="p">)</span>
 
 <span class="n">scatter!</span><span class="p">(</span><span class="n">log10_T</span><span class="p">,</span> <span class="n">abs_G</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s">&quot;Gaia&quot;</span><span class="p">)</span>
-<span class="n">scatter!</span><span class="p">([</span><span class="n">log10_T_from_BP_sub_RP</span><span class="p">(</span><span class="n">BP_sun</span><span class="o">-</span><span class="n">RP_sun</span><span class="p">)],[</span><span class="n">G_sun</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s">&quot;Sun&quot;</span><span class="p">)</span>
+<span class="n">scatter!</span><span class="p">([</span><span class="n">log10_T_from_BP_minus_RP</span><span class="p">(</span><span class="n">BP_sun</span><span class="o">-</span><span class="n">RP_sun</span><span class="p">)],[</span><span class="n">G_sun</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s">&quot;Sun&quot;</span><span class="p">)</span>
 <span class="n">yflip!</span><span class="p">(</span><span class="nb">true</span><span class="p">)</span>
 <span class="n">xflip!</span><span class="p">(</span><span class="nb">true</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/history_28_0.svg" src="../_images/history_28_0.svg" /></div>
+<img alt="../_images/history_35_0.svg" src="../_images/history_35_0.svg" /></div>
 </div>
+<p>We’re almost there, just need to turn the y-axis into a luminosity! To do this, we first compute the ratio of flux in the G band versus the total flux for a source at a given temperature. Since we have that <span class="math notranslate nohighlight">\(F_\lambda = \pi B_\lambda\)</span> and <span class="math notranslate nohighlight">\(F=\sigma T^4\)</span> we find:</p>
+<div class="math notranslate nohighlight">
+\[R(T)\equiv\frac{F_G}{F}=\frac{\pi}{\sigma T^4}\int_0^\infty B_\lambda(\lambda, T) \varphi_G(\lambda)d\lambda.\]</div>
+<p>Below we illustrate this ratio as a function of temperature.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="n">flux_ratio_G_total</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
-    <span class="c"># Ignoring constant in the integration, relying on bins being equally spaced in lambda</span>
-    <span class="n">F_G</span> <span class="o">=</span> <span class="n">sum</span><span class="p">(</span><span class="n">passbands</span><span class="o">.</span><span class="n">BP_pb</span> <span class="o">.*</span> <span class="n">spectral_radiance</span><span class="o">.</span><span class="p">(</span><span class="n">passbands</span><span class="o">.</span><span class="n">lambda</span><span class="p">,</span><span class="n">T</span><span class="p">)</span> <span class="o">.*</span><span class="mf">1e-7</span><span class="p">)</span>
-    <span class="k">return</span> <span class="nb">π</span><span class="o">*</span><span class="n">F_G</span><span class="o">/</span><span class="p">(</span><span class="n">σ</span><span class="o">*</span><span class="n">T</span><span class="o">^</span><span class="mi">4</span><span class="p">)</span>
+    <span class="c"># This numerical integration relies on bins being spaced by a nanometer in the passband data</span>
+    <span class="n">F_G</span> <span class="o">=</span> <span class="nb">π</span><span class="o">*</span><span class="n">sum</span><span class="p">(</span><span class="n">passbands</span><span class="o">.</span><span class="n">G_pb</span> <span class="o">.*</span> <span class="n">B_λ</span><span class="o">.</span><span class="p">(</span><span class="n">passbands</span><span class="o">.</span><span class="n">lambda</span><span class="p">,</span><span class="n">T</span><span class="p">)</span> <span class="o">.*</span><span class="mf">1e-7</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">F_G</span><span class="o">/</span><span class="p">(</span><span class="n">σ</span><span class="o">*</span><span class="n">T</span><span class="o">^</span><span class="mi">4</span><span class="p">)</span>
 <span class="k">end</span>
 
-<span class="n">plot</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;</span><span class="si">$log_</span><span class="s">{10} T_\mathrm{eff}$&quot;</span><span class="p">,</span><span class="n">ylabel</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;</span><span class="si">$F_</span><span class="s">\mathrm{G}/F$&quot;</span><span class="p">,</span> <span class="n">yscale</span><span class="o">=</span><span class="ss">:log</span><span class="p">)</span>
-<span class="n">plot!</span><span class="p">(</span><span class="n">log10_T_sample</span><span class="p">,</span> <span class="n">flux_ratio_G_total</span><span class="o">.</span><span class="p">(</span><span class="mi">10</span> <span class="o">.^</span> <span class="n">log10_T_sample</span><span class="p">))</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;</span><span class="si">$log_</span><span class="s">{10} T_\mathrm{eff}$&quot;</span><span class="p">,</span><span class="n">ylabel</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;</span><span class="si">$F_</span><span class="s">\mathrm{G}/F$&quot;</span><span class="p">,</span> <span class="n">yscale</span><span class="o">=</span><span class="ss">:log</span><span class="p">,</span> <span class="n">ylims</span><span class="o">=</span><span class="p">[</span><span class="mf">1e-4</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">legend</span><span class="o">=</span><span class="nb">false</span><span class="p">)</span>
+<span class="n">plot!</span><span class="p">(</span><span class="n">log10_T_sample</span><span class="p">,</span> <span class="n">flux_ratio_G_total</span><span class="o">.</span><span class="p">(</span><span class="mi">10</span> <span class="o">.^</span> <span class="n">log10_T_sample</span><span class="p">))</span> <span class="c"># log10_T_sample is an array defined previously, and goes from log10(T)=3 to 6</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/history_29_0.svg" src="../_images/history_29_0.svg" /></div>
+<img alt="../_images/history_37_0.svg" src="../_images/history_37_0.svg" /></div>
 </div>
+<p>As can be seen, if the temperature is pushed to very low or very high values we only capture a miniscule amount of the total light. This means that we have little information on the total luminosity and we can expect issues to appear when trying to convert from a G band magnitude to a total bolometric luminosity.</p>
+<p>And now for the last step, how do we use this to convert from an absolute G magnitude to the bolometric luminosity? If we substract the absolute G magnitude of the Sun to that of another star we obtain</p>
+<div class="math notranslate nohighlight" id="equation-abs-g-1">
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-abs-g-1" title="Permalink to this equation">#</a></span>\[M_{G} - M_{G,\odot} = -2.5 \log_{10}\left(\frac{L_{G}}{L_{G,\odot}}\right),\]</div>
+<p>where <span class="math notranslate nohighlight">\(L_G\)</span> stands for the luminosity of the star weighted by the G filter passband,</p>
+<div class="math notranslate nohighlight">
+\[L_G=\int_0^{\infty} L_\lambda \varphi(\lambda)d\lambda\]</div>
+<p>and <span class="math notranslate nohighlight">\(L_\lambda\)</span> is the luminosity per unit wavelength. Equation <a class="reference internal" href="#equation-abs-g-1">(2.3)</a> can be rewritten as</p>
+<div class="math notranslate nohighlight">
+\[M_{G} - M_{G,\odot} = -2.5\times\left[\log_{10}\left(\frac{L_{G}}{L}\right)+\log_{10}\left(\frac{L}{L_{\odot}}\right)+\log_{10}\left(\frac{L_\odot}{L_{G,\odot}}\right)\right].\]</div>
+<p>The ratio between the luminosity of a source and its G band is just the quantity <span class="math notranslate nohighlight">\(R(T)\)</span> we have computed before. Using the corresponding temperature for the Sun and solving for <span class="math notranslate nohighlight">\(\log_{10}(L/L_\odot)\)</span> we get</p>
+<div class="math notranslate nohighlight">
+\[\log_{10}\left(\frac{L}{L_\odot}\right)=\frac{M_{G,\odot}-M_{G}}{2.5} - \log_{10}(R(T)) + \log_{10}(R(5772\;\mathrm{K})),\]</div>
+<p>and remember that the temperature can be inferred from the color. With this we can complete our Hertzsprung-Russell diagram. As a check, we also include the predicted properties for stars on the zero-age main-sequence, which is the beginning of the core-hydrogen burning phase in the evolution of a star. These values of <span class="math notranslate nohighlight">\(L\)</span> and <span class="math notranslate nohighlight">\(T_\mathrm{eff}\)</span> come from the results of <span id="id3">[<a class="reference internal" href="../bibliography.html#id5" title="G. Schaller, D. Schaerer, G. Meynet, and A. Maeder. New Grids of Stellar Models from 0.8-SOLAR-MASS to 120-SOLAR-MASSES at Z=0.020 and Z=0.001. \aaps , 96:269, December 1992.">Schaller <em>et al.</em>, 1992</a>]</span> and <span id="id4">[<a class="reference internal" href="../bibliography.html#id6" title="C. Charbonnel, W. Däppen, D. Schaerer, P. A. Bernasconi, A. Maeder, G. Meynet, and N. Mowlavi. Grids of stellar models. VIII. From 0.4 to 1.0 \M$_sun$\ at Z=0.020 and Z=0.001, with the MHD equation of state. \aaps , 135:405-413, March 1999. arXiv:astro-ph/9810416, doi:10.1051/aas:1999454.">Charbonnel <em>et al.</em>, 1999</a>]</span> and cover masses between <span class="math notranslate nohighlight">\(0.4 M_\odot\)</span> and <span class="math notranslate nohighlight">\(2.5 M_\odot\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c">#log10_L_div_Lsun = (G_sun .- abs_G)./(2.5) .-</span>
-<span class="c">#    log10.(flux_ratio_G_total.(10 .^ log10_T)) .+ log10.(flux_ratio_G_total.(5772));</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">log10_L_div_Lsun</span> <span class="o">=</span> <span class="p">(</span><span class="n">G_sun</span> <span class="o">.-</span> <span class="n">abs_G</span><span class="p">)</span><span class="o">./</span><span class="p">(</span><span class="mf">2.5</span><span class="p">)</span> <span class="o">.-</span>
+    <span class="n">log10</span><span class="o">.</span><span class="p">(</span><span class="n">flux_ratio_G_total</span><span class="o">.</span><span class="p">(</span><span class="mi">10</span> <span class="o">.^</span> <span class="n">log10_T</span><span class="p">))</span> <span class="o">.+</span> <span class="n">log10</span><span class="o">.</span><span class="p">(</span><span class="n">flux_ratio_G_total</span><span class="o">.</span><span class="p">(</span><span class="mi">5772</span><span class="p">));</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="c">#plot(xlabel=L&quot;$\log_{10}T_\mathrm{eff}$&quot;, ylabel=L&quot;\log_{10}L/L_\odot&quot;)</span>
-<span class="c">#</span>
-<span class="c">## Predicted Zero-age main-sequence location for stars of masses (in Msun):</span>
-<span class="c">##     0.4, 0.8, 0.9, 1.0, 1.25, 1.5, 1.7, 2, 2.5</span>
-<span class="c">## All models except those with M=0.4 Msun are from Schaller et al. (1992):</span>
-<span class="c">## - https://ui.adsabs.harvard.edu/abs/1992A%26AS...96..269S/abstract</span>
-<span class="c">## Model at 0.4 Msun is from Charbonnel et al. (1999):</span>
-<span class="c">## - https://ui.adsabs.harvard.edu/abs/1999A%26AS..135..405C/abstract</span>
-<span class="c">#log10_T_geneva = [3.568, 3.687, 3.724, 3.751, 3.808, 3.852, 3.901, 3.958, 4.031]</span>
-<span class="c">#log10_L_geneva = [-1.63, -0.612, -0.394, -0.163, 0.325, 0.676, 0.916, 1.209, 1.600]</span>
-<span class="c">#</span>
-<span class="c">#scatter!(log10_T, log10_L_div_Lsun, label=&quot;Gaia&quot;)</span>
-<span class="c">##scatter!(log10_T, (G_sun .- abs_G)./(-2.5))</span>
-<span class="c">#scatter!([log10_T_from_BP_sub_RP(BP_sun-RP_sun)],[0], label=&quot;Sun&quot;)</span>
-<span class="c">#plot!(log10_T_geneva, log10_L_geneva, linewidth=5, linestyle= :dot, color=&quot;orange&quot;, label=&quot;ZAMS&quot;)</span>
-<span class="c">#xflip!(true)</span>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;$\log_{10}T_\mathrm{eff}$&quot;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="sa">L</span><span class="s">&quot;\log_{10}L/L_\odot&quot;</span><span class="p">)</span>
+
+<span class="c"># Predicted Zero-age main-sequence location for stars of masses (in Msun):</span>
+<span class="c">#     0.4, 0.8, 0.9, 1.0, 1.25, 1.5, 1.7, 2, 2.5</span>
+<span class="c"># All models except that with M=0.4 Msun are from Schaller et al. (1992).</span>
+<span class="c"># Model at 0.4 Msun is from Charbonnel et al. (1999).</span>
+<span class="c"># These results were computed using the Geneva stellar evolution code</span>
+<span class="n">log10_T_geneva</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.568</span><span class="p">,</span> <span class="mf">3.687</span><span class="p">,</span> <span class="mf">3.724</span><span class="p">,</span> <span class="mf">3.751</span><span class="p">,</span> <span class="mf">3.808</span><span class="p">,</span> <span class="mf">3.852</span><span class="p">,</span> <span class="mf">3.901</span><span class="p">,</span> <span class="mf">3.958</span><span class="p">,</span> <span class="mf">4.031</span><span class="p">]</span>
+<span class="n">log10_L_geneva</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">1.63</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.612</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.394</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.163</span><span class="p">,</span> <span class="mf">0.325</span><span class="p">,</span> <span class="mf">0.676</span><span class="p">,</span> <span class="mf">0.916</span><span class="p">,</span> <span class="mf">1.209</span><span class="p">,</span> <span class="mf">1.600</span><span class="p">]</span>
+
+<span class="n">scatter!</span><span class="p">(</span><span class="n">log10_T</span><span class="p">,</span> <span class="n">log10_L_div_Lsun</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;Gaia&quot;</span><span class="p">)</span>
+<span class="n">scatter!</span><span class="p">([</span><span class="n">log10_T_from_BP_minus_RP</span><span class="p">(</span><span class="n">BP_sun</span><span class="o">-</span><span class="n">RP_sun</span><span class="p">)],[</span><span class="mi">0</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;Sun&quot;</span><span class="p">)</span>
+<span class="n">plot!</span><span class="p">(</span><span class="n">log10_T_geneva</span><span class="p">,</span> <span class="n">log10_L_geneva</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span> <span class="ss">:dot</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">&quot;orange&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">&quot;ZAMS&quot;</span><span class="p">)</span>
+<span class="n">xflip!</span><span class="p">(</span><span class="nb">true</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/history_31_0.svg" src="../_images/history_31_0.svg" /></div>
+<img alt="../_images/history_40_0.svg" src="../_images/history_40_0.svg" /></div>
 </div>
+<p>Here we see that the predicted zero-age main-sequence matches well the observed stars except at low luminosities and effective temperatures. This is not entirely surprising, as for those low temperatures we have already seen that the Gaia filters only cover a small fraction of the total luminosity of the star.</p>
+<p>Feel free to further play with this data. For instance, using <span class="math notranslate nohighlight">\(L=4\pi R^2\sigma T_\mathrm{eff}^4\)</span> you can determine the radii of these stars, and compare how much the radii in the main-sequence differ from those of the white dwarfs.</p>
 </section>
 </section>
 </section>
