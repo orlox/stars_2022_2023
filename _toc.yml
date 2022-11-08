@@ -12,4 +12,5 @@ chapters:
 - file: eos1/eos1
 - file: eos2/eos2
 - file: radiative/radiative
+- file: convection/convection
 - file: bibliography
