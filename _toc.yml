@@ -13,4 +13,6 @@ chapters:
 - file: eos2/eos2
 - file: radiative/radiative
 - file: convection/convection
+- file: lab1/lab1
+- file: nucleosynthesis/nucleosynthesis
 - file: bibliography
