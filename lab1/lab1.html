@@ -1,0 +1,1334 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>9. MESA LAB1 &#8212; Stellar Structure and Evolution</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="10. Nuclear processes in stars" href="../nucleosynthesis/nucleosynthesis.html" />
+    <link rel="prev" title="7. Convective energy transport" href="../convection/convection.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Stellar Structure and Evolution</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../instructions/instructions.html">
+   1. Instructions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../history/history.html">
+   2. Some history
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../equations/equations.html">
+   3. The equations of stellar structure and evolution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../eos1/eos1.html">
+   4. The energy equation and the equation of state
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../eos2/eos2.html">
+   5. Degenerate equations of state
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../radiative/radiative.html">
+   6. Radiative and conductive energy transport
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../convection/convection.html">
+   7. Convective energy transport
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   9. MESA LAB1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nucleosynthesis/nucleosynthesis.html">
+   10. Nuclear processes in stars
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bibliography.html">
+   11. Bibliography
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/orlox/stars_2022_2023/main?urlpath=tree/lab1/lab1.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/orlox/stars_2022_2023"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/orlox/stars_2022_2023/issues/new?title=Issue%20on%20page%20%2Flab1/lab1.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/lab1/lab1.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#practicalities">
+   9.1. Practicalities
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lab-intro">
+     9.1.1. Lab intro
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instructions-for-the-report">
+     9.1.2. Instructions for the report
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#general-rules">
+       9.1.2.1. General rules
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#formalities">
+       9.1.2.2. Formalities
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grades-and-deadlines">
+     9.1.3. Grades and deadlines
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-lab-computers">
+     9.1.4. The lab computers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-mesa-work-folder">
+     9.1.5. The MESA work folder
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-run-mesa">
+     9.1.6. How to run MESA
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-assigned-masses">
+   9.2. The assigned masses
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-questions">
+   9.3. The questions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preliminary-instructions">
+     9.3.1. Preliminary instructions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-pre-main-sequence-and-main-sequence-2-pts">
+     9.3.2. The Pre Main Sequence and Main Sequence (2 pts)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-virial-theorem-5-pts">
+     9.3.3. The Virial Theorem (5 pts)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-equation-of-state-i-polytropes-5-pts">
+     9.3.4. The Equation of State I. Polytropes (5 pts)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-equation-of-state-ii-radiation-pressure-2-pts">
+     9.3.5. The Equation of State II. Radiation pressure? (2 pts)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#massive-vs-low-mass-evolution-2-pts">
+     9.3.6. Massive vs Low Mass evolution (2 pts)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bonus-radiative-opacities-pts">
+     9.3.7. Bonus: Radiative Opacities (➕ pts)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>MESA LAB1</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#practicalities">
+   9.1. Practicalities
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lab-intro">
+     9.1.1. Lab intro
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instructions-for-the-report">
+     9.1.2. Instructions for the report
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#general-rules">
+       9.1.2.1. General rules
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#formalities">
+       9.1.2.2. Formalities
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grades-and-deadlines">
+     9.1.3. Grades and deadlines
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-lab-computers">
+     9.1.4. The lab computers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-mesa-work-folder">
+     9.1.5. The MESA work folder
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-run-mesa">
+     9.1.6. How to run MESA
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-assigned-masses">
+   9.2. The assigned masses
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-questions">
+   9.3. The questions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preliminary-instructions">
+     9.3.1. Preliminary instructions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-pre-main-sequence-and-main-sequence-2-pts">
+     9.3.2. The Pre Main Sequence and Main Sequence (2 pts)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-virial-theorem-5-pts">
+     9.3.3. The Virial Theorem (5 pts)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-equation-of-state-i-polytropes-5-pts">
+     9.3.4. The Equation of State I. Polytropes (5 pts)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-equation-of-state-ii-radiation-pressure-2-pts">
+     9.3.5. The Equation of State II. Radiation pressure? (2 pts)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#massive-vs-low-mass-evolution-2-pts">
+     9.3.6. Massive vs Low Mass evolution (2 pts)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bonus-radiative-opacities-pts">
+     9.3.7. Bonus: Radiative Opacities (➕ pts)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="mesa-lab1">
+<h1><span class="section-number">9. </span>MESA LAB1<a class="headerlink" href="#mesa-lab1" title="Permalink to this headline">#</a></h1>
+<div style="text-align: justify"> 
+<p>Modules for Experiments in Stellar Astrophysics (MESA) <span id="id1">[<a class="reference internal" href="../bibliography.html#id7" title="Adam S. Jermyn, Evan B. Bauer, Josiah Schwab, R. Farmer, Warrick H. Ball, Earl P. Bellinger, Aaron Dotter, Meridith Joyce, Pablo Marchant, Joey S. G. Mombarg, William M. Wolf, Tin Long Sunny Wong, Giulia C. Cinquegrana, Eoin Farrell, R. Smolec, Anne Thoul, Matteo Cantiello, Falk Herwig, Odette Toloza, Lars Bildsten, Richard H. D. Townsend, and F. X. Timmes. Modules for experiments in stellar astrophysics (mesa): time-dependent convection, energy conservation, automatic differentiation, and infrastructure. 2022. URL: https://arxiv.org/abs/2208.03651, doi:10.48550/ARXIV.2208.03651.">Jermyn <em>et al.</em>, 2022</a>]</span> is a state of the art, open-source 1D stellar evolution code. MESA is built to allow users to run experiments in stellar evolution, with a huge variety of possibilities for input physics and customization. You are strongly encouraged to give a look at the <a class="reference external" href="https://docs.mesastar.org/en/release-r21.12.1/">documentation</a> to discover more about the software. We will specifically use the MESAstar module to evolve a single star.</p>
+<section id="practicalities">
+<h2><span class="section-number">9.1. </span>Practicalities<a class="headerlink" href="#practicalities" title="Permalink to this headline">#</a></h2>
+<section id="lab-intro">
+<h3><span class="section-number">9.1.1. </span>Lab intro<a class="headerlink" href="#lab-intro" title="Permalink to this headline">#</a></h3>
+<p>In this lab you will learn how to evolve a star with MESA and how to interpret its outputs in terms of the theory of stellar structure and evolution you have seen so far. In particular</p>
+<ul>
+<li>
+<p><b><u>FIRST HOUR</b></u>: theoretical overview of the software. The basic numerical scheme used to solve the set of stellar structure and evolution equations; the boundary conditions for the differential equations; the software infrastructure and usage of inlists, output files.</p>
+</li>
+<li>
+<p><b><u>SECOND HOUR</b></u>: set up your simulation and save the outputs in your local machines / USB memory / personal folder in the system, as you will need to use it at home to post-process the information and write a report. This time at the lab is mainly meant for you to run the simulation while you have someone that can help you (me); if, at the end, you still have some time, you can start answering the questions of the report. <br>
+NB: you will have to run <b> two </b> simulations of two stars with different masses, and save <b> both </b> those outputs. Be sure to do that before you leave the session.</p>
+</li>
+</ul>
+</section>
+<section id="instructions-for-the-report">
+<h3><span class="section-number">9.1.2. </span>Instructions for the report<a class="headerlink" href="#instructions-for-the-report" title="Permalink to this headline">#</a></h3>
+<section id="general-rules">
+<h4><span class="section-number">9.1.2.1. </span>General rules<a class="headerlink" href="#general-rules" title="Permalink to this headline">#</a></h4>
+<p>If you still have time during the second hour of the session, you can start going through the list of requests below. You will have to produce a (<b>graded!</b>) report about these. Try to answer to <i>all</i> questions completely:</p>
+<ul>
+<li>
+<p><u>Are you asked for a number</u>? <br> If this number comes from a formula, show the formula introducing the quantities appearing in it, as well as under which physical assumptions that specific formula holds. E.g., if you’re computing a gravitational energy <span class="math notranslate nohighlight">\(E_{\mathrm{gr}}\)</span>, we would like you to write something like:</p>
+<br>
+<center>
+<div align="justify" style="padding: 4px; border: 0.75px dashed black; display: inline-block;">
+<p><i> The estimate for the gravitation potential energy <span class="math notranslate nohighlight">\(E_{\mathrm{grav}}\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[E_{\mathrm{gr}}\equiv \int_{0}^{M} -\dfrac{Gm}{r(m)^2} dm= 3.14\times 10^{7} \:\mathrm{erg},\]</div>
+<p>where <span class="math notranslate nohighlight">\(G\)</span> is the gravitational constant, <span class="math notranslate nohighlight">\(M\)</span> is the total star mass and <span class="math notranslate nohighlight">\(r=r(m)\)</span> is the Eulerian radial coordinate along the star’s structure. The first equality is a first principle definition, holding in the assumption of spherical symmetry; in the second equality, we evaluate the formula. </i></p>
+</div>
+</center>
+<br>
+<p>If the number comes directly out of your simulation, be sure to explicitly say where you found this information: which column of the output file are you using, and at which stage of the evolution of your system?</p>
+</li>
+<li>
+<p><u>Are you asked for a derivation</u>? <br> We would like to see the math with clear passages.</p>
+</li>
+<li>
+<p><u>Are you asked for a plot</u>?<br> You can use whichever visualization tool you want to produce plots. Just be sure to make them readable: fontsize of any label / tick / legend must be the same as the written text. And everything needs to be properly labeled. Number the plots as Fig.(1), Fig.(2) … Fig.(n) and refer to those in the text, when you describe how such figure illustrates the answer to the question.</p>
+</li>
+</ul>
+<!-- Remember that guiding us through your reasoning goes exclusively at your own advantage! -->
+</section>
+<section id="formalities">
+<h4><span class="section-number">9.1.2.2. </span>Formalities<a class="headerlink" href="#formalities" title="Permalink to this headline">#</a></h4>
+<ul>
+<li>
+<p><b>PAGE LIMIT</b> Maximum of 4 pages (including figures) with classical font and fontsize (<span class="math notranslate nohighlight">\(\geq\)</span> 12pt please). Include your name and student number on the first page of the PDF.</p>
+</li>
+<li>
+<p><b>SUBMISSION FORMAT</b> Submit a tar / zip named as <code class="docutils literal notranslate"><span class="pre">name_lastname_XMsun_LAB1.zip</span></code>, where <span class="math notranslate nohighlight">\(X\)</span> is defined as <span class="math notranslate nohighlight">\(M=X\:M_{\odot}\)</span> and <span class="math notranslate nohighlight">\(M\)</span> is the mass of your assigned star (see below!).</p>
+<br>
+<center>
+<div align="center" style="padding: 2px; border: 2px dashed red; display: inline-block;">
+<p><b> 🚨 Attention 🚨 </b> <br>
+Include your <code class="docutils literal notranslate"><span class="pre">inlist_project</span></code> too!</p>
+</div>
+</center>
+</li>
+</ul>
+</section>
+</section>
+<section id="grades-and-deadlines">
+<h3><span class="section-number">9.1.3. </span>Grades and deadlines<a class="headerlink" href="#grades-and-deadlines" title="Permalink to this headline">#</a></h3>
+<p>The idea is that you go through <i> every </i> question; the final question (<i>Bonus: Radiative Opacities</i>) can give you bonus points for the final exam, but if you address all the other requests correctly and completely, you will be able to get the full grade of the report anyway. You will be given approximately 3 weeks to complete the report and send it to us.</p>
+<ul>
+<li>
+<p><b> GRADES </b> Points for each question are made explicit in the text. The maximum is 16 points / 16. <i>(Preliminary)</i> Let us say that you totalize N points / 16: in total, this report will weight N / 4 grades out of your final 20! So if you manage to score full grade in this report, 4 points out of your final 20 are granted. Good luck! 🍀</p>
+</li>
+<li>
+<p><b> DEADLINE </b> Report must be completed by</p>
+<br>
+<center>
+<div align="center" style="padding: 2px; border: 2px solid red; display: inline-block;">
+  9 December , 14:00 CET
+</div>
+</center>
+<br>
+</li>
+<li>
+<p><b>TO BE SENT</b>
+Via email to <a class="reference external" href="mailto:annachiara&#46;picco&#37;&#52;&#48;kuleuven&#46;be">annachiara<span>&#46;</span>picco<span>&#64;</span>kuleuven<span>&#46;</span>be</a>, with the object of the email matching the name of the attached zip / tar file, i.e. something like <code class="docutils literal notranslate"><span class="pre">name_lastname_XMsun_LAB1.zip</span></code>.</p>
+</li>
+</ul>
+</section>
+<section id="the-lab-computers">
+<h3><span class="section-number">9.1.4. </span>The lab computers<a class="headerlink" href="#the-lab-computers" title="Permalink to this headline">#</a></h3>
+<p><u>MESA (v15140) is already installed</u> in the machines of the room 4.33 (4th floor, Instituut voor Sterrenkunde). You will not be required to install any additional package. However, to be able to complete the simulation runs, you will have to access the IvS system with your personal credentials. At the start of your Master in Astronomy &amp; Astrophysics at KU Leuven, you should all have received those credentials. If not so, immediately tell me and we’ll figure out how to set it up as soon as possible.</p>
+<p>To be able to run MESA from a folder of your choice, you need to set the Linux environment variables to tell your terminal where to find the software. To do so, open a terminal with <code class="docutils literal notranslate"><span class="pre">ctrl+shift+T</span></code> and type the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the environment variables</span>
+module load mesasdk
+module load mesa
+<span class="c1"># Check that everything is correct</span>
+<span class="nb">echo</span> <span class="nv">$MESA_DIR</span>
+<span class="nb">echo</span> <span class="nv">$MESASDK_VERSION</span>
+</pre></div>
+</div>
+</section>
+<section id="the-mesa-work-folder">
+<h3><span class="section-number">9.1.5. </span>The MESA work folder<a class="headerlink" href="#the-mesa-work-folder" title="Permalink to this headline">#</a></h3>
+<p>In the following, I am going to assume that you are working in a folder called <code class="docutils literal notranslate"><span class="pre">MESA_LAB1</span></code>; you should adapt the commands to the (path of the) folder you chose to use. More specifically, you are going to work with a copy of the template work directory of the MESAstar module:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> <span class="c1"># Move to the directory of your choice</span>
+ <span class="nb">cd</span> MESA_LAB1
+ <span class="c1"># Copy the template work directory from the MESA distribution</span>
+ cp -R <span class="nv">$MESA_DIR</span>/star/work/* .
+</pre></div>
+</div>
+<p>After running your first simulation, you will see that in this folder you’ll have the following elements:</p>
+<ul>
+<li>
+<p><i><b> inlist </b></i><br> Fortran namelist pointing to the specific inlist for the project.</p>
+ </li>
+ <li>
+<p><i><b> inlist_project </b></i><br> Fortran namelist containing all the options for the simulation; these include input physics as well as resolution controls. It is always asvisable to give a look at the options and try to understand their meaning, by digging into the parameter libraries in <code class="docutils literal notranslate"><span class="pre">$MESA_DIR/star/defaults/*</span></code>. These files contain default values for all the options present in your <code class="docutils literal notranslate"><span class="pre">inlist_project</span></code>, as well as their explanation and reference in literature.</p>
+ </li>
+ <li>
+<p><i><b> inlist_pgstar </b></i><br> Fortran namelist specific for the pgstar dynamic window. You can give a look at the default parameters for the pgstar inlist by looking through <code class="docutils literal notranslate"><span class="pre">$MESA_DIR/star/default/pgstar.defaults</span></code>.</p>
+</li>
+ <li>
+<p><i><b> LOGS </b></i><br> Folder containing all the output files: evolutionary quantities in <code class="docutils literal notranslate"><span class="pre">history.data</span></code>, profiles information in <code class="docutils literal notranslate"><span class="pre">profileN.data</span></code>. Profiles are mapped to model numbers as illustrated in <code class="docutils literal notranslate"><span class="pre">profiles.index</span></code>. The profile files are printed at regular intervals during the simulation, see the option <code class="docutils literal notranslate"><span class="pre">profile_interval</span> <span class="pre">=</span> <span class="pre">10</span></code> in your <code class="docutils literal notranslate"><span class="pre">inlist_project</span></code>.</p>
+</li>
+ <li>
+<p><i><b> photos </b></i><br> Folder containing the simulation photos: files named <code class="docutils literal notranslate"><span class="pre">xN</span></code>, with N being the photo’s number, in machine-language. These are also printed at regular intervals during the simulation, see the option <code class="docutils literal notranslate"><span class="pre">photo_interval</span> <span class="pre">=</span> <span class="pre">10</span></code> in your <code class="docutils literal notranslate"><span class="pre">inlist_project</span></code>, and contain all the information about models. They are useful to be able to restart the simulation from different points along the track, in case your run is time-consuming and you want to save some time. You should not need to use those in this lab1.</p>
+</li>
+ <li>
+<p><i><b> grid_png </b></i><br> Folder containing png snapshots of the pgstar dynamic window: these are called as <code class="docutils literal notranslate"><span class="pre">grid_N.png</span></code>, where N is the model number along the evolutionary track. These are also printed at regular intervals, see the option <code class="docutils literal notranslate"><span class="pre">Grid1_file_interval</span> <span class="pre">=</span> <span class="pre">10</span></code> in your <code class="docutils literal notranslate"><span class="pre">inlist_project</span></code>.</p>
+</li>
+ <li>
+<p><i><b> profile_columns.list </b></i><br> List of all the information, about structural properties of a model at fixed time, that are printed in the output files <code class="docutils literal notranslate"><span class="pre">profileN.data</span></code>, and used in the pgstar dynamic window.</p>
+</li>
+ <li>
+<p><i><b> history_columns.list </b></i><br> List of all the information, about evolutionary quantities along the track, that are printed in the output file <code class="docutils literal notranslate"><span class="pre">history.data</span></code>, and used in the pgstar dynamic window.</p>
+</li>
+</ul>
+</section>
+<section id="how-to-run-mesa">
+<h3><span class="section-number">9.1.6. </span>How to run MESA<a class="headerlink" href="#how-to-run-mesa" title="Permalink to this headline">#</a></h3>
+<p>You will always run MESA from the folder called <code class="docutils literal notranslate"><span class="pre">MESA_LAB1</span></code>. In such folder, there is a very nicely written <code class="docutils literal notranslate"><span class="pre">README.rst</span></code> file with a reminder on how to run / compile (and restart, when needed) the simulation. In general, you will have to type the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Move to the MESA_LAB1 directory</span>
+<span class="nb">cd</span> MESA_LAB1
+<span class="c1"># Compile and produce the executable called &quot;star&quot;</span>
+./mk
+<span class="c1"># Run the simulation</span>
+./rn
+<span class="c1"># Restart the simulation from the photo x050</span>
+./re x050
+</pre></div>
+</div>
+</section>
+</section>
+<section id="the-assigned-masses">
+<h2><span class="section-number">9.2. </span>The assigned masses<a class="headerlink" href="#the-assigned-masses" title="Permalink to this headline">#</a></h2>
+<p>Due to the number of available computers in the lab, you all will be paired during the session. This means that every student (A) will have a mate (B) to look at the simulations with. Each team (A+B) of students will have to produce, <b>during the session</b>, a total of two simulations (1+2), and save the outputs for later use (at home). These two simulations will serve the following purposes:</p>
+<ul>
+<li>
+<p><u>Simulation 1</u> will evolve a star of initial mass <span class="math notranslate nohighlight">\(M\)</span>. Student A will have to answer all the questions aside from <i> Massive vs Low Mass evolution </i> by taking into account exclusively the outcome of simulation 1. Student B will make use of the outcome of simulation 1 just to answer the aforesaid question.</p>
+</li>
+<li>
+<p><u>Simulation 2</u> will evolve a star of initial mass <span class="math notranslate nohighlight">\(M'\neq M\)</span>. Student B will have to answer all the questions aside from <i> Massive vs Low Mass evolution </i> by taking into account exclusively the outcome of simulation 2. Student A will make use of the outcome of simulation 2 just to answer the aforesaid question.</p>
+</li>
+</ul>
+<p>Please find below the list of pairs of masses, together with the team (A+B) number. You can pick the team number once you’re paired in the lab; I will make sure that no pairs of masses is picked by two different teams 😜</p>
+<center>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Team number</p></th>
+<th class="text-align:center head"><p><span class="math notranslate nohighlight">\(M\:(M_{\odot})\)</span></p></th>
+<th class="text-align:center head"><p><span class="math notranslate nohighlight">\(M'\:(M_{\odot})\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><strong>1</strong></p></td>
+<td class="text-align:center"><p>0.8</p></td>
+<td class="text-align:center"><p>4.25</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><strong>2</strong></p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>3</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><strong>3</strong></p></td>
+<td class="text-align:center"><p>1.15</p></td>
+<td class="text-align:center"><p>2.25</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><strong>4</strong></p></td>
+<td class="text-align:center"><p>2</p></td>
+<td class="text-align:center"><p>8.75</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><strong>5</strong></p></td>
+<td class="text-align:center"><p>5.5</p></td>
+<td class="text-align:center"><p>1.2</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><strong>6</strong></p></td>
+<td class="text-align:center"><p>6</p></td>
+<td class="text-align:center"><p>2.15</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><strong>7</strong></p></td>
+<td class="text-align:center"><p>7</p></td>
+<td class="text-align:center"><p>2.25</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><strong>8</strong></p></td>
+<td class="text-align:center"><p>7.5</p></td>
+<td class="text-align:center"><p>1.75</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><strong>9</strong></p></td>
+<td class="text-align:center"><p>8</p></td>
+<td class="text-align:center"><p>0.8</p></td>
+</tr>
+</tbody>
+</table>
+</center></section>
+<section id="the-questions">
+<h2><span class="section-number">9.3. </span>The questions<a class="headerlink" href="#the-questions" title="Permalink to this headline">#</a></h2>
+<section id="preliminary-instructions">
+<h3><span class="section-number">9.3.1. </span>Preliminary instructions<a class="headerlink" href="#preliminary-instructions" title="Permalink to this headline">#</a></h3>
+<p>Download the input files from your <a class="reference external" href="https://toledo.kuleuven.be/portal">Toledo</a> page of the Stellar Structure &amp; Evolution class. You should find those in the last published announcement. After decompressing your download, put the content in the <code class="docutils literal notranslate"><span class="pre">MESA_LAB1</span></code> directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Move to the directory of your choice</span>
+<span class="nb">cd</span> MESA_LAB1
+<span class="c1"># Decompress the downloaded file from Toledo</span>
+tar -xf lab1_input.tar.xz
+<span class="c1"># Copy all the input files and put them in place of the ones already present in the MESA_LAB1 folder</span>
+cp -R ./lab1_input/* .
+</pre></div>
+</div>
+<p>Consult the table above and find your couple of masses. Out of those, pick your mass <span class="math notranslate nohighlight">\(M\)</span> and put it as initial condition for your simulation. To do so, open your <code class="docutils literal notranslate"><span class="pre">inlist_project</span></code> file and edit it as follows, assuming that your mass for the simulation 1 is <span class="math notranslate nohighlight">\(M=X\:M_{\odot}\)</span>:</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="p">&amp;</span><span class="n">star_job</span><span class="w"></span>
+<span class="w">    </span><span class="p">[...]</span><span class="w"></span>
+<span class="w">    </span><span class="c">! save a model at the end of the run</span>
+<span class="w">        </span><span class="n">save_model_when_terminate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.</span><span class="w"></span>
+<span class="w">        </span><span class="n">save_model_filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;XMsun_at_TAMS.mod&#39;</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">write_profile_when_terminate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.</span><span class="w"></span>
+<span class="w">        </span><span class="n">filename_for_profile_when_terminate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;XMsun_at_TAMS_profile.data&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="p">[...]</span><span class="w"></span>
+<span class="o">/</span><span class="w"> </span><span class="c">! end of star_job namelist</span>
+
+<span class="p">[...]</span><span class="w"></span>
+
+<span class="p">&amp;</span><span class="n">controls</span><span class="w"></span>
+<span class="w">    </span><span class="c">! starting specifications</span>
+<span class="w">        </span><span class="n">initial_mass</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="c">! in Msun units</span>
+<span class="w">    </span><span class="p">[...]</span><span class="w"></span>
+<span class="w">    </span><span class="c">! output controls</span>
+<span class="w">        </span><span class="n">log_directory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;LOGS_XMsun&#39;</span><span class="w"></span>
+<span class="w">        </span><span class="n">photo_directory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;photos_XMsun&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="p">[...]</span><span class="w"></span>
+<span class="o">/</span><span class="w"> </span><span class="c">! end of controls namelist</span>
+
+<span class="p">[...]</span><span class="w"></span>
+
+<span class="p">&amp;</span><span class="n">pgstar</span><span class="w"></span>
+<span class="w">    </span><span class="c">! file output</span>
+<span class="w">    </span><span class="n">Grid1_file_flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="n">Grid1_file_dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;grid_png_XMsun&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="n">Grid1_file_prefix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;grid_XMsun_&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="p">[...]</span><span class="w"></span>
+<span class="o">/</span><span class="w"> </span><span class="c">! end of pgstar namelist</span>
+</pre></div>
+</div>
+<p>You are good to go: run the simulation 1 and look at the dynamic plots attentively; the run should be smooth and fast. If you did everything correctly, you should be able to see something like the window below popping out in your screen:</p>
+<p><img alt="alt text for screen readers" src="../_images/pgstar_example.png" /></p>
+<p>Once the simulation 1 is done, edit your <code class="docutils literal notranslate"><span class="pre">inlist_project</span></code> as above, but this time assuming that your mass for the simulation 2 is <span class="math notranslate nohighlight">\(M'=X'\:M_{\odot}\)</span>: substitute every <span class="math notranslate nohighlight">\(X\)</span> value with your <span class="math notranslate nohighlight">\(X'\)</span> value. This is necessary to avoid overwriting your previous output.</p>
+<center>
+<div align="center" style="padding: 2px; border: 2px solid #e86f3f; display: inline-block;">
+<p><b> 🚨 Attention 🚨 </b> <br>
+Before leaving the session, save your <code class="docutils literal notranslate"><span class="pre">MESA_LAB1</span></code> folder somewhere: your local machines / USB memory / personal folder in the system. In the following, I am going to assume that you are at home writing your report: specifically, you are <b>student A</b> assigned with mass <span class="math notranslate nohighlight">\(M=X\:M_{\odot}\)</span> for your simulation 1, and you will use <span class="math notranslate nohighlight">\(M'\neq M\)</span> just to answer the question on <i> Massive vs Low Mass evolution </i>.</p>
+</div>
+</center>
+</section>
+<section id="the-pre-main-sequence-and-main-sequence-2-pts">
+<h3><span class="section-number">9.3.2. </span>The Pre Main Sequence and Main Sequence (2 pts)<a class="headerlink" href="#the-pre-main-sequence-and-main-sequence-2-pts" title="Permalink to this headline">#</a></h3>
+<p>You evolved a model star with initial mass <span class="math notranslate nohighlight">\(M\)</span> along the Pre Main Sequence (PMS) phases and its Main Sequence (MS):</p>
+<ul>
+   <li>
+<p><b>PMS</b>: Phase of the evolution in which the star is just formed but still too cold to ignite hydrogen burning in the core; the star contracts due to gravity, and thanks to the virial theorem in action its internal energy increases, until the conditions in its core are suitable for the first nuclear reactions to start. When hydrogen burning starts, we finally talk about Main Sequence.</p>
+   </li>
+   <li>
+<p><b>MS</b>: Phase of the evolution in which the star is burning hydrogen in its core; stars will spend roughly <span class="math notranslate nohighlight">\(~90\%\)</span> of their lives in this stage. We can also give two other useful names:</p>
+   <ul>
+        <li> 
+        <u>ZAMS</u>: Zero Age Main Sequence, point in stellar evolution when the star joins the Main Sequence;
+        </li>
+        <li> 
+        <u>TAMS</u>: Terminal Age Main Sequence, point in stellar evolution when the star has burnt all hydrogen in its core.
+        </li>
+   </ul> 
+   </li>
+</ul>
+<ol type="1">
+<li>
+<p style="color:#b82828;font-size:110%;"><u><b>Orders of magnitude</b></u></p>
+<p>Compute the dynamical (<span class="math notranslate nohighlight">\(\tau_{\mathrm{dyn}}\)</span>), Kelvin-Helmholtz (<span class="math notranslate nohighlight">\(\tau_{\mathrm{KH}}\)</span>) and nuclear (<span class="math notranslate nohighlight">\(\tau_{\mathrm{nuc}}\)</span>) timescales expected for your star with mass <span class="math notranslate nohighlight">\(M=X\:M_{\odot}\)</span> <b>at ZAMS</b>. To do so, remember the exercise from lecture <a class="reference external" href="https://orlox.github.io/stars_2022_2023/history">2</a> in which you found</p>
+<div class="math notranslate nohighlight">
+\[\tau_{\mathrm{dyn}}\approx\sqrt{\dfrac{R^3}{GM}}\approx 0.02\left(\dfrac{R}{R_{\odot}}\right)^{3/2}\left(\dfrac{M_{\odot}}{M}\right)^{1/2}\:\mathrm{days},\]</div>
+<div class="math notranslate nohighlight">
+\[\tau_{\mathrm{KH}}\approx\dfrac{GM^2}{2RL}\approx 1.5\times 10^7\left(\dfrac{M}{M_{\odot}}\right)^2\dfrac{R_{\odot}}{R}\dfrac{L_{\odot}}{L}\:\mathrm{yr},\]</div>
+<div class="math notranslate nohighlight">
+\[\tau_{\mathrm{nuc}}\approx 10^10\dfrac{M}{M_{\odot}}\dfrac{L_{\odot}}{L}\:\mathrm{yr}.\]</div>
+<p>You will have to give a look at the <code class="docutils literal notranslate"><span class="pre">./LOGS_XMsun/history.data</span></code> file. You should be able to read the information you need from those columns.</p>
+<p><i>Hint</i>: A good indicator of the start of the ZAMS is the central hydrogen abundance <code class="docutils literal notranslate"><span class="pre">center_h1</span></code>.</p>
+</li>
+<li>
+<p style="color:#b82828;font-size:110%;"><u><b>Timescale of MS phase</b></u></p>
+<p>How much time <span class="math notranslate nohighlight">\(\tau_{\mathrm{MS}}\)</span> does your star spend in the MS phase in the simulation? To which order of magnitude estimate above would you associate this timescale? What does this mean in terms of the star’s equilibrium?</p>
+</li>
+<li>
+<p style="color:#b82828;font-size:110%;"><u><b>Timescale of PMS phase</b></u></p>
+<p>How much time <span class="math notranslate nohighlight">\(\tau_{\mathrm{PMS}}\)</span> does your star spend in the PMS phase in the simulation? To which order of magnitude estimate above would you associate this timescale? What does this mean in terms of the star’s equilibrium?</p>
+</li>
+</ol>
+</section>
+<section id="the-virial-theorem-5-pts">
+<h3><span class="section-number">9.3.3. </span>The Virial Theorem (5 pts)<a class="headerlink" href="#the-virial-theorem-5-pts" title="Permalink to this headline">#</a></h3>
+<p>You will now verify that the virial theorem is in action during your star’s evolution. To do so, we will start by computing the total energy reservoir <span class="math notranslate nohighlight">\(E_{\mathrm{tot}}\)</span> of your star. Remember that the total energy is given, at each timestep, by</p>
+<div class="math notranslate nohighlight">
+\[E_{\mathrm{tot}}=E_{\mathrm{gr}}+E_{\mathrm{int}}+E_{\mathrm{kin}}\:,\]</div>
+<p>where <span class="math notranslate nohighlight">\(E_{\mathrm{gr}}\)</span> stands for gravitational potential energy, <span class="math notranslate nohighlight">\(E_{\mathrm{int}}\)</span> for internal energy and <span class="math notranslate nohighlight">\(E_{\mathrm{kin}}\)</span> is the energy associated to bulk motions pf gas inside the star, which is different from <span class="math notranslate nohighlight">\(E_{\mathrm{int}}\)</span>, being due to the thermal motions of the gas particles.</p>
+<ol type="1">
+<li>
+<p style="color:#e66e1e;font-size:110%;"><u><b>Gravitational potential energy</b></u></p>
+<p>Compute the gravitational potential energy <span class="math notranslate nohighlight">\(E_{\mathrm{grav}}\)</span> of your star <b>at ZAMS</b>. You will have to give a look at the <code class="docutils literal notranslate"><span class="pre">./LOGS_XMsun/profileN.data</span></code>, where N corresponds to the number of profile which is closer to being the profile of your star at ZAMS. Do it directly from the formal definition:</p>
+<div class="math notranslate nohighlight">
+\[E_{\mathrm{grav}}\equiv -\int_0^M\:\dfrac{Gm}{r^2(m)}dm\:.\]</div>
+<p><i>Hint</i>: From the previous step, you should have been able to determine which model along the evolutionary track corresponds to the ZAMS one. The mapping from this number to the right profile is straightforward, once you give a look at a file called <code class="docutils literal notranslate"><span class="pre">./LOGS_XMsun/profiles.index</span></code>. You should use the information printed on the columns <code class="docutils literal notranslate"><span class="pre">rmid</span></code> (radial coordinate of the cell in <span class="math notranslate nohighlight">\(R_{\odot}\)</span>) and <code class="docutils literal notranslate"><span class="pre">dm</span></code> (cell mass in grams).</p>
+</li>
+<li>
+<p style="color:#e66e1e;font-size:110%;"><u><b>Internal energy</b></u></p>
+<p>Compute the internal energy <span class="math notranslate nohighlight">\(E_{\mathrm{int}}\)</span> of your star <b>at ZAMS</b>. Do it directly from the formal definition:</p>
+<div class="math notranslate nohighlight">
+\[E_{\mathrm{int}}\equiv\int_0^M\:u(m)dm\:,\]</div>
+<p>where <span class="math notranslate nohighlight">\(u=u(m)\)</span> is the specific (per unit mass) internal energy of each cell at mass coordinate <span class="math notranslate nohighlight">\(m\)</span>. You should be able to find the information in the column <code class="docutils literal notranslate"><span class="pre">energy</span></code> (internal energy (ergs/g)).</p>
+</li>
+<li>
+<p style="color:#e66e1e;font-size:110%;"><u><b>Total energy</b></u></p>
+<p>Compute the internal energy <span class="math notranslate nohighlight">\(E_{\mathrm{kin}}\)</span> of your star <b>at ZAMS</b>. Remember that your star is supposed to be in hydrostatic equilibrium: this should already give you a hint on <span class="math notranslate nohighlight">\(E_{\mathrm{kin}}\)</span>. If you don’t know how to calculate it, give a look at a column called <code class="docutils literal notranslate"><span class="pre">cell_specific_KE</span></code>, which stands for specific kinetic energy of a single cell (ergs/g) and convince yourself about what you see. <br> You now have all the ingredients to compute <span class="math notranslate nohighlight">\(E_{\mathrm{tot}}=E_{\mathrm{gr}}+E_{\mathrm{int}}+E_{\mathrm{kin}}\)</span>. Is your system bound at ZAMS?</p>
+</li>
+<!-- <li>
+<p style="color:#e66e1e;font-size:110%;"><u><b>Check along the evolution</b></u></p>
+
+You 
+
+</li> -->
+</ol>
+<p>Let us now verify that (and how) the virial theorem, always valid in theory under the assumption of spherical symmetry and hydrostatic equilibrium, is actually at work in our simulation. Remember that this theorem connects two important energy reservoirs of the star, i.e. <span class="math notranslate nohighlight">\(E_{\mathrm{grav}}\)</span> and <span class="math notranslate nohighlight">\(E_{\mathrm{int}}\)</span>, and it allows us to interpret the star’s phases of evolution.</p>
+<ol type="1">
+<li>
+<p style="color:#e66e1e;font-size:110%;"><u><b>Virial theorem</b></u></p>
+<p>Remember that the most general form of the virial theorem is the following:
+<br></p>
+<center>
+<div align="center" style="padding: 2px; border: 2px solid #e66e1e; display: inline-block;">
+<b>VIRIAL THEOREM</b>
+<br>
+<div class="math notranslate nohighlight">
+\[\int_0^M\:\dfrac{P}{\rho}dm=-\dfrac{1}{3}E_{\mathrm{gr}}\:,\]</div>
+</dive>
+</center>
+<br>
+<p>with <span class="math notranslate nohighlight">\(P=P(m)\)</span> and <span class="math notranslate nohighlight">\(\rho=\rho(m)\)</span> being the pressure and density profiles along the star’s structure. You already computed <span class="math notranslate nohighlight">\(E_{\mathrm{gr}}\)</span> in the previous steps; compute now the left-hand-side (LHS) of the equation <b>at ZAMS</b>, and verify the theorem! Do you expect it to hold at all timesteps too or just at ZAMS?
+<i>Hint</i>: You should be able to find the information you need in the columns <code class="docutils literal notranslate"><span class="pre">logRho</span></code> and <code class="docutils literal notranslate"><span class="pre">logP</span></code> of your <code class="docutils literal notranslate"><span class="pre">profileN.data</span></code> file.</p>
+</li>
+<li>
+<p style="color:#e66e1e;font-size:110%;"><u><b>The equation of state</b></u></p>
+During your class you derived the following form of the virial theorem in the particular case of perfect, non-relativistic and monoatomic gas:
+<div class="math notranslate nohighlight">
+\[u=\dfrac{3}{2}\dfrac{K_{\mathrm{B}}T}{\mu m_{\mathrm{u}}}=\dfrac{3}{2}\dfrac{P}{\rho}\hspace{0.25cm}\Rightarrow\hspace{0.5cm}E_{\mathrm{int}}=-\dfrac{1}{2}E_{\mathrm{gr}}\:,\]</div>
+<p>where the internal energy per unit mass <span class="math notranslate nohighlight">\(u\)</span> comes from the perfect gas assumption: the kinetic energy per particle sums up to the total internal energy of an ideal monoatomic gas, and from statistical mechanics this is equal to <span class="math notranslate nohighlight">\(3/2 K_{\mathrm{B}}T\)</span>. If we now relax the assumption of non-relativistic and monoatomic gas (but keeping it perfect, i.e. non-ideal effects are not in action), we can write the specific internal energy <span class="math notranslate nohighlight">\(u\)</span> in a more general form, and thus derive the correspondent form of the virial theorem:</p>
+<div class="math notranslate nohighlight">
+\[u=\phi\dfrac{P}{\rho}\hspace{0.25cm}\Rightarrow\hspace{0.5cm}E_{\mathrm{int}}=-\dfrac{1}{3}\phi E_{\mathrm{gr}}\:,\]</div>
+<p>under the assumption of <span class="math notranslate nohighlight">\(\phi=const\)</span> along the star structure. Write the expression of the total energy <span class="math notranslate nohighlight">\(E_{\mathrm{tot}}\)</span> of your star and find out the <span class="math notranslate nohighlight">\(\phi\)</span>-dependent condition under which your system remains bound. <br>
+You also have all the ingredients to find out the value of this <span class="math notranslate nohighlight">\(\phi\)</span> for your simulation <b>at ZAMS</b>: how close is it to be <span class="math notranslate nohighlight">\(\phi=3/2\)</span>? What do you think can be the reason behind the departure, if there’s any?</p>
+</li>
+<li>
+<p style="color:#e66e1e;font-size:110%;"><u><b>Check along the evolution</b></u></p>
+<p>Up to now, you worked with a particular profile, i.e. the solution of the stellar structure equations at a fixed timestep. What you can also do is to verify the form of the virial theorem along the entire evolutionary track. Assume that <span class="math notranslate nohighlight">\(\phi=3/2\)</span> (you already discussed the goodness of the assumption at ZAMS), and do the check by plotting <span class="math notranslate nohighlight">\(E_{\mathrm{int}}\)</span> and <span class="math notranslate nohighlight">\(-1/2 E_{\mathrm{gr}}\)</span> at each timestep. At which point(s) of the evolution do you see the worst (or best) agreement? Motivate. <br>
+Plot, together with the above two quantities, also <span class="math notranslate nohighlight">\(E_{\mathrm{tot}}\)</span>; can you tell, by virtue of the virial theorem in hold, what is happening during the evolution of your star?</p>
+<p><i>Hint</i>: You should be able to find the information you need in the columns <code class="docutils literal notranslate"><span class="pre">total_gravitational_energy</span></code>, <code class="docutils literal notranslate"><span class="pre">total_internal_energy</span></code> and <code class="docutils literal notranslate"><span class="pre">tot_E</span></code> of your <code class="docutils literal notranslate"><span class="pre">history.data</span></code> file. I suggest to use, as x-axis, a quantity that can monotonically trace the evolution of your star, for example its age. And try to highlight the ZAMS as well.</p>
+</li>
+<li>
+<p style="color:#e66e1e;font-size:110%;"><u><b>Thermal equilibrium</b></u></p>
+<p>After reaching the ZAMS, your star should start burning hydrogen in its core and thus set into thermal equilibrium, defined as follows:</p>
+<br>
+<center>
+<div align="center" style="padding: 2px; border: 2px solid #e66e1e; display: inline-block;">
+<b>THERMAL EQUILIBRIUM</b>
+<br>
+<p>State of hydrostatic equilibrium in which <span class="math notranslate nohighlight">\(E_{\mathrm{tot}}=\mathrm{const}\hspace{0.15cm}\Leftrightarrow\hspace{0.15cm}\dot{E}_{\mathrm{tot}}=0\)</span>.
+</dive></p>
+</center>
+<br>
+<p>You can easily verify it by approximating the time derivative into a discrete one:</p>
+<div class="math notranslate nohighlight">
+\[\dot{E}_{\mathrm{tot}}\equiv\dfrac{dE_{\mathrm{tot}}}{dt}\approx\dfrac{|E_{\mathrm{tot}}(t)-E_{\mathrm{tot}}(t+dt)|}{E_{\mathrm{tot}}(t)}\:,\]</div>
+<p>where we indicate a timestep with the fixed time coordinate <span class="math notranslate nohighlight">\(t\)</span>. I suggest to shrink the y-axis as possible, spanning more or less a <span class="math notranslate nohighlight">\(1\%\)</span> errorbar. Why do you not get a perfect zero?</p>
+</li>
+</ol>
+</section>
+<section id="the-equation-of-state-i-polytropes-5-pts">
+<h3><span class="section-number">9.3.4. </span>The Equation of State I. Polytropes (5 pts)<a class="headerlink" href="#the-equation-of-state-i-polytropes-5-pts" title="Permalink to this headline">#</a></h3>
+<p>We want now to see if we can describe our star in terms of a polytropic equation of state (EoS), i.e. one of the form
+<br></p>
+<center>
+<div align="center" style="padding: 2px; border: 2px solid #e6ad1e; display: inline-block;">
+<b>POLYTROPIC EOS</b>
+<br>
+<div class="math notranslate nohighlight">
+\[P=C\:\rho^{1+1/n}\:\]</div>
+</dive>
+</center>
+<br>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> and <span class="math notranslate nohighlight">\(n\)</span> are both constants and <span class="math notranslate nohighlight">\(n\)</span> is called “polytropic index”. Polytropic stellar models are simplified, but they played an important role in the historical development of stellar structure theory; furthermore, there are a couple of situations in which we can still describe the star’s structure with them with good approximation.</p>
+<ol type="1">
+<li>
+<p style="color:#e6ad1e;font-size:110%;"><u><b>From general to polytropic EoS</b></u></p>
+<p>Remember the first law of thermodynamics and the definition of specific internal energy <span class="math notranslate nohighlight">\(u\)</span> and specific volume <span class="math notranslate nohighlight">\(v\equiv 1/\rho\)</span>, the change in heat content in a thermodynamic process within stellar interiors is given by</p>
+<div class="math notranslate nohighlight">
+\[dq=du+Pdv=du-\dfrac{P}{\rho^2}d\rho\:.\]</div>
+<p>By taking into account a general equation of state and an adiabatic (<span class="math notranslate nohighlight">\(dq=0\)</span>) process, you should be able to show the following:</p>
+<div class="math notranslate nohighlight">
+\[u=\phi\dfrac{P}{\rho}\hspace{0.25cm}\Rightarrow\hspace{0.25cm}\dfrac{dP}{P}=\dfrac{\phi+1}{\phi}\dfrac{d\rho}{\rho}\:.\]</div>
+<p>Once you showed this, just put <span class="math notranslate nohighlight">\(\phi=\mathrm{const}=3/2\)</span> and thus calculate the value of the correspondent polytropic index <span class="math notranslate nohighlight">\(n\)</span>, by comparing the outcome of your derivation with the polytropic EoS general form. You already discussed the goodness of <span class="math notranslate nohighlight">\(\phi=3/2\)</span> assumption, i.e. how close your gas is to be perfect, non relativistic and monoatomic, along the evolutionary track.</p>
+</li>
+<li>
+<p style="color:#e6ad1e;font-size:110%;"><u><b>Polytropes and the PMS</b></u></p>
+<p>During the early PMS phase, the star’s structure is completely convective: opacity of outer layers is so high, due to the very low temperatures, that radiative energy transport is made inefficient and the convective envelope is sinking so deep in the star that the entire structure experiences convection.</p>
+<ul>
+<li>
+<p>Convince yourself that all of the above holds for your model <b>during the first stages of the PMS</b>. In your lectures you studied a formal criterion, the <i>Schwarzschild criterion</i>, for stability against convection:
+<br></p>
+<center>
+<div align="center" style="padding: 2px; border: 2px dashed #e6ad1e; display: inline-block;">
+<b>SCHWARZSCHILD CRITERION</b>
+<br>
+<div class="math notranslate nohighlight">
+\[\nabla_{\mathrm{rad}}\equiv\dfrac{3}{16\pi a c G}\dfrac{P}{T^4}\dfrac{\kappa l}{m}&lt;\nabla_{\mathrm{ad}}\]</div>
+</dive>
+</center>
+<br>
+<p>where <span class="math notranslate nohighlight">\(a=7.566\times 10^{-15}\:\mathrm{erg}\:\mathrm{cm}^{-3}\:\mathrm{K}^{-4}\)</span> is the radiation constant, <span class="math notranslate nohighlight">\(P=P(m)\)</span>, <span class="math notranslate nohighlight">\(T=T(m)\)</span>, <span class="math notranslate nohighlight">\(\kappa=\kappa (m)\)</span> and <span class="math notranslate nohighlight">\(l=l(m)\)</span> are the pressure, temperature, opacity and luminosity profiles along the stellar structure; <span class="math notranslate nohighlight">\(\nabla_{\mathrm{ad}}\)</span> and <span class="math notranslate nohighlight">\(\nabla_{\mathrm{rad}}\)</span> are the adiabatic and radiative temperature gradients. Verify that there’s a stage of the evolution in which this criterion holds <i>globally</i> in your star. You might want to produce a plot like one of those present in your saved pngs to support your argument.</p>
+</li>
+<li>
+<p>How close is <span class="math notranslate nohighlight">\(\nabla_{\mathrm{ad}}\)</span> to be <span class="math notranslate nohighlight">\(\nabla_{\mathrm{ad}}\simeq 0.4\)</span> in this stage? What does this number mean? Motivate why <span class="math notranslate nohighlight">\(\nabla_{\mathrm{ad}}\)</span> drops below <span class="math notranslate nohighlight">\(0.4\)</span> around the outer layers of your star and why, close to your core, that value is almost correct.</p>
+</li>
+<li>
+How long does your star stay completely convective? I.e., how relevant is this stage of evolution with respect to the total age of your star?
+</li>
+<p><i>Hint I:</i> You can select the completely convective model during the PMS by looking at the <code class="docutils literal notranslate"><span class="pre">grid_XMsun.png</span></code> files, in particular at the Kippenhahn diagram, i.e. the one showing mass coordinates <span class="math notranslate nohighlight">\(m/M_{\odot}\)</span> of interesting zones as a function of the model number. When the light blue region spans the entire mass range, you have convection over all you structure. The mapping from model number to the right <code class="docutils literal notranslate"><span class="pre">profileN.data</span></code> should be straightforward from the <code class="docutils literal notranslate"><span class="pre">profiles.index</span></code> file.</p>
+<p><i>Hint II:</i> You should be able to find the useful information in the columns <code class="docutils literal notranslate"><span class="pre">grada</span></code> (adiabatic temperature gradient) and <code class="docutils literal notranslate"><span class="pre">gradr</span></code> (radiative temperature gradient).</p>
+</ul>
+</li>
+<li>
+<p style="color:#e6ad1e;font-size:110%;"><u><b>The polytropic index</b></u></p>
+<p>We want now to see how good can a polytropic EoS describe our completely convective star; to do so, we can use the polytropic index <span class="math notranslate nohighlight">\(n\)</span> you derived above and compare the numerical solution of the Lane Emden equation for polytropes to the results of our simulation. Remember that the radius <span class="math notranslate nohighlight">\(R\)</span> of a polytropic model is given by the first zero of the solution <span class="math notranslate nohighlight">\(\theta_n(\xi)\)</span>, i.e. that value of the dimensionless radial coordinate <span class="math notranslate nohighlight">\(\xi=\xi_n\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[R=\xi_n r_n\hspace{0.75cm}\mathrm{with}\hspace{0.5cm}r_n^2\equiv\dfrac{(n+1)P_c}{4\pi G\rho_c^2}\:.\]</div>
+<p>We provide you with the following useful information about the numerical solutions of the Lane Emden equation:</p>
+<!-- |  **n**  | $\xi_n$ | $\Theta_n$ | $\rho_c/\bar{\rho}$ |  $N_n$  |   $W_n$  |
+|:-------:|:-------:|:----------:|:-------------------:|:-------:|:--------:|
+|  **0**  | 2.44949 |   4.89898  |       1.00000       |    /    | 0.119366 |
+|  **1**  | 3.14159 |   3.14159  |       3.28987       | 0.63662 | 0.392699 |
+| **1.5** | 3.65375 |   2.71406  |       5.99071       | 0.42422 | 0.770140 |
+|  **2**  | 4.35287 |   2.41105  |       11.40254      | 0.36475 | 1.638183 |
+|  **3**  | 6.89685 |   2.01824  |       54.1825       | 0.36394 | 11.05068 | -->
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p><strong>n</strong></p></th>
+<th class="text-align:center head"><p><span class="math notranslate nohighlight">\(\xi_n\)</span></p></th>
+<th class="text-align:center head"><p><span class="math notranslate nohighlight">\(\Theta_n\)</span></p></th>
+<th class="text-align:center head"><p><span class="math notranslate nohighlight">\(W_n\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><strong>0</strong></p></td>
+<td class="text-align:center"><p>2.44949</p></td>
+<td class="text-align:center"><p>4.89898</p></td>
+<td class="text-align:center"><p>0.119366</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><strong>1</strong></p></td>
+<td class="text-align:center"><p>3.14159</p></td>
+<td class="text-align:center"><p>3.14159</p></td>
+<td class="text-align:center"><p>0.392699</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><strong>1.5</strong></p></td>
+<td class="text-align:center"><p>3.65375</p></td>
+<td class="text-align:center"><p>2.71406</p></td>
+<td class="text-align:center"><p>0.770140</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><strong>2</strong></p></td>
+<td class="text-align:center"><p>4.35287</p></td>
+<td class="text-align:center"><p>2.41105</p></td>
+<td class="text-align:center"><p>1.638183</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><strong>3</strong></p></td>
+<td class="text-align:center"><p>6.89685</p></td>
+<td class="text-align:center"><p>2.01824</p></td>
+<td class="text-align:center"><p>11.05068</p></td>
+</tr>
+</tbody>
+</table>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\Theta_n\equiv\left.\left(-\xi^2\dfrac{d\theta}{d\xi}\right)\right|_{\xi=\xi_n}\:,\hspace{0.5cm}W_n\equiv\dfrac{\xi_n^4}{4\pi(n+1)\Theta_n^2}\:.\]</div>
+<!-- $$\Theta_n\equiv\left.\left(-\xi^2\dfrac{d\theta}{d\xi}\right)\right|_{\xi=\xi_n}\:,\hspace{0.5cm}\bar{\rho}\equiv\dfrac{3M}{4\pi R^3}=\dfrac{3\Theta_n}{\xi_n^3}\rho_c\:,$$ -->
+<!-- $$N+n\equiv\dfrac{(4\pi)^{1/n}}{n+1}\Theta_n^{(1-n)/n}\xi_n^{(n-3)/n}\:,\hspace{0.5cm}W_n\equiv\dfrac{\xi_n^4}{4\pi(n+1)\Theta_n^2}\:.$$ -->
+<ul>
+<li>
+<p>By using the general expression for a polytropic EoS, derive the relation <span class="math notranslate nohighlight">\(R=R(\rho_{\mathrm{c}})|_{n}\)</span>, and plot this analytic dependence for <span class="math notranslate nohighlight">\(n=0,1,1.5,2,3\)</span>. Plot, then, the same quantities resulting from your simulation, all along the PMS phase. You should be able to make a comparison between the results of your simulation and the polytropic index you have found in the first step of this question. What can you conclude?</p>
+<p><i>Hint I:</i></p>
+<p>You’ll have to adjust the value of <span class="math notranslate nohighlight">\(C\)</span> to make the comparison. Some indicative numbers (to be adjusted!) are the following: for <span class="math notranslate nohighlight">\(M\simeq 2\:M_{\odot}\)</span>, a <span class="math notranslate nohighlight">\(C\simeq 7\times 10^{14}\:[\mathrm{units?}]\)</span>, and for <span class="math notranslate nohighlight">\(M\simeq 8\:M_{\odot}\)</span>, a <span class="math notranslate nohighlight">\(C\simeq 1\times 10^{15}\:[\mathrm{units?}]\)</span>. Fix the units 😉</p>
+<p><i>Hint II:</i></p>
+<p>The information you need are in the columns <code class="docutils literal notranslate"><span class="pre">log_R</span></code> (log of the star’s radius, in <span class="math notranslate nohighlight">\(R_{\odot}\)</span>) and <code class="docutils literal notranslate"><span class="pre">.log_center_Rho</span></code>, in your <code class="docutils literal notranslate"><span class="pre">history.data</span></code> file.</p>
+</li>
+</ul>
+</li>
+<!-- <li>
+<p style="color:#e6ad1e;font-size:110%;"><u><b>Check along the evolution</b></u></p>
+
+</li> -->
+<li>
+<p style="color:#e6ad1e;font-size:110%;"><u><b>The PMS contraction</b></u></p>
+<p>Since we assessed that a polytropic EoS with the found <span class="math notranslate nohighlight">\(n\)</span> can describe a phase of the PMS in which the star is completely convective, we want now to understand the PMS contraction in terms of evolution of <span class="math notranslate nohighlight">\(T_c\)</span> and <span class="math notranslate nohighlight">\(\rho_c\)</span>, to see how the star manages to set towards the proper <span class="math notranslate nohighlight">\((T,\rho)\)</span> conditions to ignite H burning in its core.</p>
+<p>After some manipulations (not requested in the report), one can show the following:</p>
+<div class="math notranslate nohighlight">
+\[P_c=C\rho_c^{1+1/n}=...=W_n\dfrac{GM^2}{R^4}\:.\]</div>
+<ul>
+<li> 
+<p>Eliminate, in the RHS of the equation above, <span class="math notranslate nohighlight">\(R\)</span> in favor of <span class="math notranslate nohighlight">\(\rho_c\)</span> with the relation you derived. In the LHS of the equation above, substitute the right expression of <span class="math notranslate nohighlight">\(P_c\)</span> for an ideal, non-relativistic and monoatomic gas: <span class="math notranslate nohighlight">\(P_c=\mathcal{R}/\mu T_c\rho_c\)</span>, where <span class="math notranslate nohighlight">\(\mathcal{R}\)</span> is the universal gas constant. Derive, then, the relation <span class="math notranslate nohighlight">\(T_c=T_c(\mu,\rho_c)\)</span>. This relation defines a <i>schematic evolutionary track</i> in the <span class="math notranslate nohighlight">\((\rho_c,T_c)\)</span> plane, with weak dependence on the chemical composition, for which you can assume <span class="math notranslate nohighlight">\(\mu\sim 0.62\)</span> (proper for our Sun).
+<br> Which slope are you finding from the relation? What does this slope remind you?</p>
+<p><i>Hint</i> Try to plot the slope for a radiation-dominated gas…</p>
+</li>
+<li>
+<p>Verify that, in the diagram <span class="math notranslate nohighlight">\((\rho_c,T_c)\)</span>, your track stays in the ideal gas region <b>all along the track</b>. By plotting a schematic track as well, with the mass of your our star, verify that (and where!) you get some sort of match.</p>
+<p><i>Hint</i> The central temperature information is in the column <code class="docutils literal notranslate"><span class="pre">log_center_T</span></code>, in your <code class="docutils literal notranslate"><span class="pre">history.data</span></code> file.</p>
+</li>
+<li>
+<p>Briefly comment on what’s happening to your track, by looking at the evolution in the <span class="math notranslate nohighlight">\((\rho_c,T_c)\)</span> plane.</p>
+</li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="the-equation-of-state-ii-radiation-pressure-2-pts">
+<h3><span class="section-number">9.3.5. </span>The Equation of State II. Radiation pressure? (2 pts)<a class="headerlink" href="#the-equation-of-state-ii-radiation-pressure-2-pts" title="Permalink to this headline">#</a></h3>
+<p>In this question you will study the contribution, to the EoS, of the gas of photons, i.e. the radiation pressure contribution <span class="math notranslate nohighlight">\(P_{\mathrm{rad}}\)</span>. Until now, you discussed the goodness of the ideal gas assumption for your model, and extensively showed its action along the evolution of your system. But does it mean that the photons’ contribution is not even there, or not important?</p>
+<p>Remember that in general the pressure inside a star is <b>the sum</b> of the gas pressure and radiation pressure:</p>
+<div class="math notranslate nohighlight">
+\[P=P_{\mathrm{gas}}+P_{\mathrm{rad}}=P_{\mathrm{ions}}+P_{\mathrm{e}}+P_{\mathrm{rad}}=\dfrac{\mathcal{R}}{\mu}\rho T+\dfrac{1}{3}a T^4\:,\]</div>
+<p>where <span class="math notranslate nohighlight">\(P_{\mathrm{e}}\)</span> is the contribution of free electrons, <span class="math notranslate nohighlight">\(P_{\mathrm{ions}}\)</span> the one from ions; be aware that the fact that we wrote <span class="math notranslate nohighlight">\(P_{\mathrm{gas}}=\mathcal{R}/\mu \rho T\)</span> implies that we are considering the gas of electrons to be non-degenerate (see below).</p>
+<ol type="1">
+<li>
+<p style="color:#42a135;font-size:110%;"><u><b>The fraction of radiation</b></u></p>
+<p>You will study now the profile concerning the <b>TAMS</b> stage of your simulation. Finding this profile is particularly easy, since it’s the last one printed from your simulation run, and you will find it as it is called <code class="docutils literal notranslate"><span class="pre">XMsun_at_TAMS_profile.data</span></code>, in your top level of the <code class="docutils literal notranslate"><span class="pre">MESA_LAB1</span></code> directory.</p>
+<ul>
+<li>
+<p>Plot the total pressure <span class="math notranslate nohighlight">\(P\)</span>, the radiation pressure <span class="math notranslate nohighlight">\(P_{\mathrm{rad}}\)</span> and the gas pressure <span class="math notranslate nohighlight">\(P_{\mathrm{gas}}\)</span> contributions all together for the profile <b>at TAMS</b>. You may also want to verify the theoretical formulas above, making use of the column <code class="docutils literal notranslate"><span class="pre">mu</span></code> for the mean molecular weight per gas particle. Quantify the impact of the radiation pressure contribution by defining a fraction <span class="math notranslate nohighlight">\(\beta\)</span> as follows<br></p>
+<div class="math notranslate nohighlight">
+\[P_{\mathrm{gas}}=\beta P\hspace{0.5cm}\mathrm{and}\hspace{0.5cm}P_{\mathrm{rad}}=(1-\beta)P\:.\]</div>
+<p>Notice that this <span class="math notranslate nohighlight">\(\beta\)</span> will vary along your star’s structure; comment on the order of magnitude of your <span class="math notranslate nohighlight">\(\beta\)</span> and on the regions in which it is higher / lower.</p>
+</li>
+</ul>
+</li>
+<li>
+<p style="color:#42a135;font-size:110%;"><u><b>Some degeneracy degree?</b></u></p>
+<p>Let us lastly verify whether neglecting the contribution of degeneracy pressure from electrons, thus treating them as classical particles following <span class="math notranslate nohighlight">\(P_e=\mathcal{R}/\mu \rho T\)</span>, is a good assumption or not. From statistical mechanics, we know that Pauli exclusion principle (and, in general, the effects of quantum physics!) starts to play a role when the de Broglie length <span class="math notranslate nohighlight">\(\Lambda\)</span> of our system is of the order, or larger, than the typical length of interest for microphysical processes, i.e. in our case <span class="math notranslate nohighlight">\(~ 1/n_e^{1/3}\)</span>, with <span class="math notranslate nohighlight">\(n_e\)</span> being the number density of free electrons in the stellar gas. The condition can be expressed as</p>
+<br>
+<center>
+<div align="center" style="padding: 2px; border: 2px solid #42a135; display: inline-block;">
+<b>DEGENERACY CRITERION</b>
+<br>
+<div class="math notranslate nohighlight">
+\[\dfrac{\Lambda^3}{\nu}\gtrsim 1\hspace{0.75cm}\mathrm{with}\hspace{0.25cm}\nu\equiv\dfrac{1}{n_e}\]</div>
+</dive>
+</center>
+<br>
+<ul>
+<li>
+Calculate the degree of degeneracy for the profile <b>at TAMS</b>, and assess the goodness of the classical gas assumption; remember that the definition of the de Broglie length for the electrons gas is
+<div class="math notranslate nohighlight">
+\[\Lambda\equiv\dfrac{h}{\sqrt{2\pi m_e K_{\mathrm{B}}T}}\:,\]</div>
+<p>where <span class="math notranslate nohighlight">\(h=6.626\times 10^{-27}\:\mathrm{erg}\:\mathrm{s}\)</span> is the Planck constant and <span class="math notranslate nohighlight">\(m_{e}=9.109\times 10^{-28}\:\mathrm{g}\)</span>. In which region do you see the highest degree of degeneracy?</p>
+</li>
+<li>
+<p>The above condition can be shown to be equivalent to imposing the <i>degeneracy parameter</i> <span class="math notranslate nohighlight">\(\psi\gtrsim 1\)</span> (see your lecture notes!). MESA outputs this quantity for the core of your star along the entire evolutionary track, stored in <code class="docutils literal notranslate"><span class="pre">center_degeneracy</span></code> column (give a look at your <code class="docutils literal notranslate"><span class="pre">grid_Xmsun.png</span></code> too). What can you conclude about the degree of degeneracy in your track? And why is the value of <span class="math notranslate nohighlight">\(\psi\)</span> (or <span class="math notranslate nohighlight">\(\Lambda^3/\nu\)</span>) <u>in the core</u> the relevant one?</p>
+</li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="massive-vs-low-mass-evolution-2-pts">
+<h3><span class="section-number">9.3.6. </span>Massive vs Low Mass evolution (2 pts)<a class="headerlink" href="#massive-vs-low-mass-evolution-2-pts" title="Permalink to this headline">#</a></h3>
+<p>Now you’ll finally use the output of your simulation 2, namely the second mass <span class="math notranslate nohighlight">\(M'=X'\:\mathrm{\odot}\)</span>; the goal is to make you aware of some differences in the evolution of a low mass (<span class="math notranslate nohighlight">\(M'\gtrsim 1\:\mathrm{\odot}\)</span>) star versus a relatively higher mass (<span class="math notranslate nohighlight">\(M'\gtrsim 5\:\mathrm{\odot}\)</span>) one. You will study the differences in great detail in the following classes, but there are some key points that can be observed also along the MS.</p>
+<ol>
+<li>
+<p style="color:#479ecc;font-size:110%;"><u><b>Convective or radiative core?</b></u></p>
+<p>Consider you models <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(M'\)</span>.</p>
+<ul>
+<li>
+Do they experience convection in their core, during the nuclear burning of H? What does it imply, in terms of elements abundances profiles in the core?
+</li>
+<li>
+Does the size of the convective core increase or decrease during the nuclear burning of H? 
+</li>
+</ul>
+<br>
+<p><i>Hint:</i>
+you can follow the information stored in <code class="docutils literal notranslate"><span class="pre">mass_conv_core</span></code> in your <code class="docutils literal notranslate"><span class="pre">history.data</span></code> file. Or, you can also answer qualitatively by looking at the Kippenhahn diagram, and the abundances profiles plot in your <code class="docutils literal notranslate"><span class="pre">grid_XMsun.png</span></code> and <code class="docutils literal notranslate"><span class="pre">grid_X'Msun.png</span></code>. In this context, you can (not mandatory) include screenshots of you pgstar window to prove your point.</p>
+</i>
+<li>
+<p style="color:#479ecc;font-size:110%;"><u><b>Convective or radiative envelope?</b></u></p>
+<ul>
+<li>
+<p>Consider you models <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(M'\)</span>. Do they experience convection in their envelope, during the nuclear burning of H? Quantify the different convective envelope masses you are seeing.</p>
+</li>
+<li>Remembering the Schwarzschild criterion for stability against convection, can you motivate why you're (not) seeing a convective envelope, if that is the case?
+</li>
+</ul>
+<br>
+<p><i>Hint:</i>
+you can give a rough estimate of the envelope masses by looking at at the Kippenhahn diagram in your <code class="docutils literal notranslate"><span class="pre">grid_XMsun.png</span></code> and <code class="docutils literal notranslate"><span class="pre">grid_X'Msun.png</span></code>. For the motivation on convection to occur in the envelope, I suggest to give a look at one of the other diagrams present in your pgstar window, i.e. the one showing the opacity curve 😁</p>
+</li>
+<li>
+<p style="color:#479ecc;font-size:110%;"><u><b>The surface properties</b></u></p>
+<p>Give a look at the HR diagram, i.e. the <span class="math notranslate nohighlight">\((\log T_{\mathrm{eff}}(\mathrm{K}), \:\log L(L_{\odot}))\)</span> plane. Plot your two tracks together in such plane, highlighting the ZAMS.</p>
+<ul>
+<li> 
+<p>Compare the orders of magnitude for the surface luminosity <span class="math notranslate nohighlight">\(\log L(L_{\odot})\)</span> for your two stars and try to explain the difference you’re seeing, in terms of the mass-luminosity relation that you saw in your lectures. Is your more massive star of the pair more luminous <b>at ZAMS</b>? By how much?</p>
+</li>
+<li>
+<p>Compare the orders of magnitude for the effective temperature <span class="math notranslate nohighlight">\(\log T_{\mathrm{eff}}(\mathrm{K})\)</span> for your two stars. Which star of your pair sets into ZAMS at a higher <span class="math notranslate nohighlight">\(T_{\mathrm{eff}}?\)</span> And at TAMS?</p>
+</li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="bonus-radiative-opacities-pts">
+<h3><span class="section-number">9.3.7. </span>Bonus: Radiative Opacities (➕ pts)<a class="headerlink" href="#bonus-radiative-opacities-pts" title="Permalink to this headline">#</a></h3>
+<p>This bonus question is meant for you to gain a better understanding of the ingredients playing a role in computing the <b>radiative opacity</b> <span class="math notranslate nohighlight">\(\kappa\)</span> of the stellar matter.</p>
+<ol>
+<li>
+<p style="color:#db5694;font-size:110%;"><u><b>The total opacity at ZAMS</b></u></p>
+<p>Plot the <b>ZAMS</b> profile of the total radiative opacity <span class="math notranslate nohighlight">\(\log\kappa\)</span> (see column <code class="docutils literal notranslate"><span class="pre">log_opacity</span></code>). This is the result of very complicated ingredients from atomic physics and chemistry blended together, but there should be some easily recognizable features.</p>
+<ul>
+<li>
+<p>Remember that the <b>electron scattering</b> opacity <span class="math notranslate nohighlight">\(\kappa_{\mathrm{es}}\)</span>, in the Thomson classical limit, can be expressed by</p>
+<div class="math notranslate nohighlight">
+\[\kappa_{\mathrm{es}}=0.20(1+X)\:\mathrm{cm}^2\:\mathrm{g}^{-1}\:,\]</div>
+<p>where <span class="math notranslate nohighlight">\(X\simeq 0.7\)</span> is the hydrogen mass fraction. Where in your star can you see this feature to be the dominant one?</p>
+</li>
+<li>
+<p><b>Free-free absorption</b> opacity <span class="math notranslate nohighlight">\(\kappa_{\mathrm{ff}}\)</span> accounts for the inverse process of the <i>Bremsstrahlung</i>, in which a free electron passes by a charged nucleus and emits radiation due to the experienced acceleration. An approximate calculation was carried on by Kramers, who gave a power-law relation of this sort</p>
+<div class="math notranslate nohighlight">
+\[\kappa_{\mathrm{ff}}\simeq \kappa_0 \rho T^{-7/2}\:\mathrm{cm}^2$\:\mathrm{g}^{-1}\:,\]</div>
+<p>in which <span class="math notranslate nohighlight">\(\kappa_{0}\)</span> is a constant that depends on the chemical composition. Where in your star can you see a power-law-ish trend being dominant?</p>
+</li>
+<li>
+<p>If I remind you that Hydrogen recombines at <span class="math notranslate nohighlight">\(~ 10^4\:\mathrm{K}\)</span>, mostly independently on the density <span class="math notranslate nohighlight">\(\rho\)</span>, can you tell where (and if!) this feature is playing a role?</p>
+</li>
+</ul>
+</li>
+<li>
+<p style="color:#db5694;font-size:110%;"><u><b>Electron scattering</b></u></p>
+<p>Verify that <span class="math notranslate nohighlight">\(\kappa_{\mathrm{es}}\)</span> is dominant in the core both at ZAMS and at TAMS, showing that the plasma of completely ionized gas is a good description of the core along your evolutionary track.</p>
+</li>
+</ol>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "julia-1.8"
+        },
+        kernelOptions: {
+            kernelName: "julia-1.8",
+            path: "./lab1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'julia-1.8'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../convection/convection.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">7. </span>Convective energy transport</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../nucleosynthesis/nucleosynthesis.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">10. </span>Nuclear processes in stars</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Pablo Marchant & Annachiara Picco<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
