@@ -626,7 +626,7 @@ NB: you will have to run <b> two </b> simulations of two stars with different ma
 <p><i> The estimate for the gravitation potential energy <span class="math notranslate nohighlight">\(E_{\mathrm{grav}}\)</span> is:</p>
 <div class="math notranslate nohighlight">
 \[E_{\mathrm{gr}}\equiv \int_{0}^{M} -\dfrac{Gm}{r(m)^2} dm= 3.14\times 10^{7} \:\mathrm{erg},\]</div>
-<p>where <span class="math notranslate nohighlight">\(G\)</span> is the gravitational constant, <span class="math notranslate nohighlight">\(M\)</span> is the total star mass and <span class="math notranslate nohighlight">\(r=r(m)\)</span> is the Eulerian radial coordinate along the star’s structure. The first equality is a first principle definition, holding in the assumption of spherical symmetry; in the second equality, we evaluate the formula. </i></p>
+<p>where <span class="math notranslate nohighlight">\(G\)</span> is the gravitational constant, <span class="math notranslate nohighlight">\(M\)</span> is the total star mass and <span class="math notranslate nohighlight">\(r=r(m)\)</span> is the Eulerian radial coordinate along the star’s structure.</i></p>
 </div>
 </center>
 <br>
@@ -679,7 +679,7 @@ Include your <code class="docutils literal notranslate"><span class="pre">inlist
 </li>
 <li>
 <p><b>TO BE SENT</b>
-Via email to <a class="reference external" href="mailto:annachiara&#46;picco&#37;&#52;&#48;kuleuven&#46;be">annachiara<span>&#46;</span>picco<span>&#64;</span>kuleuven<span>&#46;</span>be</a>, with the object of the email matching the name of the attached zip / tar file, i.e. something like <code class="docutils literal notranslate"><span class="pre">name_lastname_XMsun_LAB1.zip</span></code>.</p>
+Via email to <a class="reference external" href="mailto:annachiara&#46;picco&#37;&#52;&#48;kuleuven&#46;be">annachiara<span>&#46;</span>picco<span>&#64;</span>kuleuven<span>&#46;</span>be</a>, with the subject of the email matching the name of the attached zip / tar file, i.e. something like <code class="docutils literal notranslate"><span class="pre">name_lastname_XMsun_LAB1.zip</span></code>.</p>
 </li>
 </ul>
 </section>
@@ -894,7 +894,7 @@ Before leaving the session, save your <code class="docutils literal notranslate"
 <div class="math notranslate nohighlight">
 \[\tau_{\mathrm{KH}}\approx\dfrac{GM^2}{2RL}\approx 1.5\times 10^7\left(\dfrac{M}{M_{\odot}}\right)^2\dfrac{R_{\odot}}{R}\dfrac{L_{\odot}}{L}\:\mathrm{yr},\]</div>
 <div class="math notranslate nohighlight">
-\[\tau_{\mathrm{nuc}}\approx 10^10\dfrac{M}{M_{\odot}}\dfrac{L_{\odot}}{L}\:\mathrm{yr}.\]</div>
+\[\tau_{\mathrm{nuc}}\approx 10^{10}\dfrac{M}{M_{\odot}}\dfrac{L_{\odot}}{L}\:\mathrm{yr}.\]</div>
 <p>You will have to give a look at the <code class="docutils literal notranslate"><span class="pre">./LOGS_XMsun/history.data</span></code> file. You should be able to read the information you need from those columns.</p>
 <p><i>Hint</i>: A good indicator of the start of the ZAMS is the central hydrogen abundance <code class="docutils literal notranslate"><span class="pre">center_h1</span></code>.</p>
 </li>
@@ -977,20 +977,23 @@ Plot, together with the above two quantities, also <span class="math notranslate
 </li>
 <li>
 <p style="color:#e66e1e;font-size:110%;"><u><b>Thermal equilibrium</b></u></p>
-<p>After reaching the ZAMS, your star should start burning hydrogen in its core and thus set into thermal equilibrium, defined as follows:</p>
+<p>After reaching the ZAMS, your star should start burning hydrogen in its core and thus set into <i>thermal equilibrium</i>. In this situation, the energy balance equation simplifies to a simpler form, in which <span class="math notranslate nohighlight">\(\epsilon_{\mathrm{gr}}=0\)</span> due to the star being in stationary state:</p>
 <br>
 <center>
 <div align="center" style="padding: 2px; border: 2px solid #e66e1e; display: inline-block;">
 <b>THERMAL EQUILIBRIUM</b>
 <br>
-<p>State of hydrostatic equilibrium in which <span class="math notranslate nohighlight">\(E_{\mathrm{tot}}=\mathrm{const}\hspace{0.15cm}\Leftrightarrow\hspace{0.15cm}\dot{E}_{\mathrm{tot}}=0\)</span>.
-</dive></p>
+<div class="math notranslate nohighlight">
+\[\dfrac{\partial l}{\partial m}=\epsilon_{\mathrm{nuc}}-\epsilon_{\nu}\hspace{0.5cm}\Leftrightarrow\hspace{0.5cm}L_{\mathrm{surf}}=L_{\mathrm{nuc}}-L_{\nu}\]</div>
+</dive>
 </center>
 <br>
-<p>You can easily verify it by approximating the time derivative into a discrete one:</p>
+<p>where we just integrated the local quantities <span class="math notranslate nohighlight">\(l=l(m)\)</span>, <span class="math notranslate nohighlight">\(\epsilon_{\mathrm{nuc}}=\epsilon_{\mathrm{nuc}}(m)\)</span> and <span class="math notranslate nohighlight">\(\epsilon_{\nu}=\epsilon_{\nu}(m)\)</span> over the star’s structure and defined the surface, nuclear and neutrino luminosity as follows</p>
 <div class="math notranslate nohighlight">
-\[\dot{E}_{\mathrm{tot}}\equiv\dfrac{dE_{\mathrm{tot}}}{dt}\approx\dfrac{|E_{\mathrm{tot}}(t)-E_{\mathrm{tot}}(t+dt)|}{E_{\mathrm{tot}}(t)}\:,\]</div>
-<p>where we indicate a timestep with the fixed time coordinate <span class="math notranslate nohighlight">\(t\)</span>. I suggest to shrink the y-axis as possible, spanning more or less a <span class="math notranslate nohighlight">\(1\%\)</span> errorbar. Why do you not get a perfect zero?</p>
+\[L_{\mathrm{surf}}\equiv\int_{0}^M\dfrac{\partial l}{\partial m}dm\:,\hspace{0.25cm}L_{\mathrm{nuc}}\equiv\int_0^M\epsilon_{\mathrm{nuc}}dm\:,\hspace{0.25cm}L_{\nu}\equiv\int_0^M\epsilon_{\nu}dm\:.\]</div>
+<p>For the early stages of the evolution, such as PMS and MS, and for the purposes of this lab1, ignoring the neutrino energy losses, i.e. <span class="math notranslate nohighlight">\(L_{\nu}=0\)</span>, is a good approximation. Go ahead and verify that <span class="math notranslate nohighlight">\(L_{\mathrm{surf}}=L_{\mathrm{nuc}}\)</span> along the MS.</p>
+<p><i>Hint</i>:</p>
+<p>You should find the interesting information in the columns <code class="docutils literal notranslate"><span class="pre">luminosity</span></code> and <code class="docutils literal notranslate"><span class="pre">log_LH</span></code> of your <code class="docutils literal notranslate"><span class="pre">history.data</span></code> file, both in <span class="math notranslate nohighlight">\(L_{\odot}\)</span> units. Be aware that <code class="docutils literal notranslate"><span class="pre">log_LH</span></code> stores the integrated power of a specific nuclear process, i.e. the hydrogen burning, which is the only contribution to your <span class="math notranslate nohighlight">\(L_{\mathrm{nuc}}\)</span> during the MS.</p>
 </li>
 </ol>
 </section>
@@ -1107,7 +1110,7 @@ How long does your star stay completely convective? I.e., how relevant is this s
 <p><i>Hint I:</i></p>
 <p>You’ll have to adjust the value of <span class="math notranslate nohighlight">\(C\)</span> to make the comparison. Some indicative numbers (to be adjusted!) are the following: for <span class="math notranslate nohighlight">\(M\simeq 2\:M_{\odot}\)</span>, a <span class="math notranslate nohighlight">\(C\simeq 7\times 10^{14}\:[\mathrm{units?}]\)</span>, and for <span class="math notranslate nohighlight">\(M\simeq 8\:M_{\odot}\)</span>, a <span class="math notranslate nohighlight">\(C\simeq 1\times 10^{15}\:[\mathrm{units?}]\)</span>. Fix the units 😉</p>
 <p><i>Hint II:</i></p>
-<p>The information you need are in the columns <code class="docutils literal notranslate"><span class="pre">log_R</span></code> (log of the star’s radius, in <span class="math notranslate nohighlight">\(R_{\odot}\)</span>) and <code class="docutils literal notranslate"><span class="pre">.log_center_Rho</span></code>, in your <code class="docutils literal notranslate"><span class="pre">history.data</span></code> file.</p>
+<p>The information you need are in the columns <code class="docutils literal notranslate"><span class="pre">log_R</span></code> (log of the star’s radius, in <span class="math notranslate nohighlight">\(R_{\odot}\)</span>) and <code class="docutils literal notranslate"><span class="pre">log_center_Rho</span></code>, in your <code class="docutils literal notranslate"><span class="pre">history.data</span></code> file.</p>
 </li>
 </ul>
 </li>
@@ -1187,7 +1190,7 @@ Calculate the degree of degeneracy for the profile <b>at TAMS</b>, and assess th
 </section>
 <section id="massive-vs-low-mass-evolution-2-pts">
 <h3><span class="section-number">9.3.6. </span>Massive vs Low Mass evolution (2 pts)<a class="headerlink" href="#massive-vs-low-mass-evolution-2-pts" title="Permalink to this headline">#</a></h3>
-<p>Now you’ll finally use the output of your simulation 2, namely the second mass <span class="math notranslate nohighlight">\(M'=X'\:\mathrm{\odot}\)</span>; the goal is to make you aware of some differences in the evolution of a low mass (<span class="math notranslate nohighlight">\(M'\gtrsim 1\:\mathrm{\odot}\)</span>) star versus a relatively higher mass (<span class="math notranslate nohighlight">\(M'\gtrsim 5\:\mathrm{\odot}\)</span>) one. You will study the differences in great detail in the following classes, but there are some key points that can be observed also along the MS.</p>
+<p>Now you’ll finally use the output of your simulation 2, namely the second mass <span class="math notranslate nohighlight">\(M'=X'\:M\mathrm{\odot}\)</span>; the goal is to make you aware of some differences in the evolution of a low mass (<span class="math notranslate nohighlight">\(M'\gtrsim 1\:\mathrm{\odot}\)</span>) star versus a relatively higher mass (<span class="math notranslate nohighlight">\(M'\gtrsim 5\:\mathrm{\odot}\)</span>) one. You will study the differences in great detail in the following classes, but there are some key points that can be observed also along the MS.</p>
 <ol>
 <li>
 <p style="color:#479ecc;font-size:110%;"><u><b>Convective or radiative core?</b></u></p>
@@ -1248,7 +1251,7 @@ you can give a rough estimate of the envelope masses by looking at at the Kippen
 <li>
 <p><b>Free-free absorption</b> opacity <span class="math notranslate nohighlight">\(\kappa_{\mathrm{ff}}\)</span> accounts for the inverse process of the <i>Bremsstrahlung</i>, in which a free electron passes by a charged nucleus and emits radiation due to the experienced acceleration. An approximate calculation was carried on by Kramers, who gave a power-law relation of this sort</p>
 <div class="math notranslate nohighlight">
-\[\kappa_{\mathrm{ff}}\simeq \kappa_0 \rho T^{-7/2}\:\mathrm{cm}^2$\:\mathrm{g}^{-1}\:,\]</div>
+\[\kappa_{\mathrm{ff}}\simeq \kappa_0 \rho T^{-7/2}\:\mathrm{cm}^2\:\mathrm{g}^{-1}\:,\]</div>
 <p>in which <span class="math notranslate nohighlight">\(\kappa_{0}\)</span> is a constant that depends on the chemical composition. Where in your star can you see a power-law-ish trend being dominant?</p>
 </li>
 <li>
