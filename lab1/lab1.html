@@ -895,7 +895,7 @@ Before leaving the session, save your <code class="docutils literal notranslate"
 \[\tau_{\mathrm{KH}}\approx\dfrac{GM^2}{2RL}\approx 1.5\times 10^7\left(\dfrac{M}{M_{\odot}}\right)^2\dfrac{R_{\odot}}{R}\dfrac{L_{\odot}}{L}\:\mathrm{yr},\]</div>
 <div class="math notranslate nohighlight">
 \[\tau_{\mathrm{nuc}}\approx 10^{10}\dfrac{M}{M_{\odot}}\dfrac{L_{\odot}}{L}\:\mathrm{yr}.\]</div>
-<p>You will have to give a look at the <code class="docutils literal notranslate"><span class="pre">./LOGS_XMsun/history.data</span></code> file. You should be able to read the information you need from those columns. NB: the <code class="docutils literal notranslate"><span class="pre">star_age</span></code> column that you’ll use as a check is in unit of years!</p>
+<p>You will have to give a look at the <code class="docutils literal notranslate"><span class="pre">./LOGS_XMsun/history.data</span></code> file. You should be able to read the information you need from those columns. <b>NB</b>: the <code class="docutils literal notranslate"><span class="pre">star_age</span></code> column that you’ll use as a check is in unit of years!</p>
 <p><i>Hint</i>: A good indicator of the start of the ZAMS is the central hydrogen abundance <code class="docutils literal notranslate"><span class="pre">center_h1</span></code>.</p>
 </li>
 <li>
@@ -955,8 +955,8 @@ You
 </dive>
 </center>
 <br>
-<p>with <span class="math notranslate nohighlight">\(P=P(m)\)</span> and <span class="math notranslate nohighlight">\(\rho=\rho(m)\)</span> being the pressure and density profiles along the star’s structure. You already computed <span class="math notranslate nohighlight">\(E_{\mathrm{gr}}\)</span> in the previous steps; compute now the left-hand-side (LHS) of the equation <b>at ZAMS</b>, and verify the theorem! Do you expect it to hold at all timesteps too or just at ZAMS?
-<i>Hint</i>: You should be able to find the information you need in the columns <code class="docutils literal notranslate"><span class="pre">logRho</span></code> and <code class="docutils literal notranslate"><span class="pre">logP</span></code> of your <code class="docutils literal notranslate"><span class="pre">profileN.data</span></code> file.</p>
+<p>with <span class="math notranslate nohighlight">\(P=P(m)\)</span> and <span class="math notranslate nohighlight">\(\rho=\rho(m)\)</span> being the pressure and density profiles along the star’s structure. You already computed <span class="math notranslate nohighlight">\(E_{\mathrm{gr}}\)</span> in the previous steps; compute now the left-hand-side (LHS) of the equation <b>at ZAMS</b>, and verify the theorem! Do you expect it to hold at all timesteps too or just at ZAMS?</p>
+<p><i>Hint</i>: You should be able to find the information you need in the columns <code class="docutils literal notranslate"><span class="pre">logRho</span></code> and <code class="docutils literal notranslate"><span class="pre">logP</span></code> of your <code class="docutils literal notranslate"><span class="pre">profileN.data</span></code> file. Also: all the logarithms you’ll encounter are in base 10.</p>
 </li>
 <li>
 <p style="color:#e66e1e;font-size:110%;"><u><b>The equation of state</b></u></p>
