@@ -387,6 +387,16 @@ title="Print to PDF"
      10.1.1. Timescales for different burning phases
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#homology-for-radiative-energy-transport">
+     10.1.2. Homology for radiative energy transport
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#homologous-contraction">
+     10.1.3. Homologous contraction
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -433,6 +443,16 @@ title="Print to PDF"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#timescales-for-different-burning-phases">
      10.1.1. Timescales for different burning phases
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#homology-for-radiative-energy-transport">
+     10.1.2. Homology for radiative energy transport
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#homologous-contraction">
+     10.1.3. Homologous contraction
     </a>
    </li>
   </ul>
@@ -509,7 +529,32 @@ title="Print to PDF"
 <li><p>All helium is burnt into carbon</p></li>
 <li><p>All carbon is burnt into oxygen</p></li>
 </ul>
-<p>If through these burning phases the star has a fixed luminosity, determine the duration of each burning phase relative to the core hydrogen burning phase. Ignore any energy loss through neutrinos.</p>
+<p>If through these burning phases the star has a fixed luminosity, determine the duration of each core helium and core carbon burning relative to the core hydrogen burning phase. Ignore any energy loss through neutrinos.</p>
+</section>
+<section id="homology-for-radiative-energy-transport">
+<h3><span class="section-number">10.1.2. </span>Homology for radiative energy transport<a class="headerlink" href="#homology-for-radiative-energy-transport" title="Permalink to this headline">#</a></h3>
+<p>Given the equation for the temperature gradient in a region where energy is transported through radiation,</p>
+<div class="math notranslate nohighlight">
+\[\frac{dT^4}{dm}=-\frac{3\kappa l}{16\pi^2 a c r^4}\]</div>
+<p>show that two homologous stars of constant opacity (but not necessarily equal opacity between them) satisfy the relationship</p>
+<div class="math notranslate nohighlight">
+\[\left(\frac{T_2(x)}{T_1(x)}\right)^4=\frac{l_2(x)}{l_1(x)}\frac{M_2}{M_1}\frac{\kappa_2}{\kappa_1}\left(\frac{R_2}{R_1}\right)^4.\]</div>
+</section>
+<section id="homologous-contraction">
+<h3><span class="section-number">10.1.3. </span>Homologous contraction<a class="headerlink" href="#homologous-contraction" title="Permalink to this headline">#</a></h3>
+<p>Consider the homology relations derived using the equation of continuity and the equation of hydrostatic equilibrium,</p>
+<div class="math notranslate nohighlight">
+\[\frac{\rho_2(x)}{\rho_1(x)}=\frac{M_2}{M_1}\left(\frac{R_2}{R_1}\right)^{-3},\quad \frac{P_2(x)}{P_1(x)}=\left(\frac{M_2}{M_1}\right)^2\left(\frac{R_2}{R_1}\right)^{-4}.\]</div>
+<p>These expressions can be used to describe a star contracting homologously with a fixed mass, meaning that <span class="math notranslate nohighlight">\(M_1=M_2\)</span> and <span class="math notranslate nohighlight">\(R_1\)</span> and <span class="math notranslate nohighlight">\(R_2\)</span> represent the radii at two different stages of contraction. Show from this that as the star contracts homologously it satisfies</p>
+<div class="math notranslate nohighlight">
+\[\frac{\dot{P}(m)}{P(m)}=-4\frac{\dot{R}}{R}=\frac{4}{3}\frac{\dot{\rho}(m)}{\rho(m)}.\]</div>
+<p>Making use of the EOS quantities</p>
+<div class="math notranslate nohighlight">
+\[\chi_T\equiv \left(\frac{\partial \ln P}{\partial \ln T}\right)_\rho, \quad \chi_\rho\equiv \left(\frac{\partial \ln P}{\partial \ln \rho}\right)_T,\]</div>
+<p>show that</p>
+<div class="math notranslate nohighlight">
+\[\frac{\dot{T}(m)}{T(m)}=\frac{1}{\chi_T}\left(\frac{4}{3}-\chi_\rho\right)\frac{\dot{\rho}(m)}{\rho(m)}=\frac{1}{\chi_T}\left(3\chi_\rho-4\right)\frac{\dot{R}}{R}.\]</div>
+<p>What does this implies for the temperature of a star composed of an ideal gas? What about the temperature for a non-relativistic degenerate gas?</p>
 </section>
 </section>
 <section id="computational-exercises">
@@ -527,9 +572,8 @@ title="Print to PDF"
 <div class="math notranslate nohighlight">
 \[\frac{\Delta m_{He-C}}{m_\mathrm{u}}=\left(\frac{4.002603}{4}-\frac{12}{12}\right)=0.000651,\]</div>
 <div class="math notranslate nohighlight">
-\[\frac{\Delta m_{C-O}}{m_\mathrm{u}}=\left(\frac{12}{12}-\frac{15.994915}{16}\right)=0.000031,\]</div>
-<div class="math notranslate nohighlight">
-\[\frac{\Delta m_{O-Si}}{m_\mathrm{u}}=\left(\frac{15.994915}{16}-\frac{27.976930}{28}\right)=0.000031,\]</div>
+\[\frac{\Delta m_{C-O}}{m_\mathrm{u}}=\left(\frac{12}{12}-\frac{15.994915}{16}\right)=0.000031.\]</div>
+<p>From this one finds that core helium burning lasts only <span class="math notranslate nohighlight">\(\sim 10\%\)</span> of the duration of the core-hydrogen burning phase, while core-carbon burning lasts just <span class="math notranslate nohighlight">\(\sim 0.5\%\)</span> of the core hydrogen burning phase. In practice most stars actually becomes more luminous through their evolution, exacerbating this further!</p>
 </section>
 </section>
 </section>
