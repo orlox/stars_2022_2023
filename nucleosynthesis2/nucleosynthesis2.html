@@ -414,6 +414,16 @@ title="Print to PDF"
      10.3.1. Timescales for different burning phases
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     10.3.2. Homology for radiative energy transport
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     10.3.3. Homologous contraction
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -470,6 +480,16 @@ title="Print to PDF"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
      10.3.1. Timescales for different burning phases
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     10.3.2. Homology for radiative energy transport
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     10.3.3. Homologous contraction
     </a>
    </li>
   </ul>
@@ -572,8 +592,42 @@ title="Print to PDF"
 <div class="math notranslate nohighlight">
 \[\frac{\Delta m_{He-C}}{m_\mathrm{u}}=\left(\frac{4.002603}{4}-\frac{12}{12}\right)=0.000651,\]</div>
 <div class="math notranslate nohighlight">
-\[\frac{\Delta m_{C-O}}{m_\mathrm{u}}=\left(\frac{12}{12}-\frac{15.994915}{16}\right)=0.000031.\]</div>
-<p>From this one finds that core helium burning lasts only <span class="math notranslate nohighlight">\(\sim 10\%\)</span> of the duration of the core-hydrogen burning phase, while core-carbon burning lasts just <span class="math notranslate nohighlight">\(\sim 0.5\%\)</span> of the core hydrogen burning phase. In practice most stars actually becomes more luminous through their evolution, exacerbating this further!</p>
+\[\frac{\Delta m_{C-O}}{m_\mathrm{u}}=\left(\frac{12}{12}-\frac{15.994915}{16}\right)=0.000318.\]</div>
+<p>From this one finds that core helium burning lasts only <span class="math notranslate nohighlight">\(\sim 10\%\)</span> of the duration of the core-hydrogen burning phase, while core-carbon burning lasts just <span class="math notranslate nohighlight">\(\sim 5\%\)</span> of the core hydrogen burning phase. In practice most stars actually becomes more luminous through their evolution, exacerbating this further!</p>
+</section>
+<section id="id2">
+<h3><span class="section-number">10.3.2. </span>Homology for radiative energy transport<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<p>We start by changing the derivative to one with respect to <span class="math notranslate nohighlight">\(x=m/M\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\frac{dT^4}{dx}=-\frac{3\kappa l M}{16\pi^2 a c r^4}.\]</div>
+<p>We consider a solution to the equations of stellar structure which we denote with the subscript <span class="math notranslate nohighlight">\(1\)</span>, and consider another analogous solution with a subscript <span class="math notranslate nohighlight">\(2\)</span>. The equation for radiative energy transport for star <span class="math notranslate nohighlight">\(1\)</span> can be written as</p>
+<div class="math notranslate nohighlight">
+\[\frac{dT_1^4}{dx}=-\frac{3\kappa_1 l_1 M_1}{16\pi^2 a c r_1^4}=-\frac{3\kappa_2 l_2 M_2}{16\pi^2 a c r_2^4}\left[\frac{l_2}{l_1}\frac{M_1}{M_2}\frac{\kappa_2}{\kappa_1}\left(\frac{r_2}{r_1}\right)^4\right].\]</div>
+<p>On the right hand side we identify the equation of radiative energy transport for star <span class="math notranslate nohighlight">\(2\)</span>, such that we have</p>
+<div class="math notranslate nohighlight">
+\[\frac{dT_1^4}{dx}=\frac{dT_2^4}{dx}\left[\frac{l_2}{l_1}\frac{M_1}{M_2}\frac{\kappa_2}{\kappa_1}\left(\frac{r_2}{r_1}\right)^4\right].\]</div>
+<p>The desired result is then obtained by integrating from an arbitrary value of <span class="math notranslate nohighlight">\(x\)</span> all the way to the surface (<span class="math notranslate nohighlight">\(x=1\)</span>), while ignoring the temperature at the surface.</p>
+</section>
+<section id="id3">
+<h3><span class="section-number">10.3.3. </span>Homologous contraction<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<p>Considering two homologous stars with the same mass but different radii, we get
+$<span class="math notranslate nohighlight">\(\frac{\rho_2(x)}{\rho_1(x)}=\left(\frac{R_2}{R_1}\right)^{-3},\quad \frac{P_2(x)}{P_1(x)}=\left(\frac{R_2}{R_1}\right)^{-4}.\)</span>$</p>
+<p>Fixing the values for star <span class="math notranslate nohighlight">\(2\)</span>, and taking the properties of star <span class="math notranslate nohighlight">\(1\)</span> to represent those of a homologously contracting star, we obtain</p>
+<div class="math notranslate nohighlight">
+\[\rho_1(x,t) = C_1(x) [R_1(t)]^{-3},\quad P_1(x,t) = C_2(x) [R_1(t)]^{-4},\]</div>
+<p>from which the derivatives of density and pressure with respect to radius are straightforward to derive,</p>
+<div class="math notranslate nohighlight">
+\[\frac{\dot{P}(m)}{P(m)}=-4\frac{\dot{R}}{R}=\frac{4}{3}\frac{\dot{\rho}(m)}{\rho(m)}.\]</div>
+<p>To switch from pressure to density we make use of the relationship</p>
+<div class="math notranslate nohighlight">
+\[\frac{dP}{P}=\chi_T\frac{dT}{T}+\chi_\rho\frac{d\rho}{\rho},\]</div>
+<p>which combined with the previous equation results in</p>
+<div class="math notranslate nohighlight">
+\[\chi_T \frac{\dot{T}}{T}+\chi_\rho\frac{\dot{\rho}}{\rho}=\frac{4}{3}\frac{\dot{\rho}(m)}{\rho(m)}.\]</div>
+<p>Using the derived relationship between <span class="math notranslate nohighlight">\(\dot{R}/R\)</span> and <span class="math notranslate nohighlight">\(\dot{\rho}/\rho\)</span> we obtain the temperature time derivative as a function of the radial time derivative,</p>
+<div class="math notranslate nohighlight">
+\[\frac{\dot{T}(m)}{T(m)}=\frac{1}{\chi_T}\left(3\chi_\rho-4\right)\frac{\dot{R}}{R}.\]</div>
+<p>As contraction implies a negative <span class="math notranslate nohighlight">\(\dot{R}\)</span>, we find that the temperature will increase if the fluid has <span class="math notranslate nohighlight">\(\chi_\rho&lt;4/3\)</span>. This is the case in particular for an ideal gas, specifically for the case where we can ignore radiation one has <span class="math notranslate nohighlight">\(\chi_\rho = 1\)</span>. If we instead consider a non-relativistic degenerate gas, we have instead that <span class="math notranslate nohighlight">\(\chi_\rho=5/3\)</span>, implying that a degenerate star will cool down with contraction.</p>
 </section>
 </section>
 </section>
