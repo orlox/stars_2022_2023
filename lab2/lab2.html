@@ -1,0 +1,853 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>11. MESA LAB2 &#8212; Stellar Structure and Evolution</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="12. Bibliography" href="../bibliography.html" />
+    <link rel="prev" title="10. Nuclear processes in stars 2" href="../nucleosynthesis2/nucleosynthesis2.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Stellar Structure and Evolution</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../instructions/instructions.html">
+   1. Instructions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../history/history.html">
+   2. Some history
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../equations/equations.html">
+   3. The equations of stellar structure and evolution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../eos1/eos1.html">
+   4. The energy equation and the equation of state
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../eos2/eos2.html">
+   5. Degenerate equations of state
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../radiative/radiative.html">
+   6. Radiative and conductive energy transport
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../convection/convection.html">
+   7. Convective energy transport
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab1/lab1.html">
+   8. MESA LAB1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nucleosynthesis/nucleosynthesis.html">
+   9. Nuclear processes in stars
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../nucleosynthesis2/nucleosynthesis2.html">
+   10. Nuclear processes in stars 2
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   11. MESA LAB2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bibliography.html">
+   12. Bibliography
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/orlox/stars_2022_2023/main?urlpath=tree/lab2/lab2.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/orlox/stars_2022_2023"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/orlox/stars_2022_2023/issues/new?title=Issue%20on%20page%20%2Flab2/lab2.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/lab2/lab2.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#practicalities">
+   11.1. Practicalities
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lab-structure">
+     11.1.1. Lab structure
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instructions-for-the-report">
+     11.1.2. Instructions for the report
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grades-and-deadlines">
+     11.1.3. Grades and deadlines
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-lab-computers">
+     11.1.4. The lab computers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-questions">
+   11.2. The questions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preliminary-instructions">
+     11.2.1. Preliminary instructions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#convergence-testing-4-points">
+     11.2.2. Convergence testing (4 points)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pop-iii-versus-pop-i-stars-4-points">
+     11.2.3. Pop III versus Pop I stars (4 points)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#white-dwarf-formation-4-points">
+     11.2.4. White dwarf formation (4 points)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#iron-core-collapse-4-points">
+     11.2.5. Iron-core collapse (4 points)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>MESA LAB2</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#practicalities">
+   11.1. Practicalities
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lab-structure">
+     11.1.1. Lab structure
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instructions-for-the-report">
+     11.1.2. Instructions for the report
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grades-and-deadlines">
+     11.1.3. Grades and deadlines
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-lab-computers">
+     11.1.4. The lab computers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-questions">
+   11.2. The questions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preliminary-instructions">
+     11.2.1. Preliminary instructions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#convergence-testing-4-points">
+     11.2.2. Convergence testing (4 points)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pop-iii-versus-pop-i-stars-4-points">
+     11.2.3. Pop III versus Pop I stars (4 points)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#white-dwarf-formation-4-points">
+     11.2.4. White dwarf formation (4 points)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#iron-core-collapse-4-points">
+     11.2.5. Iron-core collapse (4 points)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="mesa-lab2">
+<h1><span class="section-number">11. </span>MESA LAB2<a class="headerlink" href="#mesa-lab2" title="Permalink to this headline">#</a></h1>
+<p>In this second MESA lab we will cover a variety of examples that illustrate important physical aspects of stellar evolution. Most of these examples are tailor made to run succesfully until a meaningful termination condition within a reasonable amount of time. Bear in mind that publication quality runs can take much longer to compute, in particular we make use of models with low spatial and temporal resolution.</p>
+<section id="practicalities">
+<h2><span class="section-number">11.1. </span>Practicalities<a class="headerlink" href="#practicalities" title="Permalink to this headline">#</a></h2>
+<section id="lab-structure">
+<h3><span class="section-number">11.1.1. </span>Lab structure<a class="headerlink" href="#lab-structure" title="Permalink to this headline">#</a></h3>
+<p>Usage of MESA has been covered on the first lab, so in this instance we will start right away with the computation of simulations. Detailed instructions on how to setup your simulations and what each simulation covers are described down below.</p>
+</section>
+<section id="instructions-for-the-report">
+<h3><span class="section-number">11.1.2. </span>Instructions for the report<a class="headerlink" href="#instructions-for-the-report" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><b>PAGE LIMIT</b> Maximum of 6 pages (including figures) with classical font and fontsize (<span class="math notranslate nohighlight">\(\geq\)</span> 12pt please). Include your name and student number on the first page of the PDF.</p></li>
+<li><p><b>SUBMISSION FORMAT</b> Submit a tar / zip named as <code class="docutils literal notranslate"><span class="pre">name_lastname_LAB2.zip</span></code>.</p></li>
+</ul>
+<br>
+</section>
+<section id="grades-and-deadlines">
+<h3><span class="section-number">11.1.3. </span>Grades and deadlines<a class="headerlink" href="#grades-and-deadlines" title="Permalink to this headline">#</a></h3>
+<p>You will be given 5 weeks to complete the report and send it to us.</p>
+<ul>
+<li>
+<p><b> GRADES </b> Each part of the lab counts for 4 points. The maximum is 16 points / 16. Let us say that you totalize N points / 16: in total, this report will weight N / 4 grades out of your final 20! So if you manage to score full grade in this report, 4 points out of your final 20 are granted. Good luck! 🍀</p>
+</li>
+<li>
+<p><b> DEADLINE </b> Report must be completed by</p>
+<br>
+<center>
+<div align="center" style="padding: 2px; border: 2px solid red; display: inline-block;">
+  17 December , 14:00 CET
+</div>
+</center>
+<br>
+</li>
+<li>
+12
+<b>TO BE SENT</b>
+Via email to annachiara.picco@kuleuven.be, with the subject of the email matching the name of the attached zip / tar file, i.e. something like ```name_lastname_XMsun_LAB2.zip```.
+</li>
+</ul>
+</section>
+<section id="the-lab-computers">
+<h3><span class="section-number">11.1.4. </span>The lab computers<a class="headerlink" href="#the-lab-computers" title="Permalink to this headline">#</a></h3>
+<p>Just as in the previous session we will be making use of version 15140 of MESA, which is already installed on the lab computers. To be able to run MESA from a folder of your choice, you need to set the Linux environment variables to tell your terminal where to find the software. To do so, open a terminal with <code class="docutils literal notranslate"><span class="pre">ctrl+shift+T</span></code> and type the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the environment variables</span>
+module load mesasdk
+module load mesa
+<span class="c1"># Check that everything is correct</span>
+<span class="nb">echo</span> <span class="nv">$MESA_DIR</span>
+<span class="nb">echo</span> <span class="nv">$MESASDK_VERSION</span>
+</pre></div>
+</div>
+<p>Beware that the <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span></code> commands are specific to the setup of the computers at the Institute of Astronomy. If you are running MESA locally on your computer you need to follow the usual instructions to install and run MESA models.</p>
+</section>
+</section>
+<section id="the-questions">
+<h2><span class="section-number">11.2. </span>The questions<a class="headerlink" href="#the-questions" title="Permalink to this headline">#</a></h2>
+<section id="preliminary-instructions">
+<h3><span class="section-number">11.2.1. </span>Preliminary instructions<a class="headerlink" href="#preliminary-instructions" title="Permalink to this headline">#</a></h3>
+<p>Download the input files <a class="reference download internal" download="" href="../_downloads/6401cc865527ffb2dd3bb2babfe76450/lab2_input.tar.xz"><code class="xref download docutils literal notranslate"><span class="pre">from</span> <span class="pre">here</span></code></a>. You can then create a folder for your work from a terminal and uncompress the input files there:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a new directory to run the lab</span>
+mkdir MESA_LAB2
+<span class="c1"># Move to the directory of your choice</span>
+<span class="nb">cd</span> MESA_LAB2
+<span class="c1"># Copy downloaded input files (you need to correct the path here)</span>
+cp PATH_TO_INPUT_FILES/lab2_input.tar.xz .
+<span class="c1"># Decompress the downloaded file</span>
+tar -xf lab2_input.tar.xz
+</pre></div>
+</div>
+<p>After uncompressing the input file, you will have four folders corresponding to each part of the lab. Within each of this folder there is a template for that part. We strongly recommend not modifying this template folder. Instead, copy the template for each simulation you run, for example you could copy and run the first template by doing (do not do this yet though, read through the instructions for the first part down below first):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> part1_convergence
+cp -r part1_template first_run
+<span class="nb">cd</span> first_run
+<span class="c1"># compile MESA</span>
+./clean <span class="o">&amp;&amp;</span> ./mk
+<span class="c1"># run MESA</span>
+./rn
+</pre></div>
+</div>
+<p>Where the exact name you give to the copied folder is your choice. To edit your inlists, from a work directory you can run (replacing gedit with a different editor if you prefer):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gedit inlist_project
+</pre></div>
+</div>
+<p>For all parts of this lab, whenever you need to use the same template to run more than one simulation, you can adjust the options <code class="docutils literal notranslate"><span class="pre">filename_for_profile_when_terminate</span></code>, <code class="docutils literal notranslate"><span class="pre">log_directory</span></code> and <code class="docutils literal notranslate"><span class="pre">Grid1_file_dir</span></code> with unique names to identify your simulation.</p>
+</section>
+<section id="convergence-testing-4-points">
+<h3><span class="section-number">11.2.2. </span>Convergence testing (4 points)<a class="headerlink" href="#convergence-testing-4-points" title="Permalink to this headline">#</a></h3>
+<p>Whenever we perform numerical simulations of continuous phenomena, we need to discretize both time and space. Although in the limit of infinite spatial and temporal resolution (and computers with infinite precision) we would expect our discrete model to match the continuous one, in practice we need to verify if the resolution used is appropriate for our work. This goes beyond stellar evolution simulations, and is a best practice for all types of numerical calculations that rely on discretization.</p>
+<p>In the first part of this lab we will compute the main sequence evolution of a <span class="math notranslate nohighlight">\(10M_\odot\)</span> star of metallicity Z=0.02 from ZAMS to TAMS, and evaluate the resulting mass of the helium core (contained in the output ‘he_core_mass’ of your history file, but also listed as <code class="docutils literal notranslate"><span class="pre">He_core</span></code> in the terminal output). We want to verify if our choice of resolution gives us a converged result by increasing it and checking by how much our results changed.</p>
+<p>A few notes on the inlist that is used in the template, to model stars from ZAMS, the following option is set in the <code class="docutils literal notranslate"><span class="pre">star_job</span></code> section of <code class="docutils literal notranslate"><span class="pre">inlist_project</span></code>:</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="p">&amp;</span><span class="n">star_job</span><span class="w"></span>
+<span class="w">   </span><span class="p">[...]</span><span class="w"></span>
+<span class="w">   </span><span class="n">create_pre_main_sequence_model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.</span><span class="w"></span>
+<span class="w">   </span><span class="p">[...]</span><span class="w"></span>
+<span class="o">/</span><span class="w"></span>
+</pre></div>
+</div>
+<p>With this option MESA will make use of pre-computed ZAMS models to initiate the simulation, saving you a bit of time by avoiding the calculation of the pre main-sequence. Mesa has a large amount of options to compute spatial and temporal resolution, but also provides two convenience options to perform a global scaling of them. These are contained in the <code class="docutils literal notranslate"><span class="pre">controls</span></code> section of your <code class="docutils literal notranslate"><span class="pre">inlist_project</span></code>:</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="p">&amp;</span><span class="n">controls</span><span class="w"></span>
+<span class="w">   </span><span class="p">[...]</span><span class="w"></span>
+<span class="w">    </span><span class="n">mesh_delta_coeff</span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="n">d0</span><span class="w"></span>
+<span class="w">    </span><span class="n">time_delta_coeff</span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="n">d0</span><span class="w"></span>
+<span class="w">   </span><span class="p">[...]</span><span class="w"></span>
+<span class="o">/</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The first of these options regulates the size of the grid, while the second regulates the size of the timesteps. The default value of these is one, and by setting both of these to two we will use bigger cells and take longer timesteps (thus, relaxing the resolution). Run this simulation a total of 4 times, with the values:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">mesh_delta_coeff=2d0</span></code>, <code class="docutils literal notranslate"><span class="pre">time_delta_coeff=2d0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mesh_delta_coeff=1d0</span></code>, <code class="docutils literal notranslate"><span class="pre">time_delta_coeff=1d0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mesh_delta_coeff=0.5d0</span></code>, <code class="docutils literal notranslate"><span class="pre">time_delta_coeff=0.5d0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mesh_delta_coeff=0.25d0</span></code>, <code class="docutils literal notranslate"><span class="pre">time_delta_coeff=0.25d0</span></code></p></li>
+</ul>
+<p>This will represent a factor 8 in time and spatial resolution between the most and the least resolved simulation. With these simulations, answer the following questions for your report:</p>
+<ul class="simple">
+<li><p>Does the resolution of your simulations behave as expected? Indicate the number of steps each simulation took, and see the number of zones by checking the <code class="docutils literal notranslate"><span class="pre">num_zones</span></code> column in your history file (you can take the value of the very last timestep).</p></li>
+<li><p>If for a particular science case I would need to know the value of the helium core mass to a precision better than 1%, what choice of resolution option would you suggest? Of course we expect the highest resolution to be the most precise, but we want to balance simulation cost and precision. You can illustrate this by plotting the value of <code class="docutils literal notranslate"><span class="pre">he_core_mass</span></code> against the logarithm of the number of steps.</p></li>
+</ul>
+</section>
+<section id="pop-iii-versus-pop-i-stars-4-points">
+<h3><span class="section-number">11.2.3. </span>Pop III versus Pop I stars (4 points)<a class="headerlink" href="#pop-iii-versus-pop-i-stars-4-points" title="Permalink to this headline">#</a></h3>
+<p>The first stars formed right after the big bang are expected to be devoid of heavy elements, including carbon, nitrogen and oxygen. As we saw these elements play an important role in nuclear burning for massive stars, the objective of this exercise is to study how such a star undergoes core hydrogen burning. This first generation of stars is referred to as Pop III stars, while the current generation to which the Sun belongs is Pop I (Pop II representing an intermediate generation). For the purpose of this lab we will model both a Z=0 and a Z=0.02 star with a mass of <span class="math notranslate nohighlight">\(20M_\odot\)</span>. In this particular case we want to include the pre main-sequence stage in order to see precisely how the star initiates core hydrogen burning, so we have in the <code class="docutils literal notranslate"><span class="pre">star_job</span></code> section of <code class="docutils literal notranslate"><span class="pre">inlist_project</span></code>:</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="p">&amp;</span><span class="n">star_job</span><span class="w"></span>
+<span class="w">   </span><span class="p">[...]</span><span class="w"></span>
+<span class="w">   </span><span class="n">create_pre_main_sequence_model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.</span><span class="w"></span>
+<span class="w">   </span><span class="p">[...]</span><span class="w"></span>
+<span class="o">/</span><span class="w"></span>
+</pre></div>
+</div>
+<p>For the sake of speed, we will also use the most relaxed resolution choice from the previous problem.</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="p">&amp;</span><span class="n">controls</span><span class="w"></span>
+<span class="w">   </span><span class="p">[...]</span><span class="w"></span>
+<span class="w">    </span><span class="n">mesh_delta_coeff</span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="n">d0</span><span class="w"></span>
+<span class="w">    </span><span class="n">time_delta_coeff</span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="n">d0</span><span class="w"></span>
+<span class="w">   </span><span class="p">[...]</span><span class="w"></span>
+<span class="o">/</span><span class="w"></span>
+</pre></div>
+</div>
+<p>This is done solely for the sake of quickly computing simulations, after seeing the results from the previous part you should be aware of the risks of unresolved models. Right now we ignore a potential lack of converged simulations, as our target is to illustrate different physical processes rather than provide very precise simulations.</p>
+<p>The provided template comes ready to compute the evolution of a <span class="math notranslate nohighlight">\(Z=0.02\)</span> star. To run the zero metallicity star, look up the options <code class="docutils literal notranslate"><span class="pre">Zbase</span></code> and <code class="docutils literal notranslate"><span class="pre">initial_z</span></code> and set them to zero. With these simulations answer the following questions:</p>
+<ul class="simple">
+<li><p>What hydrogen burning process is dominant in the Z=0 star? Make a plot for each star showing the contribution of the pp, cno and triple alpha burning as a function of time and discuss. Hint: Massive stars are expected to produce most of their energy through the CNO cycle, so how can a massive star without CNO at the beginning of its evolution undergo the CNO cycle?</p></li>
+<li><p>Check the radii of both stars at the TAMS. Is there a significant difference between them? What do you think is the main source of this difference?</p></li>
+</ul>
+</section>
+<section id="white-dwarf-formation-4-points">
+<h3><span class="section-number">11.2.4. </span>White dwarf formation (4 points)<a class="headerlink" href="#white-dwarf-formation-4-points" title="Permalink to this headline">#</a></h3>
+<p>For this problem we will model the evolution of an intermediate mass star (<span class="math notranslate nohighlight">\(2M_\odot\)</span> in particular) until the formation of a compact remnant. You only need to run the provided template once as is! This simulation will take a while to complete so you can start running right away and then proceed to read the rest of this description. The star will go through multiple evolutionary phases which you can discuss with your classmates by checking the on-screen plots as the simulation runs. In particular for this run in order to save a bit of time by starting from ZAMS we also have</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="p">&amp;</span><span class="n">star_job</span><span class="w"></span>
+<span class="w">   </span><span class="p">[...]</span><span class="w"></span>
+<span class="w">   </span><span class="n">create_pre_main_sequence_model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.</span><span class="w"></span>
+<span class="w">   </span><span class="p">[...]</span><span class="w"></span>
+<span class="o">/</span><span class="w"></span>
+</pre></div>
+</div>
+<p>A very important physical ingredient we include here are stellar winds, which are activated with the following options in the <code class="docutils literal notranslate"><span class="pre">controls</span></code> section of <code class="docutils literal notranslate"><span class="pre">inlist_project</span></code>:</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="p">&amp;</span><span class="n">controls</span><span class="w"></span>
+<span class="w">   </span><span class="p">[...]</span><span class="w"></span>
+<span class="w">   </span><span class="n">cool_wind_full_on_T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9.99d9</span><span class="w"> </span><span class="c">! setting this to a high value ensures we always the cool wind prescriptions</span>
+<span class="w">   </span><span class="n">hot_wind_full_on_T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="n">d10</span><span class="w"></span>
+<span class="w">   </span><span class="n">cool_wind_RGB_scheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Reimers&#39;</span><span class="w"></span>
+<span class="w">   </span><span class="n">cool_wind_AGB_scheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Blocker&#39;</span><span class="w"></span>
+<span class="w">   </span><span class="n">RGB_to_AGB_wind_switch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="n">d</span><span class="o">-</span><span class="mi">4</span><span class="w"></span>
+<span class="w">   </span><span class="n">Reimers_scaling_factor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="n">d0</span><span class="w"></span>
+<span class="w">   </span><span class="n">Blocker_scaling_factor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="n">d0</span><span class="w"> </span><span class="c">! very strong AGB wind to go through TP-AGB quickly</span>
+<span class="w">   </span><span class="p">[...]</span><span class="w"></span>
+<span class="o">/</span><span class="w"></span>
+</pre></div>
+</div>
+<p>where we make use of the mass loss rate of <span id="id1">[<a class="reference internal" href="../bibliography.html#id5" title="D. Reimers. Circumstellar absorption lines and mass loss from red giants. Memoires of the Societe Royale des Sciences de Liege, 8:369-382, January 1975.">Reimers, 1975</a>]</span> for the RGB phase and that of <span id="id2">[<a class="reference internal" href="../bibliography.html#id6" title="T. Bloecker. Stellar evolution of low and intermediate-mass stars. I. Mass loss on the AGB and its consequences for stellar evolution. \aap , 297:727, May 1995.">Bloecker, 1995</a>]</span> for the AGB phase (with an artificial boost of a factor of 3, meant to accelerate the calculation).</p>
+<p>The terminating condition of this simulation is set as a minimum limit on luminosity, which will be reached as the star forms a white dwarf and cools:</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="p">&amp;</span><span class="n">controls</span><span class="w"></span>
+<span class="w">   </span><span class="p">[...]</span><span class="w"></span>
+<span class="w">   </span><span class="n">log_L_lower_limit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"></span>
+<span class="w">   </span><span class="p">[...]</span><span class="w"></span>
+<span class="o">/</span><span class="w"></span>
+</pre></div>
+</div>
+<p>This option is given in units of the solar luminosity, which implies the simulation will finish once the star has a luminosity below <span class="math notranslate nohighlight">\(0.1L_\odot\)</span>.</p>
+<p>You might also notice a large set of options that look like this:</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="c">! relax tolerances for equations</span>
+<span class="w">    </span><span class="n">use_gold_tolerances</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="n">use_gold2_tolerances</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="n">iter_for_resid_tol2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
+<span class="w">    </span><span class="n">iter_for_resid_tol3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
+<span class="w">    </span><span class="n">tol_residual_norm3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="n">d</span><span class="o">-</span><span class="mi">4</span><span class="w"></span>
+<span class="w">    </span><span class="n">tol_max_residual3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="n">d</span><span class="o">-</span><span class="mi">2</span><span class="w"></span>
+<span class="w">    </span><span class="n">solver_iters_timestep_limit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="w"></span>
+<span class="w">    </span><span class="n">convergence_ignore_equL_residuals</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="n">limit_for_rel_error_in_energy_conservation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="n">d99</span><span class="w"></span>
+<span class="w">    </span><span class="n">hard_limit_for_rel_error_in_energy_conservation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="n">d99</span><span class="w"></span>
+<span class="w">    </span><span class="n">corr_coeff_limit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="n">d</span><span class="o">-</span><span class="mi">1</span><span class="w"></span>
+<span class="w">    </span><span class="n">max_abs_rel_run_E_err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="n">d0</span><span class="w"></span>
+<span class="w">    </span><span class="n">ignore_too_large_correction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="n">scale_max_correction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.1d0</span><span class="w"></span>
+<span class="w">    </span><span class="n">ignore_min_corr_coeff_for_scale_max_correction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="n">ignore_species_in_max_correction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="n">use_superad_reduction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.</span><span class="w"> </span><span class="c">! this is to help evolution from post-AGB to white dwarf</span>
+</pre></div>
+</div>
+<p>these are purely numerical adjustments for the calculations in order to optimize the runtime of the simulation for the purpose of a lab. In reality you want to avoid relaxing the tolerance to which solutions are computed!</p>
+<p>Using your simulation, answer the following questions:</p>
+<ul class="simple">
+<li><p>Through what evolutionary phases does this star go? What type of white dwarf is formed at the end? Accompany your discussion with an HR diagram. Take particular care in describing how helium is ignited.</p></li>
+<li><p>Although no nuclear burning takes place in the outermost regions of the star, you will find the surface abundances of some heavy elements change significantly before any significant mass loss happens. What is the cause of this change?</p></li>
+</ul>
+</section>
+<section id="iron-core-collapse-4-points">
+<h3><span class="section-number">11.2.5. </span>Iron-core collapse (4 points)<a class="headerlink" href="#iron-core-collapse-4-points" title="Permalink to this headline">#</a></h3>
+<p>For the last part of this lab, we will perform a simulation of an <span class="math notranslate nohighlight">\(18M_\odot\)</span> star that undergoes iron-core collapse. Just as with the previous part, this simulation is already setup for you to run it, so you can start it up and then proceed to read the rest of this description.</p>
+<p>Barring small variations of numerical aspects to make the run faster for the lab, there are three important details in <code class="docutils literal notranslate"><span class="pre">inlist_project</span></code> that relate to the physics of the problem. The first one is the following in the <code class="docutils literal notranslate"><span class="pre">star_job</span></code> section of <code class="docutils literal notranslate"><span class="pre">inlist_project</span></code>:</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="p">&amp;</span><span class="n">star_job</span><span class="w"></span>
+<span class="w">   </span><span class="p">[...]</span><span class="w"></span>
+<span class="w">   </span><span class="n">change_v_flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.</span><span class="w"></span>
+<span class="w">   </span><span class="n">new_v_flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.</span><span class="w"></span>
+<span class="w">   </span><span class="p">[...]</span><span class="w"></span>
+<span class="o">/</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Setting both of these to true will add the velocity as another solver variable inside MESA. By default MESA solves the hydrostatic version of the equations, so any velocity it registers just corresponds to changes in radii along stages of almost perfect hydrostatic balance. However, if we want to capture iron-core collapse, we need to include hydrodynamics in our simulation, which is precisely what the above option does.</p>
+<p>The next important ingredient is our termination condition for the simulation. In this case we set a threshold on the velocity at which any point within the iron-core is infalling,</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="p">&amp;</span><span class="n">controls</span><span class="w"></span>
+<span class="w">   </span><span class="p">[...]</span><span class="w"></span>
+<span class="w">   </span><span class="n">fe_core_infall_limit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="n">d7</span><span class="w"> </span><span class="c">! infall velocity at cm/s</span>
+<span class="w">   </span><span class="p">[...]</span><span class="w"></span>
+<span class="o">/</span><span class="w"></span>
+</pre></div>
+</div>
+<p>which corresponds to a velocity of <span class="math notranslate nohighlight">\(500\;\mathrm{km\;s^{-1}}\)</span>. Finally, we include a different choice of mass loss rates that is more appropriate for massive star evolution:</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="p">&amp;</span><span class="n">controls</span><span class="w"></span>
+<span class="w">   </span><span class="p">[...]</span><span class="w"></span>
+<span class="w">   </span><span class="n">cool_wind_full_on_T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.8d4</span><span class="w"></span>
+<span class="w">   </span><span class="n">hot_wind_full_on_T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.2d4</span><span class="w"></span>
+<span class="w">   </span><span class="n">cool_wind_RGB_scheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Dutch&#39;</span><span class="w"></span>
+<span class="w">   </span><span class="n">cool_wind_AGB_scheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Dutch&#39;</span><span class="w"></span>
+<span class="w">   </span><span class="n">hot_wind_scheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Dutch&#39;</span><span class="w"></span>
+<span class="w">   </span><span class="n">Dutch_wind_lowT_scheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;de Jager&#39;</span><span class="w"></span>
+<span class="w">   </span><span class="n">Dutch_scaling_factor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="w">  </span>
+<span class="w">   </span><span class="p">[...]</span><span class="w"></span>
+<span class="o">/</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">Dutch</span></code> prescription from MESA combines multiple prescriptions for mass loss from mostly Dutch authors, including those of <span id="id3">[<a class="reference internal" href="../bibliography.html#id4" title="C. de Jager, H. Nieuwenhuijzen, and K. A. van der Hucht. Mass loss rates in the Hertzsprung-Russell diagram. \aaps , 72:259-289, February 1988.">de Jager <em>et al.</em>, 1988</a>]</span>, <span id="id4">[<a class="reference internal" href="../bibliography.html#id3" title="T. Nugis and H. J. G. L. M. Lamers. Mass-loss rates of Wolf-Rayet stars as a function of stellar parameters. \aap , 360:227-244, August 2000.">Nugis and Lamers, 2000</a>]</span> and <span id="id5">[<a class="reference internal" href="../bibliography.html#id2" title="Jorick S. Vink, A. de Koter, and H. J. G. L. M. Lamers. Mass-loss predictions for O and B stars as a function of metallicity. \aap , 369:574-588, April 2001. arXiv:astro-ph/0101509, doi:10.1051/0004-6361:20010127.">Vink <em>et al.</em>, 2001</a>]</span>. A very important thing to keep in mind regarding mass loss rates in stellar evolution calculations is that they are based off prescriptions provided by other authors who have either determined them empirically or through dynamical modelling of stellar atmospheres, which is beyond the capabilities of MESA.</p>
+<p>With your simulation completed, answer the following questions for your report:</p>
+<ul class="simple">
+<li><p>How does the onset of helium burning differ from the 2 Msun star modelled in the previous part?</p></li>
+<li><p>Determine the time between the end of each burning phase (H, He, C, Ne, O, Si, core collapse). Compare it to the main-sequence lifetime.</p></li>
+<li><p>At the end of your simulation, check the iron core-mass (fe_core_mass in your history file). Is there a relevance to that value?</p></li>
+<li><p>From the profile at the end of your simulation plot the helium abundance across the entire star. Can you explain what is happening at the core?</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "julia-1.8"
+        },
+        kernelOptions: {
+            kernelName: "julia-1.8",
+            path: "./lab2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'julia-1.8'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../nucleosynthesis2/nucleosynthesis2.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">10. </span>Nuclear processes in stars 2</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../bibliography.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">12. </span>Bibliography</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Pablo Marchant & Annachiara Picco<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
